@@ -11,7 +11,7 @@
 #define xFinal 500.0
 #define yInicial 0
 #define yFinal 500.0
-#define finalTime 10000
+#define finalTime 15000
 #define	lambda 0.4
 #define	delta 0.8
 
