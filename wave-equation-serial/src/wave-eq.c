@@ -4,12 +4,12 @@
 #include <math.h>
 #include <time.h>
 
-#define N 100
+#define N 5000
 #define xInicial 0
-#define xFinal 10.0
+#define xFinal 500.0
 #define yInicial 0
-#define yFinal 10.0
-#define finalTime 100
+#define yFinal 500.0
+#define finalTime 15000
 #define	lambda 0.4
 #define	delta 0.8
 
@@ -25,7 +25,7 @@ double ***allocArray() {
 
         for(j = 0; j < N; j++) {
             
-            waveFunction[i][j] = (double *) malloc(finalTime*sizeof(double));
+            waveFunction[i][j] = (double *) malloc(3*sizeof(double));
 
         }
     }
@@ -72,7 +72,6 @@ void ***contourCondition(double ***wave, double dx, double dy){
 
 void ***derivativeCondition(double ***wave, double dx, double dy){
 
-    double v;
 	int i, j;
 
 	for (i = 1; i < N-1; i++)
@@ -86,14 +85,12 @@ void ***derivativeCondition(double ***wave, double dx, double dy){
 
 void ***finiteDifference(double ***wave, double dx, double dy){
 
-    double v;
-
 	int i, j, t;
 
 	for (t = 1; t < finalTime; ++t) {
 		for (i = 1; i < N-1; ++i) {
 			for (j = 1; j < N-1; ++j) {
-				wave[i][j][t+1] = 2*wave[i][j][t]*(1 - lambda*lambda - delta*delta) - wave[i][j][t-1] + lambda*lambda*wave[i+1][j][(t)] + lambda*lambda*wave[i-1][j][t] + delta*delta*wave[i][j+1][t] +  delta*delta*wave[i][j-1][t];
+				wave[i][j][(t+1)%3] = 2*wave[i][j][t%3]*(1 - lambda*lambda - delta*delta) - wave[i][j][(t-1)%3] + lambda*lambda*wave[i+1][j][(t%3)] + lambda*lambda*wave[i-1][j][t%3] + delta*delta*wave[i][j+1][t%3] +  delta*delta*wave[i][j-1][t%3];
 			}
 		}	
 	}
@@ -110,17 +107,17 @@ void writeFiles(double ***wave, double dx, double dy) {
     // fprintf(fileDynamicPlot, "x\ty\tt\tf\n");
     fprintf(fileStaticPlot, "x\ty\tt\tf\n");
 
-    // for (t = 0; t < finalTime; ++t) {
+    // for (t = 1; t < finalTime; ++t) {
 	// 	for (i = 1; i < N-1; ++i) {
 	// 		for (j = 1; j < N-1; ++j) {
-    //             fprintf(fileDynamicPlot, "%lf\t%lf\t%d\t%lf\n", i*dx, j*dy, t, wave[i][j][t]);
+    //             fprintf(fileDynamicPlot, "%lf\t%lf\t%d\t%lf\n", i*dx, j*dy, t, wave[i][j][(t+1)%3]);
     //         }
     //     }
     // }
 
     for (i = 1; i < N-1; ++i) {
 		for (j = 1; j < N-1; ++j) {
-            fprintf(fileStaticPlot, "%lf\t%lf\t%d\t%lf\n", i*dx, j*dy, finalTime - 1, wave[i][j][finalTime - 1]);
+            fprintf(fileStaticPlot, "%lf\t%lf\t%d\t%lf\n", i*dx, j*dy, finalTime - 1, wave[i][j][(finalTime)%3]);
         }
     }
 
@@ -160,7 +157,6 @@ void main() {
     double ***waveFunction;
 
     system("clear");
-
     clock_t beginTime = clock();
 
     printf("Alocando a memória do array.\n");
