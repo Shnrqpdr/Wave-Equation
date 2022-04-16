@@ -4,7 +4,7 @@ from mpl_toolkits.mplot3d import Axes3D
 import pandas as pd
 # %matplotlib inline
 
-coluna=pd.read_csv("WaveStatic.dat", header = 0, sep='\s+', engine='python')
+coluna=pd.read_csv("../WaveStatic.dat", header = 0, sep='\s+', engine='python')
 
 fig = plt.figure(figsize=(10,6))
 ax1 = fig.add_subplot(111, projection='3d')
@@ -18,4 +18,4 @@ surf1 = ax1.plot_trisurf(coluna['x'], coluna['y'], coluna['f'], cmap=mycmap)
 fig.colorbar(surf1, ax=ax1, shrink=0.5, aspect=5)
 
 #plt.show()
-plt.savefig('plotWave1.png', dpi=400)
+plt.savefig('plotWave3.png', dpi=400)

@@ -1,6 +1,6 @@
 CC=gcc
 CFLAGS=-lm
-COMPILER_FLAGS=
+COMPILER_FLAGS=-pg -g
 
 laplace.x: wave-eq.c
 	$(CC) $(COMPILER_FLAGS) wave-eq.c -o wave.x $(CFLAGS)
@@ -8,4 +8,4 @@ laplace.x: wave-eq.c
 .PHONY: clean
 
 clean:
-	rm -fr *.x *.o *.dat *.png *~ core
+	rm -fr *.x *.o *.dat *~ core
