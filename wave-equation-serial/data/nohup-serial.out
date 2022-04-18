@@ -1,0 +1,11 @@
+[3J[H[2JAlocando a memória do array.
+Começando os calculos.
+dx: 0.100000	dy: 0.100000
+Malha: 5000 x 5000
+Tempo total: 20000
+Colocando condição inicial.
+Colocando condição de contorno.
+Colocando condição da derivada.
+Iniciando calculo da função de onda.
+Escrevendo no arquivo
+Time:   11165.77 seconds 

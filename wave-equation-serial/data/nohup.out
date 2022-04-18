@@ -1,0 +1,64 @@
+Rodando SERIAL
+[3J[H[2JAlocando a memória do array.
+Começando os calculos.
+dx: 0.100000	dy: 0.100000
+Malha: 5000 x 5000
+Tempo total: 20000
+Colocando condição inicial.
+Colocando condição de contorno.
+Colocando condição da derivada.
+Iniciando calculo da função de onda.
+Escrevendo no arquivo
+Time:   11165.77 seconds
+
+Rodando com flags + O0 
+[3J[H[2JAlocando a memória do array.
+Começando os calculos.
+dx: 0.100000	dy: 0.100000
+Malha: 5000 x 5000
+Tempo total: 20000
+Colocando condição inicial.
+Colocando condição de contorno.
+Colocando condição da derivada.
+Iniciando calculo da função de onda.
+Escrevendo no arquivo
+Time:   10983.01 seconds
+
+Rodando com flags + O1 
+[3J[H[2JAlocando a memória do array.
+Começando os calculos.
+dx: 0.100000	dy: 0.100000
+Malha: 5000 x 5000
+Tempo total: 20000
+Colocando condição inicial.
+Colocando condição de contorno.
+Colocando condição da derivada.
+Iniciando calculo da função de onda.
+Escrevendo no arquivo
+Time:    2698.30 seconds
+
+Rodando com flags + O2 
+[3J[H[2JAlocando a memória do array.
+Começando os calculos.
+dx: 0.100000	dy: 0.100000
+Malha: 5000 x 5000
+Tempo total: 20000
+Colocando condição inicial.
+Colocando condição de contorno.
+Colocando condição da derivada.
+Iniciando calculo da função de onda.
+Escrevendo no arquivo
+Time:    2686.27 seconds
+
+Rodando com flags + O3 
+[3J[H[2JAlocando a memória do array.
+Começando os calculos.
+dx: 0.100000	dy: 0.100000
+Malha: 5000 x 5000
+Tempo total: 20000
+Colocando condição inicial.
+Colocando condição de contorno.
+Colocando condição da derivada.
+Iniciando calculo da função de onda.
+Escrevendo no arquivo
+Time:    2695.16 seconds 

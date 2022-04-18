@@ -10,8 +10,8 @@
 #define yInicial 0
 #define yFinal 500.0
 #define finalTime 15000
-#define	lambda 0.4
-#define	delta 0.8
+#define	alpha 0.4
+#define	gamma 0.8
 
 double ***allocArray() {
 
@@ -37,8 +37,8 @@ void ***initialCondition(double ***wave, double dx, double dy){
 
 	int i, j;
 
-	for (i = 0; i < N; ++i){
-		for (j = 0; j < N; ++j){
+	for (i = 0; i < N; i++){
+		for (j = 0; j < N; j++){
 
 			wave[i][j][0] = sin(M_PI*i/75);
 
@@ -78,7 +78,7 @@ void ***derivativeCondition(double ***wave, double dx, double dy){
 	{
 		for (j = 1; j < N-1; j++)
 		{
-			wave[i][j][1] = (2*wave[i][j][0]*(1 - lambda*lambda - delta*delta) + lambda*lambda*wave[i+1][j][0] + lambda*lambda*wave[i-1][j][0] + delta*delta*wave[i][j+1][0] +  delta*delta*wave[i][j-1][0])/2;
+			wave[i][j][1] = (2*wave[i][j][0]*(1 - alpha*alpha - gamma*gamma) + alpha*alpha*wave[i+1][j][0] + alpha*alpha*wave[i-1][j][0] + gamma*gamma*wave[i][j+1][0] +  gamma*gamma*wave[i][j-1][0])/2;
 		}
 	}
 }
@@ -87,10 +87,10 @@ void ***finiteDifference(double ***wave, double dx, double dy){
 
 	int i, j, t;
 
-	for (t = 1; t < finalTime; ++t) {
-		for (i = 1; i < N-1; ++i) {
-			for (j = 1; j < N-1; ++j) {
-				wave[i][j][(t+1)%3] = 2*wave[i][j][t%3]*(1 - lambda*lambda - delta*delta) - wave[i][j][(t-1)%3] + lambda*lambda*wave[i+1][j][(t%3)] + lambda*lambda*wave[i-1][j][t%3] + delta*delta*wave[i][j+1][t%3] +  delta*delta*wave[i][j-1][t%3];
+	for (t = 1; t < finalTime; t++) {
+		for (i = 1; i < N-1; i++) {
+			for (j = 1; j < N-1; j++) {
+				wave[i][j][(t+1)%3] = 2*wave[i][j][t%3]*(1 - alpha*alpha - gamma*gamma) - wave[i][j][(t-1)%3] + alpha*alpha*wave[i+1][j][(t%3)] + alpha*alpha*wave[i-1][j][t%3] + gamma*gamma*wave[i][j+1][t%3] +  gamma*gamma*wave[i][j-1][t%3];
 			}
 		}	
 	}
@@ -107,16 +107,16 @@ void writeFiles(double ***wave, double dx, double dy) {
     // fprintf(fileDynamicPlot, "x\ty\tt\tf\n");
     fprintf(fileStaticPlot, "x\ty\tt\tf\n");
 
-    // for (t = 1; t < finalTime; ++t) {
-	// 	for (i = 1; i < N-1; ++i) {
-	// 		for (j = 1; j < N-1; ++j) {
+    // for (t = 1; t < finalTime; t++) {
+	// 	for (i = 1; i < N-1; i++) {
+	// 		for (j = 1; j < N-1; j++) {
     //             fprintf(fileDynamicPlot, "%lf\t%lf\t%d\t%lf\n", i*dx, j*dy, t, wave[i][j][(t+1)%3]);
     //         }
     //     }
     // }
 
-    for (i = 1; i < N-1; ++i) {
-		for (j = 1; j < N-1; ++j) {
+    for (i = 1; i < N-1; i++) {
+		for (j = 1; j < N-1; j++) {
             fprintf(fileStaticPlot, "%lf\t%lf\t%d\t%lf\n", i*dx, j*dy, finalTime - 1, wave[i][j][(finalTime)%3]);
         }
     }
