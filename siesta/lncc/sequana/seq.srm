@@ -1,0 +1,31 @@
+#!/bin/bash
+#SBATCH --nodes=1
+#SBATCH	--ntasks=48
+#SBATCH --ntasks-per-node=48
+#SBATCH -p sequana_cpu_dev
+#SBATCH -J Siesta
+#SBATCH	--exclusive 
+ 
+#Exibe os nós alocados para o job
+echo $SLURM_JOB_NODELIST
+nodeset -e $SLURM_JOB_NODELIST
+
+cd $SLURM_SUBMIT_DIR
+
+#carregar módulos
+module load sequana/current
+module load openmpi/icc/4.0.3_sequana
+module load intel_psxe/2019_sequana
+export I_MPI_PMI_LIBRARY=/usr/lib64/libpmi.so
+
+EXE=../../../siesta
+
+ulimit -c unlimited
+ulimit -s unlimited
+
+for i in $(seq 1 48)
+do
+        { time srun -n $i $EXE < benzene.fdf ; } 2> sequanaTempoCore_${i}.txt
+	rm -fr *.DM *.XV *.CG *.ZM
+done
+
