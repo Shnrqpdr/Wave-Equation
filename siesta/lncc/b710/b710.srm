@@ -1,0 +1,28 @@
+#!/bin/bash
+#SBATCH --nodes=1
+#SBATCH	--ntasks=24
+#SBATCH --ntasks-per-node=24
+#SBATCH -p cpu_dev
+#SBATCH -J Siesta
+#SBATCH	--exclusive 
+ 
+#Exibe os nós alocados para o job
+echo $SLURM_JOB_NODELIST
+nodeset -e $SLURM_JOB_NODELIST
+
+cd $SLURM_SUBMIT_DIR
+
+#carregar módulos
+export I_MPI_PMI_LIBRARY=/usr/lib64/libpmi.so
+
+EXE=../../../siesta
+
+ulimit -c unlimited
+ulimit -s unlimited
+
+for i in $(seq 41 48)
+do
+        { time srun -n $i $EXE < benzene.fdf ; } 2> b710TempoCore_${i}.txt
+	rm -fr *.DM *.XV *.CG *.ZM
+done
+
