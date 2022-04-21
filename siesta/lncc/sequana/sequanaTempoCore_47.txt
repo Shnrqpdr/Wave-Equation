@@ -1,0 +1,1535 @@
+*** Error in `/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta': malloc(): memory corruption: 0x00000000050b4ad0 ***
+*** Error in `/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta': malloc(): memory corruption: 0x0000000005a30ce0 ***
+======= Backtrace: =========
+/lib64/libc.so.6(+0x82b36)[0x2aedbaa23b36]
+/lib64/libc.so.6(__libc_malloc+0x4c)[0x2aedbaa2678c]
+======= Backtrace: =========
+/lib64/libc.so.6(catopen+0xf3)[0x2aedba9d5cf3]
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x1a83f26]
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x1a90af3]
+/lib64/libpthread.so.0(+0xf630)[0x2aedb8b3a630]
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x1cec00a]
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x1ce221f]
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x1d03fd3]
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x2301a9f]
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x1e54fee]
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x1b43a2a]
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x1b401b5]
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x40be22]
+/lib64/libc.so.6(__libc_start_main+0xf5)[0x2aedba9c3555]
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x40bd29]
+======= Memory map: ========
+/lib64/libc.so.6(+0x82b36)[0x2b831ac04b36]
+/lib64/libc.so.6(__libc_malloc+0x4c)[0x2b831ac0778c]
+/lib64/libc.so.6(catopen+0xf3)[0x2b831abb6cf3]
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x1a83f26]
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x1a90af3]
+/lib64/libpthread.so.0(+0xf630)[0x2b8318d1b630]
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x1cec00a]
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x1ce221f]
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x1d03fd3]
+00400000-025c8000 r-xp 00000000 a73:e3392 162134922478240464             /scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/siesta
+027c8000-027d0000 r--p 021c8000 a73:e3392 162134922478240464             /scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/siesta
+027d0000-0283a000 rw-p 021d0000 a73:e3392 162134922478240464             /scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/siesta
+0283a000-039ff000 rw-p 00000000 00:00 0 
+04e85000-05413000 rw-p 00000000 00:00 0                                  [heap]
+2aedb8907000-2aedb8929000 r-xp 00000000 08:03 38932298                   /usr/lib64/ld-2.17.so
+2aedb8929000-2aedb893b000 rw-p 00000000 00:00 0 
+2aedb893b000-2aedb893c000 -w-s 00000000 00:05 40965                      /dev/infiniband/uverbs0
+2aedb893c000-2aedb893d000 -w-s 00001000 00:05 40965                      /dev/infiniband/uverbs0
+2aedb893d000-2aedb893e000 -w-s 00002000 00:05 40965                      /dev/infiniband/uverbs0
+2aedb893e000-2aedb893f000 -w-s 00003000 00:05 40965                      /dev/infiniband/uverbs0
+2aedb893f000-2aedb8940000 -w-s 00004000 00:05 40965                      /dev/infiniband/uverbs0
+2aedb8940000-2aedb8941000 -w-s 00005000 00:05 40965                      /dev/infiniband/uverbs0
+2aedb8941000-2aedb8942000 -w-s 00006000 00:05 40965                      /dev/infiniband/uverbs0
+2aedb8942000-2aedb8943000 -w-s 00007000 00:05 40965                      /dev/infiniband/uverbs0
+2aedb8943000-2aedb8944000 r--s 00500000 00:05 40965                      /dev/infiniband/uverbs0
+2aedb8944000-2aedb8945000 r--s 00700000 00:05 40965                      /dev/infiniband/uverbs0
+2aedb8945000-2aedb8954000 rw-p 00000000 00:00 0 
+2aedb8954000-2aedb8a13000 rw-s 00000000 00:12 98758354                   /dev/shm/Intel_MPI_nCmx7M (deleted)
+2aedb8a13000-2aedb8ad2000 rw-s 00000000 00:12 98677349                   /dev/shm/Intel_MPI_0CfMPi (deleted)
+2aedb8b28000-2aedb8b29000 r--p 00021000 08:03 38932298                   /usr/lib64/ld-2.17.so
+2aedb8b29000-2aedb8b2a000 rw-p 00022000 08:03 38932298                   /usr/lib64/ld-2.17.so
+2aedb8b2a000-2aedb8b2b000 rw-p 00000000 00:00 0 
+2aedb8b2b000-2aedb8b42000 r-xp 00000000 08:03 38929047                   /usr/lib64/libpthread-2.17.so
+2aedb8b42000-2aedb8d41000 ---p 00017000 08:03 38929047                   /usr/lib64/libpthread-2.17.so
+2aedb8d41000-2aedb8d42000 r--p 00016000 08:03 38929047                   /usr/lib64/libpthread-2.17.so
+2aedb8d42000-2aedb8d43000 rw-p 00017000 08:03 38929047                   /usr/lib64/libpthread-2.17.so
+2aedb8d43000-2aedb8d47000 rw-p 00000000 00:00 0 
+2aedb8d47000-2aedb8e48000 r-xp 00000000 08:03 38929029                   /usr/lib64/libm-2.17.so
+2aedb8e48000-2aedb9047000 ---p 00101000 08:03 38929029                   /usr/lib64/libm-2.17.so
+2aedb9047000-2aedb9048000 r--p 00100000 08:03 38929029                   /usr/lib64/libm-2.17.so
+2aedb9048000-2aedb9049000 rw-p 00101000 08:03 38929029                   /usr/lib64/libm-2.17.so
+2aedb9049000-2aedb904b000 r-xp 00000000 08:03 38929027                   /usr/lib64/libdl-2.17.so
+2aedb904b000-2aedb924b000 ---p 00002000 08:03 38929027                   /usr/lib64/libdl-2.17.so
+2aedb924b000-2aedb924c000 r--p 00002000 08:03 38929027                   /usr/lib64/libdl-2.17.so
+2aedb924c000-2aedb924d000 rw-p 00003000 08:03 38929027                   /usr/lib64/libdl-2.17.so
+2aedb924d000-2aedb93df000 r-xp 00000000 a73:e3392 162130641050172020     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/lib/libmpifort.so.12.0.0
+2aedb93df000-2aedb95df000 ---p 00192000 a73:e3392 162130641050172020     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/lib/libmpifort.so.12.0.0
+2aedb95df000-2aedb95e7000 rw-p 00192000 a73:e3392 162130641050172020     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/lib/libmpifort.so.12.0.0
+2aedb95e7000-2aedb960b000 rw-p 00000000 00:00 0 
+*** Error in `/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta': malloc(): memory corruption: 0x00000000043d1f00 ***
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x2301a9f]
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x1e54fee]
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x1b43a2a]
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x1b401b5]
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x40be22]
+/lib64/libc.so.6(__libc_start_main+0xf5)[0x2b831aba4555]
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x40bd29]
+======= Memory map: ========
+00400000-025c8000 r-xp 00000000 a73:e3392 162134922478240464             /scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/siesta
+027c8000-027d0000 r--p 021c8000 a73:e3392 162134922478240464             /scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/siesta
+027d0000-0283a000 rw-p 021d0000 a73:e3392 162134922478240464             /scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/siesta
+0283a000-039ff000 rw-p 00000000 00:00 0 
+05826000-05e32000 rw-p 00000000 00:00 0                                  [heap]
+2b8318ae8000-2b8318b0a000 r-xp 00000000 08:03 38932298                   /usr/lib64/ld-2.17.so
+2b8318b0a000-2b8318b1c000 rw-p 00000000 00:00 0 
+2b8318b1c000-2b8318b1d000 -w-s 00000000 00:05 40965                      /dev/infiniband/uverbs0
+2b8318b1d000-2b8318b1e000 -w-s 00001000 00:05 40965                      /dev/infiniband/uverbs0
+2b8318b1e000-2b8318b1f000 -w-s 00002000 00:05 40965                      /dev/infiniband/uverbs0
+2b8318b1f000-2b8318b20000 -w-s 00003000 00:05 40965                      /dev/infiniband/uverbs0
+2b8318b20000-2b8318b21000 -w-s 00004000 00:05 40965                      /dev/infiniband/uverbs0
+2b8318b21000-2b8318b22000 -w-s 00005000 00:05 40965                      /dev/infiniband/uverbs0
+2b8318b22000-2b8318b23000 -w-s 00006000 00:05 40965                      /dev/infiniband/uverbs0
+2b8318b23000-2b8318b24000 -w-s 00007000 00:05 40965                      /dev/infiniband/uverbs0
+2b8318b24000-2b8318b25000 r--s 00500000 00:05 40965                      /dev/infiniband/uverbs0
+2b8318b25000-2b8318b26000 r--s 00700000 00:05 40965                      /dev/infiniband/uverbs0
+2b8318b26000-2b8318b35000 rw-p 00000000 00:00 0 
+2b8318b35000-2b8318bf4000 rw-s 00000000 00:12 98758354                   /dev/shm/Intel_MPI_nCmx7M (deleted)
+2b8318bf4000-2b8318cb3000 rw-s 00000000 00:12 98677349                   /dev/shm/Intel_MPI_0CfMPi (deleted)
+2b8318d09000-2b8318d0a000 r--p 00021000 08:03 38932298                   /usr/lib64/ld-2.17.so
+2b8318d0a000-2b8318d0b000 rw-p 00022000 08:03 38932298                   /usr/lib64/ld-2.17.so
+2b8318d0b000-2b8318d0c000 rw-p 00000000 00:00 0 
+2b8318d0c000-2b8318d23000 r-xp 00000000 08:03 38929047                   /usr/lib64/libpthread-2.17.so
+2b8318d23000-2b8318f22000 ---p 00017000 08:03 38929047                   /usr/lib64/libpthread-2.17.so
+2b8318f22000-2b8318f23000 r--p 00016000 08:03 38929047                   /usr/lib64/libpthread-2.17.so
+2b8318f23000-2b8318f24000 rw-p 00017000 08:03 38929047                   /usr/lib64/libpthread-2.17.so
+2b8318f24000-2b8318f28000 rw-p 00000000 00:00 0 
+2b8318f28000-2b8319029000 r-xp 00000000 08:03 38929029                   /usr/lib64/libm-2.17.so
+2b8319029000-2b8319228000 ---p 00101000 08:03 38929029                   /usr/lib64/libm-2.17.so
+2b8319228000-2b8319229000 r--p 00100000 08:03 38929029                   /usr/lib64/libm-2.17.so
+2b8319229000-2b831922a000 rw-p 00101000 08:03 38929029                   /usr/lib64/libm-2.17.so
+2b831922a000-2b831922c000 r-xp 00000000 08:03 38929027                   /usr/lib64/libdl-2.17.so
+2b831922c000-2b831942c000 ---p 00002000 08:03 38929027                   /usr/lib64/libdl-2.17.so
+2b831942c000-2b831942d000 r--p 00002000 08:03 38929027                   /usr/lib64/libdl-2.17.so
+2b831942d000-2b831942e000 rw-p 00003000 08:03 38929027                   /usr/lib64/libdl-2.17.so
+2aedb960b000-2aedba50d000 r-xp 00000000 a73:e3392 162130641050172012     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/lib/release/libmpi.so.12.0.0
+2aedba50d000-2aedba70d000 ---p 00f02000 a73:e3392 162130641050172012     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/lib/release/libmpi.so.12.0.0
+2aedba70d000-2aedba72c000 rw-p 00f02000 a73:e3392 162130641050172012     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/lib/release/libmpi.so.12.0.0
+2aedba72c000-2aedba799000 rw-p 00000000 00:00 0 
+2aedba799000-2aedba7a0000 r-xp 00000000 08:03 38929051                   /usr/lib64/librt-2.17.so
+2aedba7a0000-2aedba99f000 ---p 00007000 08:03 38929051                   /usr/lib64/librt-2.17.so
+2aedba99f000-2aedba9a0000 r--p 00006000 08:03 38929051                   /usr/lib64/librt-2.17.so
+2aedba9a0000-2aedba9a1000 rw-p 00007000 08:03 38929051                   /usr/lib64/librt-2.17.so
+2aedba9a1000-2aedbab65000 r-xp 00000000 08:03 38929021                   /usr/lib64/libc-2.17.so
+2aedbab65000-2aedbad64000 ---p 001c4000 08:03 38929021                   /usr/lib64/libc-2.17.so
+2aedbad64000-2aedbad68000 r--p 001c3000 08:03 38929021                   /usr/lib64/libc-2.17.so
+2aedbad68000-2aedbad6a000 rw-p 001c7000 08:03 38929021                   /usr/lib64/libc-2.17.so
+2aedbad6a000-2aedbad6f000 rw-p 00000000 00:00 0 
+2aedbad6f000-2aedbad84000 r-xp 00000000 08:03 38928403                   /usr/lib64/libgcc_s-4.8.5-20150702.so.1
+2aedbad84000-2aedbaf83000 ---p 00015000 08:03 38928403                   /usr/lib64/libgcc_s-4.8.5-20150702.so.1
+2aedbaf83000-2aedbaf84000 r--p 00014000 08:03 38928403                   /usr/lib64/libgcc_s-4.8.5-20150702.so.1
+2aedbaf84000-2aedbaf85000 rw-p 00015000 08:03 38928403                   /usr/lib64/libgcc_s-4.8.5-20150702.so.1
+2aedbaf85000-2aedbafbb000 r-xp 00000000 a73:e3392 162130641050171789     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/libfabric/lib/libfabric.so.1
+2aedbafbb000-2aedbb1ba000 ---p 00036000 a73:e3392 162130641050171789     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/libfabric/lib/libfabric.so.1
+2aedbb1ba000-2aedbb1bd000 rw-p 00035000 a73:e3392 162130641050171789     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/libfabric/lib/libfabric.so.1
+2aedbb1bd000-2aedbb1c7000 r-xp 00000000 08:03 38930825                   /usr/lib64/libnuma.so.1.0.0
+2aedbb1c7000-2aedbb3c7000 ---p 0000a000 08:03 38930825                   /usr/lib64/libnuma.so.1.0.0
+2aedbb3c7000-2aedbb3c8000 r--p 0000a000 08:03 38930825                   /usr/lib64/libnuma.so.1.0.0
+2aedbb3c8000-2aedbb3c9000 rw-p 0000b000 08:03 38930825                   /usr/lib64/libnuma.so.1.0.0
+2aedbb3c9000-2aedbb3ce000 r-xp 00000000 08:03 38936419                   /usr/lib64/libpmi.so.0.0.0
+2aedbb3ce000-2aedbb5cd000 ---p 00005000 08:03 38936419                   /usr/lib64/libpmi.so.0.0.0
+2aedbb5cd000-2aedbb5ce000 r--p 00004000 08:03 38936419                   /usr/lib64/libpmi.so.0.0.0
+2aedbb5ce000-2aedbb5cf000 rw-p 00005000 08:03 38936419                   /usr/lib64/libpmi.so.0.0.0
+2aedbb5cf000-2aedbb78f000 r-xp 00000000 08:03 38932361                   /usr/lib64/libslurm_pmi-20.11.8.so
+2aedbb78f000-2aedbb98e000 ---p 001c0000 08:03 38932361                   /usr/lib64/libslurm_pmi-20.11.8.so
+2aedbb98e000-2aedbb990000 r--p 001bf000 08:03 38932361                   /usr/lib64/libslurm_pmi-20.11.8.so
+2aedbb990000-2aedbb99a000 rw-p 001c1000 08:03 38932361                   /usr/lib64/libslurm_pmi-20.11.8.so
+2aedbb99a000-2aedbb99f000 rw-p 00000000 00:00 0 
+2aedbb99f000-2aedbb9b5000 r-xp 00000000 08:03 38929049                   /usr/lib64/libresolv-2.17.so
+2aedbb9b5000-2aedbbbb5000 ---p 00016000 08:03 38929049                   /usr/lib64/libresolv-2.17.so
+======= Backtrace: =========
+/lib64/libc.so.6(+0x82b36)[0x2b26d6a0db36]
+/lib64/libc.so.6(__libc_malloc+0x4c)[0x2b26d6a1078c]
+/lib64/libc.so.6(catopen+0xf3)[0x2b26d69bfcf3]
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x1a83f26]
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x1a90af3]
+/lib64/libpthread.so.0(+0xf630)[0x2b26d4b24630]
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x1cec00a]
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x1ce221f]
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x1d03fd3]
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x2301a9f]
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x1e54fee]
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x1b43a2a]
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x1b401b5]
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x40be22]
+/lib64/libc.so.6(__libc_start_main+0xf5)[0x2b26d69ad555]
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x40bd29]
+======= Memory map: ========
+2b831942e000-2b83195c0000 r-xp 00000000 a73:e3392 162130641050172020     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/lib/libmpifort.so.12.0.0
+2b83195c0000-2b83197c0000 ---p 00192000 a73:e3392 162130641050172020     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/lib/libmpifort.so.12.0.0
+2b83197c0000-2b83197c8000 rw-p 00192000 a73:e3392 162130641050172020     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/lib/libmpifort.so.12.0.0
+2b83197c8000-2b83197ec000 rw-p 00000000 00:00 0 
+2b83197ec000-2b831a6ee000 r-xp 00000000 a73:e3392 162130641050172012     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/lib/release/libmpi.so.12.0.0
+2b831a6ee000-2b831a8ee000 ---p 00f02000 a73:e3392 162130641050172012     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/lib/release/libmpi.so.12.0.0
+2b831a8ee000-2b831a90d000 rw-p 00f02000 a73:e3392 162130641050172012     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/lib/release/libmpi.so.12.0.0
+2b831a90d000-2b831a97a000 rw-p 00000000 00:00 0 
+2b831a97a000-2b831a981000 r-xp 00000000 08:03 38929051                   /usr/lib64/librt-2.17.so
+2b831a981000-2b831ab80000 ---p 00007000 08:03 38929051                   /usr/lib64/librt-2.17.so
+2b831ab80000-2b831ab81000 r--p 00006000 08:03 38929051                   /usr/lib64/librt-2.17.so
+2b831ab81000-2b831ab82000 rw-p 00007000 08:03 38929051                   /usr/lib64/librt-2.17.so
+2b831ab82000-2b831ad46000 r-xp 00000000 08:03 38929021                   /usr/lib64/libc-2.17.so
+2b831ad46000-2b831af45000 ---p 001c4000 08:03 38929021                   /usr/lib64/libc-2.17.so
+2b831af45000-2b831af49000 r--p 001c3000 08:03 38929021                   /usr/lib64/libc-2.17.so
+2b831af49000-2b831af4b000 rw-p 001c7000 08:03 38929021                   /usr/lib64/libc-2.17.so
+2b831af4b000-2b831af50000 rw-p 00000000 00:00 0 
+2b831af50000-2b831af65000 r-xp 00000000 08:03 38928403                   /usr/lib64/libgcc_s-4.8.5-20150702.so.1
+2b831af65000-2b831b164000 ---p 00015000 08:03 38928403                   /usr/lib64/libgcc_s-4.8.5-20150702.so.1
+2b831b164000-2b831b165000 r--p 00014000 08:03 38928403                   /usr/lib64/libgcc_s-4.8.5-20150702.so.1
+2b831b165000-2b831b166000 rw-p 00015000 08:03 38928403                   /usr/lib64/libgcc_s-4.8.5-20150702.so.1
+2b831b166000-2b831b19c000 r-xp 00000000 a73:e3392 162130641050171789     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/libfabric/lib/libfabric.so.1
+2b831b19c000-2b831b39b000 ---p 00036000 a73:e3392 162130641050171789     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/libfabric/lib/libfabric.so.1
+2b831b39b000-2b831b39e000 rw-p 00035000 a73:e3392 162130641050171789     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/libfabric/lib/libfabric.so.1
+2b831b39e000-2b831b3a8000 r-xp 00000000 08:03 38930825                   /usr/lib64/libnuma.so.1.0.0
+2b831b3a8000-2b831b5a8000 ---p 0000a000 08:03 38930825                   /usr/lib64/libnuma.so.1.0.0
+2b831b5a8000-2b831b5a9000 r--p 0000a000 08:03 38930825                   /usr/lib64/libnuma.so.1.0.0
+2b831b5a9000-2b831b5aa000 rw-p 0000b000 08:03 38930825                   /usr/lib64/libnuma.so.1.0.0
+2b831b5aa000-2b831b5af000 r-xp 00000000 08:03 38936419                   /usr/lib64/libpmi.so.0.0.0
+2b831b5af000-2b831b7ae000 ---p 00005000 08:03 38936419                   /usr/lib64/libpmi.so.0.0.0
+2b831b7ae000-2b831b7af000 r--p 00004000 08:03 38936419                   /usr/lib64/libpmi.so.0.0.0
+2b831b7af000-2b831b7b0000 rw-p 00005000 08:03 38936419                   /usr/lib64/libpmi.so.0.0.0
+2b831b7b0000-2b831b970000 r-xp 00000000 08:03 38932361                   /usr/lib64/libslurm_pmi-20.11.8.so
+2aedbbbb5000-2aedbbbb6000 r--p 00016000 08:03 38929049                   /usr/lib64/libresolv-2.17.so
+2aedbbbb6000-2aedbbbb7000 rw-p 00017000 08:03 38929049                   /usr/lib64/libresolv-2.17.so
+2aedbbbb7000-2aedbbbb9000 rw-p 00000000 00:00 0 
+2aedbbbb9000-2aedbbbc5000 r-xp 00000000 08:03 38929039                   /usr/lib64/libnss_files-2.17.so
+2aedbbbc5000-2aedbbdc4000 ---p 0000c000 08:03 38929039                   /usr/lib64/libnss_files-2.17.so
+2aedbbdc4000-2aedbbdc5000 r--p 0000b000 08:03 38929039                   /usr/lib64/libnss_files-2.17.so
+2aedbbdc5000-2aedbbdc6000 rw-p 0000c000 08:03 38929039                   /usr/lib64/libnss_files-2.17.so
+2aedbbdc6000-2aedbbdcc000 rw-p 00000000 00:00 0 
+2aedbbdcc000-2aedbbdcf000 r-xp 00000000 08:03 39326865                   /usr/lib64/slurm/auth_munge.so
+2aedbbdcf000-2aedbbfce000 ---p 00003000 08:03 39326865                   /usr/lib64/slurm/auth_munge.so
+2aedbbfce000-2aedbbfcf000 r--p 00002000 08:03 39326865                   /usr/lib64/slurm/auth_munge.so
+2aedbbfcf000-2aedbbfd0000 rw-p 00003000 08:03 39326865                   /usr/lib64/slurm/auth_munge.so
+2aedbbfd0000-2aedbbfd8000 r-xp 00000000 08:03 38932364                   /usr/lib64/libmunge.so.2.0.0
+2aedbbfd8000-2aedbc1d7000 ---p 00008000 08:03 38932364                   /usr/lib64/libmunge.so.2.0.0
+2aedbc1d7000-2aedbc1d8000 r--p 00007000 08:03 38932364                   /usr/lib64/libmunge.so.2.0.0
+2aedbc1d8000-2aedbc1d9000 rw-p 00008000 08:03 38932364                   /usr/lib64/libmunge.so.2.0.0
+2aedbc1d9000-2aeeb54a0000 rw-s 00000000 00:12 98756812                   /dev/shm/Intel_MPI_L3l11N (deleted)
+2aeeb54a0000-2aeeb54e2000 r-xp 00000000 a73:e3392 162130641050171787     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/libfabric/lib/prov/librxm-fi.so
+2aeeb54e2000-2aeeb56e1000 ---p 00042000 a73:e3392 162130641050171787     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/libfabric/lib/prov/librxm-fi.so
+2aeeb56e1000-2aeeb56f4000 rw-p 00041000 a73:e3392 162130641050171787     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/libfabric/lib/prov/librxm-fi.so
+2aeeb56f4000-2aeeb573e000 r-xp 00000000 a73:e3392 162130641050171786     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/libfabric/lib/prov/libsockets-fi.so
+2aeeb573e000-2aeeb593d000 ---p 0004a000 a73:e3392 162130641050171786     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/libfabric/lib/prov/libsockets-fi.so
+2aeeb593d000-2aeeb5940000 rw-p 00049000 a73:e3392 162130641050171786     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/libfabric/lib/prov/libsockets-fi.so
+2aeeb5940000-2aeeb5941000 ---p 00000000 00:00 0 
+2aeeb5941000-2aeeb5b41000 rw-p 00000000 00:00 0 
+2aeeb5b41000-2aeeb5b42000 ---p 00000000 00:00 0 
+2aeeb5b42000-2aeeb5d42000 rw-p 00000000 00:00 0 
+2aeeb5d9f000-2aeeb5db9000 r-xp 00000000 08:03 38932194                   /usr/lib64/libibverbs.so.1.8.28.0
+2aeeb5db9000-2aeeb5fb8000 ---p 0001a000 08:03 38932194                   /usr/lib64/libibverbs.so.1.8.28.0
+2aeeb5fb8000-2aeeb5fb9000 r--p 00019000 08:03 38932194                   /usr/lib64/libibverbs.so.1.8.28.0
+2aeeb5fb9000-2aeeb5fba000 rw-p 0001a000 08:03 38932194                   /usr/lib64/libibverbs.so.1.8.28.0
+2aeeb5fba000-2aeeb5fd8000 r-xp 00000000 08:03 38929466                   /usr/lib64/libnl-3.so.200.23.0
+2aeeb5fd8000-2aeeb61d8000 ---p 0001e000 08:03 38929466                   /usr/lib64/libnl-3.so.200.23.0
+2aeeb61d8000-2aeeb61da000 r--p 0001e000 08:03 38929466                   /usr/lib64/libnl-3.so.200.23.0
+2aeeb61da000-2aeeb61db000 rw-p 00020000 08:03 38929466                   /usr/lib64/libnl-3.so.200.23.0
+2aeeb61db000-2aeeb623f000 r-xp 00000000 08:03 38929474                   /usr/lib64/libnl-route-3.so.200.23.0
+00400000-025c8000 r-xp 00000000 a73:e3392 162134922478240464             /scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/siesta
+027c8000-027d0000 r--p 021c8000 a73:e3392 162134922478240464             /scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/siesta
+027d0000-0283a000 rw-p 021d0000 a73:e3392 162134922478240464             /scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/siesta
+0283a000-039ff000 rw-p 00000000 00:00 0 
+041a3000-0481a000 rw-p 00000000 00:00 0                                  [heap]
+2b26d48f1000-2b26d4913000 r-xp 00000000 08:03 38932298                   /usr/lib64/ld-2.17.so
+2b26d4913000-2b26d4925000 rw-p 00000000 00:00 0 
+2b26d4925000-2b26d4926000 -w-s 00000000 00:05 40965                      /dev/infiniband/uverbs0
+2b26d4926000-2b26d4927000 -w-s 00001000 00:05 40965                      /dev/infiniband/uverbs0
+2b26d4927000-2b26d4928000 -w-s 00002000 00:05 40965                      /dev/infiniband/uverbs0
+2b26d4928000-2b26d4929000 -w-s 00003000 00:05 40965                      /dev/infiniband/uverbs0
+2b26d4929000-2b26d492a000 -w-s 00004000 00:05 40965                      /dev/infiniband/uverbs0
+2b26d492a000-2b26d492b000 -w-s 00005000 00:05 40965                      /dev/infiniband/uverbs0
+2b26d492b000-2b26d492c000 -w-s 00006000 00:05 40965                      /dev/infiniband/uverbs0
+2b26d492c000-2b26d492d000 -w-s 00007000 00:05 40965                      /dev/infiniband/uverbs0
+2b26d492d000-2b26d492e000 r--s 00500000 00:05 40965                      /dev/infiniband/uverbs0
+2b26d492e000-2b26d492f000 r--s 00700000 00:05 40965                      /dev/infiniband/uverbs0
+2b26d492f000-2b26d493e000 rw-p 00000000 00:00 0 
+2b26d493e000-2b26d49fd000 rw-s 00000000 00:12 98758354                   /dev/shm/Intel_MPI_nCmx7M (deleted)
+2b26d49fd000-2b26d4abc000 rw-s 00000000 00:12 98677349                   /dev/shm/Intel_MPI_0CfMPi (deleted)
+2b26d4b12000-2b26d4b13000 r--p 00021000 08:03 38932298                   /usr/lib64/ld-2.17.so
+2b26d4b13000-2b26d4b14000 rw-p 00022000 08:03 38932298                   /usr/lib64/ld-2.17.so
+2b26d4b14000-2b26d4b15000 rw-p 00000000 00:00 0 
+2b26d4b15000-2b26d4b2c000 r-xp 00000000 08:03 38929047                   /usr/lib64/libpthread-2.17.so
+2b26d4b2c000-2b26d4d2b000 ---p 00017000 08:03 38929047                   /usr/lib64/libpthread-2.17.so
+2b26d4d2b000-2b26d4d2c000 r--p 00016000 08:03 38929047                   /usr/lib64/libpthread-2.17.so
+2b26d4d2c000-2b26d4d2d000 rw-p 00017000 08:03 38929047                   /usr/lib64/libpthread-2.17.so
+2b26d4d2d000-2b26d4d31000 rw-p 00000000 00:00 0 
+2b26d4d31000-2b26d4e32000 r-xp 00000000 08:03 38929029                   /usr/lib64/libm-2.17.so
+2b26d4e32000-2b26d5031000 ---p 00101000 08:03 38929029                   /usr/lib64/libm-2.17.so
+2b26d5031000-2b26d5032000 r--p 00100000 08:03 38929029                   /usr/lib64/libm-2.17.so
+2b26d5032000-2b26d5033000 rw-p 00101000 08:03 38929029                   /usr/lib64/libm-2.17.so
+2b26d5033000-2b26d5035000 r-xp 00000000 08:03 38929027                   /usr/lib64/libdl-2.17.so
+2b26d5035000-2b26d5235000 ---p 00002000 08:03 38929027                   /usr/lib64/libdl-2.17.so
+2b26d5235000-2b26d5236000 r--p 00002000 08:03 38929027                   /usr/lib64/libdl-2.17.so
+2b26d5236000-2b26d5237000 rw-p 00003000 08:03 38929027                   /usr/lib64/libdl-2.17.so
+2b26d5237000-2b26d53c9000 r-xp 00000000 a73:e3392 162130641050172020     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/lib/libmpifort.so.12.0.0
+2b26d53c9000-2b26d55c9000 ---p 00192000 a73:e3392 162130641050172020     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/lib/libmpifort.so.12.0.0
+2b26d55c9000-2b26d55d1000 rw-p 00192000 a73:e3392 162130641050172020     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/lib/libmpifort.so.12.0.0
+2b26d55d1000-2b26d55f5000 rw-p 00000000 00:00 0 
+2b831b970000-2b831bb6f000 ---p 001c0000 08:03 38932361                   /usr/lib64/libslurm_pmi-20.11.8.so
+2b831bb6f000-2b831bb71000 r--p 001bf000 08:03 38932361                   /usr/lib64/libslurm_pmi-20.11.8.so
+2b831bb71000-2b831bb7b000 rw-p 001c1000 08:03 38932361                   /usr/lib64/libslurm_pmi-20.11.8.so
+2b831bb7b000-2b831bb80000 rw-p 00000000 00:00 0 
+2b831bb80000-2b831bb96000 r-xp 00000000 08:03 38929049                   /usr/lib64/libresolv-2.17.so
+2b831bb96000-2b831bd96000 ---p 00016000 08:03 38929049                   /usr/lib64/libresolv-2.17.so
+2b831bd96000-2b831bd97000 r--p 00016000 08:03 38929049                   /usr/lib64/libresolv-2.17.so
+2b831bd97000-2b831bd98000 rw-p 00017000 08:03 38929049                   /usr/lib64/libresolv-2.17.so
+2b831bd98000-2b831bd9a000 rw-p 00000000 00:00 0 
+2b831bd9a000-2b831bda6000 r-xp 00000000 08:03 38929039                   /usr/lib64/libnss_files-2.17.so
+2b831bda6000-2b831bfa5000 ---p 0000c000 08:03 38929039                   /usr/lib64/libnss_files-2.17.so
+2b831bfa5000-2b831bfa6000 r--p 0000b000 08:03 38929039                   /usr/lib64/libnss_files-2.17.so
+2b831bfa6000-2b831bfa7000 rw-p 0000c000 08:03 38929039                   /usr/lib64/libnss_files-2.17.so
+2b831bfa7000-2b831bfad000 rw-p 00000000 00:00 0 
+2b831bfad000-2b831bfb0000 r-xp 00000000 08:03 39326865                   /usr/lib64/slurm/auth_munge.so
+2b831bfb0000-2b831c1af000 ---p 00003000 08:03 39326865                   /usr/lib64/slurm/auth_munge.so
+2b831c1af000-2b831c1b0000 r--p 00002000 08:03 39326865                   /usr/lib64/slurm/auth_munge.so
+2b831c1b0000-2b831c1b1000 rw-p 00003000 08:03 39326865                   /usr/lib64/slurm/auth_munge.so
+2b831c1b1000-2b831c1b9000 r-xp 00000000 08:03 38932364                   /usr/lib64/libmunge.so.2.0.0
+2b831c1b9000-2b831c3b8000 ---p 00008000 08:03 38932364                   /usr/lib64/libmunge.so.2.0.0
+2b831c3b8000-2b831c3b9000 r--p 00007000 08:03 38932364                   /usr/lib64/libmunge.so.2.0.0
+2b831c3b9000-2b831c3ba000 rw-p 00008000 08:03 38932364                   /usr/lib64/libmunge.so.2.0.0
+2b831c3ba000-2b8415681000 rw-s 00000000 00:12 98756812                   /dev/shm/Intel_MPI_L3l11N (deleted)
+2b8415681000-2b84156c3000 r-xp 00000000 a73:e3392 162130641050171787     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/libfabric/lib/prov/librxm-fi.so
+2b84156c3000-2b84158c2000 ---p 00042000 a73:e3392 162130641050171787     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/libfabric/lib/prov/librxm-fi.so
+2b84158c2000-2b84158d5000 rw-p 00041000 a73:e3392 162130641050171787     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/libfabric/lib/prov/librxm-fi.so
+2b84158d5000-2b841591f000 r-xp 00000000 a73:e3392 162130641050171786     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/libfabric/lib/prov/libsockets-fi.so
+2b841591f000-2b8415b1e000 ---p 0004a000 a73:e3392 162130641050171786     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/libfabric/lib/prov/libsockets-fi.so
+2b8415b1e000-2b8415b21000 rw-p 00049000 a73:e3392 162130641050171786     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/libfabric/lib/prov/libsockets-fi.so
+2b8415b21000-2b8415b22000 ---p 00000000 00:00 0 
+2b8415b22000-2b8415d22000 rw-p 00000000 00:00 0 
+2b8415d22000-2b8415d23000 ---p 00000000 00:00 0 
+2b8415d23000-2b8415f23000 rw-p 00000000 00:00 0 
+2b8415f80000-2b8415f9a000 r-xp 00000000 08:03 38932194                   /usr/lib64/libibverbs.so.1.8.28.0
+2b8415f9a000-2b8416199000 ---p 0001a000 08:03 38932194                   /usr/lib64/libibverbs.so.1.8.28.0
+2b8416199000-2b841619a000 r--p 00019000 08:03 38932194                   /usr/lib64/libibverbs.so.1.8.28.0
+2b841619a000-2b841619b000 rw-p 0001a000 08:03 38932194                   /usr/lib64/libibverbs.so.1.8.28.0
+2aeeb623f000-2aeeb643e000 ---p 00064000 08:03 38929474                   /usr/lib64/libnl-route-3.so.200.23.0
+2aeeb643e000-2aeeb6441000 r--p 00063000 08:03 38929474                   /usr/lib64/libnl-route-3.so.200.23.0
+2aeeb6441000-2aeeb6446000 rw-p 00066000 08:03 38929474                   /usr/lib64/libnl-route-3.so.200.23.0
+2aeeb6446000-2aeeb6448000 rw-p 00000000 00:00 0 
+2aeeb6448000-2aeeb6490000 r-xp 00000000 08:03 38932198                   /usr/lib64/libmlx5.so.1.12.28.0
+2aeeb6490000-2aeeb6690000 ---p 00048000 08:03 38932198                   /usr/lib64/libmlx5.so.1.12.28.0
+2aeeb6690000-2aeeb6691000 r--p 00048000 08:03 38932198                   /usr/lib64/libmlx5.so.1.12.28.0
+2aeeb6691000-2aeeb6692000 rw-p 00049000 08:03 38932198                   /usr/lib64/libmlx5.so.1.12.28.0
+2aeeb6692000-2aeeb6694000 rw-p 00000000 00:00 0 
+2aeeb6694000-2aeeb669f000 r-xp 00000000 08:03 38932196                   /usr/lib64/libmlx4.so.1.0.28.0
+2aeeb669f000-2aeeb689e000 ---p 0000b000 08:03 38932196                   /usr/lib64/libmlx4.so.1.0.28.0
+2aeeb689e000-2aeeb689f000 r--p 0000a000 08:03 38932196                   /usr/lib64/libmlx4.so.1.0.28.0
+2aeeb689f000-2aeeb68a0000 rw-p 0000b000 08:03 38932196                   /usr/lib64/libmlx4.so.1.0.28.0
+2aeeb68a0000-2aeeb6ac1000 rw-p 00000000 00:00 0 
+2aeeb6b76000-2aeeb73d2000 rw-p 00000000 00:00 0 
+2aeeb8000000-2aeeb8021000 rw-p 00000000 00:00 0 
+2aeeb8021000-2aeebc000000 ---p 00000000 00:00 0 
+7f0000000000-7f0003000000 rw-p 00000000 00:00 0 
+7f1000000000-7f1000200000 rw-p 00000000 00:00 0 
+7f2000000000-7f2002200000 rw-p 00000000 00:00 0 
+7ffd27341000-7ffd27371000 rw-p 00000000 00:00 0                          [stack]
+7ffd273f8000-7ffd273fa000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+*** Error in `/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta': malloc(): memory corruption: 0x0000000004fbe700 ***
+======= Backtrace: =========
+/lib64/libc.so.6(+0x82b36)[0x2ab68df00b36]
+/lib64/libc.so.6(__libc_malloc+0x4c)[0x2ab68df0378c]
+/lib64/libc.so.6(catopen+0xf3)[0x2ab68deb2cf3]
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x1a83f26]
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x1a90af3]
+/lib64/libpthread.so.0(+0xf630)[0x2ab68c017630]
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x1cec000]
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x1ce221f]
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x1d03fd3]
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x2301a9f]
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x1e54fee]
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x1b43a2a]
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x1b401b5]
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x40be22]
+/lib64/libc.so.6(__libc_start_main+0xf5)[0x2ab68dea0555]
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x40bd29]
+======= Memory map: ========
+2b26d55f5000-2b26d64f7000 r-xp 00000000 a73:e3392 162130641050172012     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/lib/release/libmpi.so.12.0.0
+2b26d64f7000-2b26d66f7000 ---p 00f02000 a73:e3392 162130641050172012     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/lib/release/libmpi.so.12.0.0
+2b26d66f7000-2b26d6716000 rw-p 00f02000 a73:e3392 162130641050172012     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/lib/release/libmpi.so.12.0.0
+2b26d6716000-2b26d6783000 rw-p 00000000 00:00 0 
+2b26d6783000-2b26d678a000 r-xp 00000000 08:03 38929051                   /usr/lib64/librt-2.17.so
+2b26d678a000-2b26d6989000 ---p 00007000 08:03 38929051                   /usr/lib64/librt-2.17.so
+2b26d6989000-2b26d698a000 r--p 00006000 08:03 38929051                   /usr/lib64/librt-2.17.so
+2b26d698a000-2b26d698b000 rw-p 00007000 08:03 38929051                   /usr/lib64/librt-2.17.so
+2b26d698b000-2b26d6b4f000 r-xp 00000000 08:03 38929021                   /usr/lib64/libc-2.17.so
+2b26d6b4f000-2b26d6d4e000 ---p 001c4000 08:03 38929021                   /usr/lib64/libc-2.17.so
+2b26d6d4e000-2b26d6d52000 r--p 001c3000 08:03 38929021                   /usr/lib64/libc-2.17.so
+2b26d6d52000-2b26d6d54000 rw-p 001c7000 08:03 38929021                   /usr/lib64/libc-2.17.so
+2b26d6d54000-2b26d6d59000 rw-p 00000000 00:00 0 
+2b26d6d59000-2b26d6d6e000 r-xp 00000000 08:03 38928403                   /usr/lib64/libgcc_s-4.8.5-20150702.so.1
+2b26d6d6e000-2b26d6f6d000 ---p 00015000 08:03 38928403                   /usr/lib64/libgcc_s-4.8.5-20150702.so.1
+2b26d6f6d000-2b26d6f6e000 r--p 00014000 08:03 38928403                   /usr/lib64/libgcc_s-4.8.5-20150702.so.1
+2b26d6f6e000-2b26d6f6f000 rw-p 00015000 08:03 38928403                   /usr/lib64/libgcc_s-4.8.5-20150702.so.1
+2b26d6f6f000-2b26d6fa5000 r-xp 00000000 a73:e3392 162130641050171789     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/libfabric/lib/libfabric.so.1
+2b26d6fa5000-2b26d71a4000 ---p 00036000 a73:e3392 162130641050171789     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/libfabric/lib/libfabric.so.1
+2b26d71a4000-2b26d71a7000 rw-p 00035000 a73:e3392 162130641050171789     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/libfabric/lib/libfabric.so.1
+2b26d71a7000-2b26d71b1000 r-xp 00000000 08:03 38930825                   /usr/lib64/libnuma.so.1.0.0
+2b26d71b1000-2b26d73b1000 ---p 0000a000 08:03 38930825                   /usr/lib64/libnuma.so.1.0.0
+2b26d73b1000-2b26d73b2000 r--p 0000a000 08:03 38930825                   /usr/lib64/libnuma.so.1.0.0
+2b26d73b2000-2b26d73b3000 rw-p 0000b000 08:03 38930825                   /usr/lib64/libnuma.so.1.0.0
+2b26d73b3000-2b26d73b8000 r-xp 00000000 08:03 38936419                   /usr/lib64/libpmi.so.0.0.0
+2b26d73b8000-2b26d75b7000 ---p 00005000 08:03 38936419                   /usr/lib64/libpmi.so.0.0.0
+2b26d75b7000-2b26d75b8000 r--p 00004000 08:03 38936419                   /usr/lib64/libpmi.so.0.0.0
+2b26d75b8000-2b26d75b9000 rw-p 00005000 08:03 38936419                   /usr/lib64/libpmi.so.0.0.0
+2b26d75b9000-2b26d7779000 r-xp 00000000 08:03 38932361                   /usr/lib64/libslurm_pmi-20.11.8.so
+2b26d7779000-2b26d7978000 ---p 001c0000 08:03 38932361                   /usr/lib64/libslurm_pmi-20.11.8.so
+2b26d7978000-2b26d797a000 r--p 001bf000 08:03 38932361                   /usr/lib64/libslurm_pmi-20.11.8.so
+2b26d797a000-2b26d7984000 rw-p 001c1000 08:03 38932361                   /usr/lib64/libslurm_pmi-20.11.8.so
+2b26d7984000-2b26d7989000 rw-p 00000000 00:00 0 
+2b26d7989000-2b26d799f000 r-xp 00000000 08:03 38929049                   /usr/lib64/libresolv-2.17.so
+2b26d799f000-2b26d7b9f000 ---p 00016000 08:03 38929049                   /usr/lib64/libresolv-2.17.so
+2b841619b000-2b84161b9000 r-xp 00000000 08:03 38929466                   /usr/lib64/libnl-3.so.200.23.0
+2b84161b9000-2b84163b9000 ---p 0001e000 08:03 38929466                   /usr/lib64/libnl-3.so.200.23.0
+2b84163b9000-2b84163bb000 r--p 0001e000 08:03 38929466                   /usr/lib64/libnl-3.so.200.23.0
+2b84163bb000-2b84163bc000 rw-p 00020000 08:03 38929466                   /usr/lib64/libnl-3.so.200.23.0
+2b84163bc000-2b8416420000 r-xp 00000000 08:03 38929474                   /usr/lib64/libnl-route-3.so.200.23.0
+2b8416420000-2b841661f000 ---p 00064000 08:03 38929474                   /usr/lib64/libnl-route-3.so.200.23.0
+2b841661f000-2b8416622000 r--p 00063000 08:03 38929474                   /usr/lib64/libnl-route-3.so.200.23.0
+2b8416622000-2b8416627000 rw-p 00066000 08:03 38929474                   /usr/lib64/libnl-route-3.so.200.23.0
+2b8416627000-2b8416629000 rw-p 00000000 00:00 0 
+2b8416629000-2b8416671000 r-xp 00000000 08:03 38932198                   /usr/lib64/libmlx5.so.1.12.28.0
+2b8416671000-2b8416871000 ---p 00048000 08:03 38932198                   /usr/lib64/libmlx5.so.1.12.28.0
+2b8416871000-2b8416872000 r--p 00048000 08:03 38932198                   /usr/lib64/libmlx5.so.1.12.28.0
+2b8416872000-2b8416873000 rw-p 00049000 08:03 38932198                   /usr/lib64/libmlx5.so.1.12.28.0
+2b8416873000-2b8416875000 rw-p 00000000 00:00 0 
+2b8416875000-2b8416880000 r-xp 00000000 08:03 38932196                   /usr/lib64/libmlx4.so.1.0.28.0
+2b8416880000-2b8416a7f000 ---p 0000b000 08:03 38932196                   /usr/lib64/libmlx4.so.1.0.28.0
+2b8416a7f000-2b8416a80000 r--p 0000a000 08:03 38932196                   /usr/lib64/libmlx4.so.1.0.28.0
+2b8416a80000-2b8416a81000 rw-p 0000b000 08:03 38932196                   /usr/lib64/libmlx4.so.1.0.28.0
+2b8416a81000-2b8416d15000 rw-p 00000000 00:00 0 
+2b8416d57000-2b84175b3000 rw-p 00000000 00:00 0 
+2b8418000000-2b8418021000 rw-p 00000000 00:00 0 
+2b8418021000-2b841c000000 ---p 00000000 00:00 0 
+7f0000000000-7f0003000000 rw-p 00000000 00:00 0 
+7f1000000000-7f1000200000 rw-p 00000000 00:00 0 
+7f2000000000-7f2002200000 rw-p 00000000 00:00 0 
+7ffc32020000-7ffc32051000 rw-p 00000000 00:00 0                          [stack]
+7ffc321a5000-7ffc321a7000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+*** Error in `/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta': malloc(): memory corruption: 0x00000000051c3d80 ***
+======= Backtrace: =========
+/lib64/libc.so.6(+0x82b36)[0x2b7b1d18bb36]
+/lib64/libc.so.6(__libc_malloc+0x4c)[0x2b7b1d18e78c]
+/lib64/libc.so.6(catopen+0xf3)[0x2b7b1d13dcf3]
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x1a83f26]
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x1a90af3]
+/lib64/libpthread.so.0(+0xf630)[0x2b7b1b2a2630]
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x1cec000]
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x1ce221f]
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x1d03fd3]
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x2301a9f]
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x1e54fee]
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x1b43a2a]
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x1b401b5]
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x40be22]
+/lib64/libc.so.6(__libc_start_main+0xf5)[0x2b7b1d12b555]
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x40bd29]
+======= Memory map: ========
+00400000-025c8000 r-xp 00000000 a73:e3392 162134922478240464             /scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/siesta
+027c8000-027d0000 r--p 021c8000 a73:e3392 162134922478240464             /scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/siesta
+027d0000-0283a000 rw-p 021d0000 a73:e3392 162134922478240464             /scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/siesta
+0283a000-039ff000 rw-p 00000000 00:00 0 
+04fa1000-054f2000 rw-p 00000000 00:00 0                                  [heap]
+2b7b1b06f000-2b7b1b091000 r-xp 00000000 08:03 38932298                   /usr/lib64/ld-2.17.so
+2b7b1b091000-2b7b1b0a3000 rw-p 00000000 00:00 0 
+2b7b1b0a3000-2b7b1b0a4000 -w-s 00000000 00:05 40965                      /dev/infiniband/uverbs0
+2b7b1b0a4000-2b7b1b0a5000 -w-s 00001000 00:05 40965                      /dev/infiniband/uverbs0
+2b7b1b0a5000-2b7b1b0a6000 -w-s 00002000 00:05 40965                      /dev/infiniband/uverbs0
+2b7b1b0a6000-2b7b1b0a7000 -w-s 00003000 00:05 40965                      /dev/infiniband/uverbs0
+2b7b1b0a7000-2b7b1b0a8000 -w-s 00004000 00:05 40965                      /dev/infiniband/uverbs0
+2b7b1b0a8000-2b7b1b0a9000 -w-s 00005000 00:05 40965                      /dev/infiniband/uverbs0
+2b7b1b0a9000-2b7b1b0aa000 -w-s 00006000 00:05 40965                      /dev/infiniband/uverbs0
+2b7b1b0aa000-2b7b1b0ab000 -w-s 00007000 00:05 40965                      /dev/infiniband/uverbs0
+2b7b1b0ab000-2b7b1b0ac000 r--s 00500000 00:05 40965                      /dev/infiniband/uverbs0
+2b7b1b0ac000-2b7b1b0ad000 r--s 00700000 00:05 40965                      /dev/infiniband/uverbs0
+2b7b1b0ad000-2b7b1b0bc000 rw-p 00000000 00:00 0 
+2b7b1b0bc000-2b7b1b17b000 rw-s 00000000 00:12 98758354                   /dev/shm/Intel_MPI_nCmx7M (deleted)
+2b7b1b17b000-2b7b1b23a000 rw-s 00000000 00:12 98677349                   /dev/shm/Intel_MPI_0CfMPi (deleted)
+2b7b1b290000-2b7b1b291000 r--p 00021000 08:03 38932298                   /usr/lib64/ld-2.17.so
+2b7b1b291000-2b7b1b292000 rw-p 00022000 08:03 38932298                   /usr/lib64/ld-2.17.so
+2b7b1b292000-2b7b1b293000 rw-p 00000000 00:00 0 
+2b7b1b293000-2b7b1b2aa000 r-xp 00000000 08:03 38929047                   /usr/lib64/libpthread-2.17.so
+2b7b1b2aa000-2b7b1b4a9000 ---p 00017000 08:03 38929047                   /usr/lib64/libpthread-2.17.so
+2b7b1b4a9000-2b7b1b4aa000 r--p 00016000 08:03 38929047                   /usr/lib64/libpthread-2.17.so
+00400000-025c8000 r-xp 00000000 a73:e3392 162134922478240464             /scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/siesta
+027c8000-027d0000 r--p 021c8000 a73:e3392 162134922478240464             /scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/siesta
+027d0000-0283a000 rw-p 021d0000 a73:e3392 162134922478240464             /scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/siesta
+0283a000-039ff000 rw-p 00000000 00:00 0 
+04dab000-05328000 rw-p 00000000 00:00 0                                  [heap]
+2ab68bde4000-2ab68be06000 r-xp 00000000 08:03 38932298                   /usr/lib64/ld-2.17.so
+2ab68be06000-2ab68be08000 r-xp 00000000 00:00 0                          [vdso]
+2ab68be08000-2ab68be1a000 rw-p 00000000 00:00 0 
+2ab68be1a000-2ab68be1b000 -w-s 00000000 00:05 40965                      /dev/infiniband/uverbs0
+2ab68be1b000-2ab68be1c000 -w-s 00001000 00:05 40965                      /dev/infiniband/uverbs0
+2ab68be1c000-2ab68be1d000 -w-s 00002000 00:05 40965                      /dev/infiniband/uverbs0
+2ab68be1d000-2ab68be1e000 -w-s 00003000 00:05 40965                      /dev/infiniband/uverbs0
+2ab68be1e000-2ab68be1f000 -w-s 00004000 00:05 40965                      /dev/infiniband/uverbs0
+2ab68be1f000-2ab68be20000 -w-s 00005000 00:05 40965                      /dev/infiniband/uverbs0
+2ab68be20000-2ab68be21000 -w-s 00006000 00:05 40965                      /dev/infiniband/uverbs0
+2ab68be21000-2ab68be22000 -w-s 00007000 00:05 40965                      /dev/infiniband/uverbs0
+2ab68be22000-2ab68be23000 r--s 00500000 00:05 40965                      /dev/infiniband/uverbs0
+2ab68be23000-2ab68be24000 r--s 00700000 00:05 40965                      /dev/infiniband/uverbs0
+2ab68be24000-2ab68be33000 rw-p 00000000 00:00 0 
+2ab68be33000-2ab68bef2000 rw-s 00000000 00:12 98758354                   /dev/shm/Intel_MPI_nCmx7M (deleted)
+2ab68bef2000-2ab68bfb1000 rw-s 00000000 00:12 98677349                   /dev/shm/Intel_MPI_0CfMPi (deleted)
+2ab68c005000-2ab68c006000 r--p 00021000 08:03 38932298                   /usr/lib64/ld-2.17.so
+2ab68c006000-2ab68c007000 rw-p 00022000 08:03 38932298                   /usr/lib64/ld-2.17.so
+2ab68c007000-2ab68c008000 rw-p 00000000 00:00 0 
+2ab68c008000-2ab68c01f000 r-xp 00000000 08:03 38929047                   /usr/lib64/libpthread-2.17.so
+2ab68c01f000-2ab68c21e000 ---p 00017000 08:03 38929047                   /usr/lib64/libpthread-2.17.so
+2ab68c21e000-2ab68c21f000 r--p 00016000 08:03 38929047                   /usr/lib64/libpthread-2.17.so
+2ab68c21f000-2ab68c220000 rw-p 00017000 08:03 38929047                   /usr/lib64/libpthread-2.17.so
+2ab68c220000-2ab68c224000 rw-p 00000000 00:00 0 
+2ab68c224000-2ab68c325000 r-xp 00000000 08:03 38929029                   /usr/lib64/libm-2.17.so
+2ab68c325000-2ab68c524000 ---p 00101000 08:03 38929029                   /usr/lib64/libm-2.17.so
+2ab68c524000-2ab68c525000 r--p 00100000 08:03 38929029                   /usr/lib64/libm-2.17.so
+2ab68c525000-2ab68c526000 rw-p 00101000 08:03 38929029                   /usr/lib64/libm-2.17.so
+2ab68c526000-2ab68c528000 r-xp 00000000 08:03 38929027                   /usr/lib64/libdl-2.17.so
+2ab68c528000-2ab68c728000 ---p 00002000 08:03 38929027                   /usr/lib64/libdl-2.17.so
+2ab68c728000-2ab68c729000 r--p 00002000 08:03 38929027                   /usr/lib64/libdl-2.17.so
+2ab68c729000-2ab68c72a000 rw-p 00003000 08:03 38929027                   /usr/lib64/libdl-2.17.so
+2ab68c72a000-2ab68c8bc000 r-xp 00000000 a73:e3392 162130641050172020     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/lib/libmpifort.so.12.0.0
+2ab68c8bc000-2ab68cabc000 ---p 00192000 a73:e3392 162130641050172020     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/lib/libmpifort.so.12.0.0
+2ab68cabc000-2ab68cac4000 rw-p 00192000 a73:e3392 162130641050172020     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/lib/libmpifort.so.12.0.0
+2b26d7b9f000-2b26d7ba0000 r--p 00016000 08:03 38929049                   /usr/lib64/libresolv-2.17.so
+2b26d7ba0000-2b26d7ba1000 rw-p 00017000 08:03 38929049                   /usr/lib64/libresolv-2.17.so
+2b26d7ba1000-2b26d7ba3000 rw-p 00000000 00:00 0 
+2b26d7ba3000-2b26d7baf000 r-xp 00000000 08:03 38929039                   /usr/lib64/libnss_files-2.17.so
+2b26d7baf000-2b26d7dae000 ---p 0000c000 08:03 38929039                   /usr/lib64/libnss_files-2.17.so
+2b26d7dae000-2b26d7daf000 r--p 0000b000 08:03 38929039                   /usr/lib64/libnss_files-2.17.so
+2b26d7daf000-2b26d7db0000 rw-p 0000c000 08:03 38929039                   /usr/lib64/libnss_files-2.17.so
+2b26d7db0000-2b26d7db6000 rw-p 00000000 00:00 0 
+2b26d7db6000-2b26d7db9000 r-xp 00000000 08:03 39326865                   /usr/lib64/slurm/auth_munge.so
+2b26d7db9000-2b26d7fb8000 ---p 00003000 08:03 39326865                   /usr/lib64/slurm/auth_munge.so
+2b26d7fb8000-2b26d7fb9000 r--p 00002000 08:03 39326865                   /usr/lib64/slurm/auth_munge.so
+2b26d7fb9000-2b26d7fba000 rw-p 00003000 08:03 39326865                   /usr/lib64/slurm/auth_munge.so
+2b26d7fba000-2b26d7fc2000 r-xp 00000000 08:03 38932364                   /usr/lib64/libmunge.so.2.0.0
+2b26d7fc2000-2b26d81c1000 ---p 00008000 08:03 38932364                   /usr/lib64/libmunge.so.2.0.0
+2b26d81c1000-2b26d81c2000 r--p 00007000 08:03 38932364                   /usr/lib64/libmunge.so.2.0.0
+2b26d81c2000-2b26d81c3000 rw-p 00008000 08:03 38932364                   /usr/lib64/libmunge.so.2.0.0
+2b26d81c3000-2b27d148a000 rw-s 00000000 00:12 98756812                   /dev/shm/Intel_MPI_L3l11N (deleted)
+2b27d148a000-2b27d14cc000 r-xp 00000000 a73:e3392 162130641050171787     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/libfabric/lib/prov/librxm-fi.so
+2b27d14cc000-2b27d16cb000 ---p 00042000 a73:e3392 162130641050171787     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/libfabric/lib/prov/librxm-fi.so
+2b27d16cb000-2b27d16de000 rw-p 00041000 a73:e3392 162130641050171787     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/libfabric/lib/prov/librxm-fi.so
+2b27d16de000-2b27d1728000 r-xp 00000000 a73:e3392 162130641050171786     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/libfabric/lib/prov/libsockets-fi.so
+2b27d1728000-2b27d1927000 ---p 0004a000 a73:e3392 162130641050171786     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/libfabric/lib/prov/libsockets-fi.so
+2b27d1927000-2b27d192a000 rw-p 00049000 a73:e3392 162130641050171786     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/libfabric/lib/prov/libsockets-fi.so
+2b27d192a000-2b27d192b000 ---p 00000000 00:00 0 
+2b27d192b000-2b27d1b2b000 rw-p 00000000 00:00 0 
+2b27d1b2b000-2b27d1b2c000 ---p 00000000 00:00 0 
+2b27d1b2c000-2b27d1d2c000 rw-p 00000000 00:00 0 
+2b27d1d89000-2b27d1da3000 r-xp 00000000 08:03 38932194                   /usr/lib64/libibverbs.so.1.8.28.0
+2b27d1da3000-2b27d1fa2000 ---p 0001a000 08:03 38932194                   /usr/lib64/libibverbs.so.1.8.28.0
+2b27d1fa2000-2b27d1fa3000 r--p 00019000 08:03 38932194                   /usr/lib64/libibverbs.so.1.8.28.0
+2b27d1fa3000-2b27d1fa4000 rw-p 0001a000 08:03 38932194                   /usr/lib64/libibverbs.so.1.8.28.0
+2b27d1fa4000-2b27d1fc2000 r-xp 00000000 08:03 38929466                   /usr/lib64/libnl-3.so.200.23.0
+2b27d1fc2000-2b27d21c2000 ---p 0001e000 08:03 38929466                   /usr/lib64/libnl-3.so.200.23.0
+2b27d21c2000-2b27d21c4000 r--p 0001e000 08:03 38929466                   /usr/lib64/libnl-3.so.200.23.0
+2b27d21c4000-2b27d21c5000 rw-p 00020000 08:03 38929466                   /usr/lib64/libnl-3.so.200.23.0
+2b27d21c5000-2b27d2229000 r-xp 00000000 08:03 38929474                   /usr/lib64/libnl-route-3.so.200.23.0
+2b7b1b4aa000-2b7b1b4ab000 rw-p 00017000 08:03 38929047                   /usr/lib64/libpthread-2.17.so
+2b7b1b4ab000-2b7b1b4af000 rw-p 00000000 00:00 0 
+2b7b1b4af000-2b7b1b5b0000 r-xp 00000000 08:03 38929029                   /usr/lib64/libm-2.17.so
+2b7b1b5b0000-2b7b1b7af000 ---p 00101000 08:03 38929029                   /usr/lib64/libm-2.17.so
+2b7b1b7af000-2b7b1b7b0000 r--p 00100000 08:03 38929029                   /usr/lib64/libm-2.17.so
+2b7b1b7b0000-2b7b1b7b1000 rw-p 00101000 08:03 38929029                   /usr/lib64/libm-2.17.so
+2b7b1b7b1000-2b7b1b7b3000 r-xp 00000000 08:03 38929027                   /usr/lib64/libdl-2.17.so
+2b7b1b7b3000-2b7b1b9b3000 ---p 00002000 08:03 38929027                   /usr/lib64/libdl-2.17.so
+2b7b1b9b3000-2b7b1b9b4000 r--p 00002000 08:03 38929027                   /usr/lib64/libdl-2.17.so
+2b7b1b9b4000-2b7b1b9b5000 rw-p 00003000 08:03 38929027                   /usr/lib64/libdl-2.17.so
+2b7b1b9b5000-2b7b1bb47000 r-xp 00000000 a73:e3392 162130641050172020     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/lib/libmpifort.so.12.0.0
+2b7b1bb47000-2b7b1bd47000 ---p 00192000 a73:e3392 162130641050172020     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/lib/libmpifort.so.12.0.0
+2b7b1bd47000-2b7b1bd4f000 rw-p 00192000 a73:e3392 162130641050172020     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/lib/libmpifort.so.12.0.0
+2b7b1bd4f000-2b7b1bd73000 rw-p 00000000 00:00 0 
+2b7b1bd73000-2b7b1cc75000 r-xp 00000000 a73:e3392 162130641050172012     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/lib/release/libmpi.so.12.0.0
+2b7b1cc75000-2b7b1ce75000 ---p 00f02000 a73:e3392 162130641050172012     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/lib/release/libmpi.so.12.0.0
+2b7b1ce75000-2b7b1ce94000 rw-p 00f02000 a73:e3392 162130641050172012     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/lib/release/libmpi.so.12.0.0
+2b7b1ce94000-2b7b1cf01000 rw-p 00000000 00:00 0 
+2b7b1cf01000-2b7b1cf08000 r-xp 00000000 08:03 38929051                   /usr/lib64/librt-2.17.so
+2b7b1cf08000-2b7b1d107000 ---p 00007000 08:03 38929051                   /usr/lib64/librt-2.17.so
+2b7b1d107000-2b7b1d108000 r--p 00006000 08:03 38929051                   /usr/lib64/librt-2.17.so
+2b7b1d108000-2b7b1d109000 rw-p 00007000 08:03 38929051                   /usr/lib64/librt-2.17.so
+2b7b1d109000-2b7b1d2cd000 r-xp 00000000 08:03 38929021                   /usr/lib64/libc-2.17.so
+2b7b1d2cd000-2b7b1d4cc000 ---p 001c4000 08:03 38929021                   /usr/lib64/libc-2.17.so
+2b7b1d4cc000-2b7b1d4d0000 r--p 001c3000 08:03 38929021                   /usr/lib64/libc-2.17.so
+2b7b1d4d0000-2b7b1d4d2000 rw-p 001c7000 08:03 38929021                   /usr/lib64/libc-2.17.so
+2b7b1d4d2000-2b7b1d4d7000 rw-p 00000000 00:00 0 
+2b7b1d4d7000-2b7b1d4ec000 r-xp 00000000 08:03 38928403                   /usr/lib64/libgcc_s-4.8.5-20150702.so.1
+2b7b1d4ec000-2b7b1d6eb000 ---p 00015000 08:03 38928403                   /usr/lib64/libgcc_s-4.8.5-20150702.so.1
+2b7b1d6eb000-2b7b1d6ec000 r--p 00014000 08:03 38928403                   /usr/lib64/libgcc_s-4.8.5-20150702.so.1
+2b7b1d6ec000-2b7b1d6ed000 rw-p 00015000 08:03 38928403                   /usr/lib64/libgcc_s-4.8.5-20150702.so.1
+2b7b1d6ed000-2b7b1d723000 r-xp 00000000 a73:e3392 162130641050171789     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/libfabric/lib/libfabric.so.1
+2b7b1d723000-2b7b1d922000 ---p 00036000 a73:e3392 162130641050171789     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/libfabric/lib/libfabric.so.1
+2b7b1d922000-2b7b1d925000 rw-p 00035000 a73:e3392 162130641050171789     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/libfabric/lib/libfabric.so.1
+*** Error in `/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta': malloc(): memory corruption: 0x0000000004b22670 ***
+2ab68cac4000-2ab68cae8000 rw-p 00000000 00:00 0 
+2ab68cae8000-2ab68d9ea000 r-xp 00000000 a73:e3392 162130641050172012     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/lib/release/libmpi.so.12.0.0
+2ab68d9ea000-2ab68dbea000 ---p 00f02000 a73:e3392 162130641050172012     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/lib/release/libmpi.so.12.0.0
+2ab68dbea000-2ab68dc09000 rw-p 00f02000 a73:e3392 162130641050172012     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/lib/release/libmpi.so.12.0.0
+2ab68dc09000-2ab68dc76000 rw-p 00000000 00:00 0 
+2ab68dc76000-2ab68dc7d000 r-xp 00000000 08:03 38929051                   /usr/lib64/librt-2.17.so
+2ab68dc7d000-2ab68de7c000 ---p 00007000 08:03 38929051                   /usr/lib64/librt-2.17.so
+2ab68de7c000-2ab68de7d000 r--p 00006000 08:03 38929051                   /usr/lib64/librt-2.17.so
+2ab68de7d000-2ab68de7e000 rw-p 00007000 08:03 38929051                   /usr/lib64/librt-2.17.so
+2ab68de7e000-2ab68e042000 r-xp 00000000 08:03 38929021                   /usr/lib64/libc-2.17.so
+2ab68e042000-2ab68e241000 ---p 001c4000 08:03 38929021                   /usr/lib64/libc-2.17.so
+2ab68e241000-2ab68e245000 r--p 001c3000 08:03 38929021                   /usr/lib64/libc-2.17.so
+2ab68e245000-2ab68e247000 rw-p 001c7000 08:03 38929021                   /usr/lib64/libc-2.17.so
+2ab68e247000-2ab68e24c000 rw-p 00000000 00:00 0 
+2ab68e24c000-2ab68e261000 r-xp 00000000 08:03 38928403                   /usr/lib64/libgcc_s-4.8.5-20150702.so.1
+2ab68e261000-2ab68e460000 ---p 00015000 08:03 38928403                   /usr/lib64/libgcc_s-4.8.5-20150702.so.1
+2ab68e460000-2ab68e461000 r--p 00014000 08:03 38928403                   /usr/lib64/libgcc_s-4.8.5-20150702.so.1
+2ab68e461000-2ab68e462000 rw-p 00015000 08:03 38928403                   /usr/lib64/libgcc_s-4.8.5-20150702.so.1
+2ab68e462000-2ab68e498000 r-xp 00000000 a73:e3392 162130641050171789     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/libfabric/lib/libfabric.so.1
+2ab68e498000-2ab68e697000 ---p 00036000 a73:e3392 162130641050171789     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/libfabric/lib/libfabric.so.1
+2ab68e697000-2ab68e69a000 rw-p 00035000 a73:e3392 162130641050171789     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/libfabric/lib/libfabric.so.1
+2ab68e69a000-2ab68e6a4000 r-xp 00000000 08:03 38930825                   /usr/lib64/libnuma.so.1.0.0
+2ab68e6a4000-2ab68e8a4000 ---p 0000a000 08:03 38930825                   /usr/lib64/libnuma.so.1.0.0
+2ab68e8a4000-2ab68e8a5000 r--p 0000a000 08:03 38930825                   /usr/lib64/libnuma.so.1.0.0
+2ab68e8a5000-2ab68e8a6000 rw-p 0000b000 08:03 38930825                   /usr/lib64/libnuma.so.1.0.0
+2ab68e8a6000-2ab68e8ab000 r-xp 00000000 08:03 38936419                   /usr/lib64/libpmi.so.0.0.0
+2ab68e8ab000-2ab68eaaa000 ---p 00005000 08:03 38936419                   /usr/lib64/libpmi.so.0.0.0
+2ab68eaaa000-2ab68eaab000 r--p 00004000 08:03 38936419                   /usr/lib64/libpmi.so.0.0.0
+2ab68eaab000-2ab68eaac000 rw-p 00005000 08:03 38936419                   /usr/lib64/libpmi.so.0.0.0
+2ab68eaac000-2ab68ec6c000 r-xp 00000000 08:03 38932361                   /usr/lib64/libslurm_pmi-20.11.8.so
+2ab68ec6c000-2ab68ee6b000 ---p 001c0000 08:03 38932361                   /usr/lib64/libslurm_pmi-20.11.8.so
+2ab68ee6b000-2ab68ee6d000 r--p 001bf000 08:03 38932361                   /usr/lib64/libslurm_pmi-20.11.8.so
+2ab68ee6d000-2ab68ee77000 rw-p 001c1000 08:03 38932361                   /usr/lib64/libslurm_pmi-20.11.8.so
+2ab68ee77000-2ab68ee7c000 rw-p 00000000 00:00 0 
+2ab68ee7c000-2ab68ee92000 r-xp 00000000 08:03 38929049                   /usr/lib64/libresolv-2.17.so
+2ab68ee92000-2ab68f092000 ---p 00016000 08:03 38929049                   /usr/lib64/libresolv-2.17.so
+2b27d2229000-2b27d2428000 ---p 00064000 08:03 38929474                   /usr/lib64/libnl-route-3.so.200.23.0
+2b27d2428000-2b27d242b000 r--p 00063000 08:03 38929474                   /usr/lib64/libnl-route-3.so.200.23.0
+2b27d242b000-2b27d2430000 rw-p 00066000 08:03 38929474                   /usr/lib64/libnl-route-3.so.200.23.0
+2b27d2430000-2b27d2432000 rw-p 00000000 00:00 0 
+2b27d2432000-2b27d247a000 r-xp 00000000 08:03 38932198                   /usr/lib64/libmlx5.so.1.12.28.0
+2b27d247a000-2b27d267a000 ---p 00048000 08:03 38932198                   /usr/lib64/libmlx5.so.1.12.28.0
+2b27d267a000-2b27d267b000 r--p 00048000 08:03 38932198                   /usr/lib64/libmlx5.so.1.12.28.0
+2b27d267b000-2b27d267c000 rw-p 00049000 08:03 38932198                   /usr/lib64/libmlx5.so.1.12.28.0
+2b27d267c000-2b27d267e000 rw-p 00000000 00:00 0 
+2b27d267e000-2b27d2689000 r-xp 00000000 08:03 38932196                   /usr/lib64/libmlx4.so.1.0.28.0
+2b27d2689000-2b27d2888000 ---p 0000b000 08:03 38932196                   /usr/lib64/libmlx4.so.1.0.28.0
+2b27d2888000-2b27d2889000 r--p 0000a000 08:03 38932196                   /usr/lib64/libmlx4.so.1.0.28.0
+2b27d2889000-2b27d288a000 rw-p 0000b000 08:03 38932196                   /usr/lib64/libmlx4.so.1.0.28.0
+2b27d288a000-2b27d3472000 rw-p 00000000 00:00 0 
+2b27d4000000-2b27d4021000 rw-p 00000000 00:00 0 
+2b27d4021000-2b27d8000000 ---p 00000000 00:00 0 
+7f0000000000-7f0003000000 rw-p 00000000 00:00 0 
+7f1000000000-7f1000200000 rw-p 00000000 00:00 0 
+7f2000000000-7f2002200000 rw-p 00000000 00:00 0 
+7ffd9e087000-7ffd9e0b6000 rw-p 00000000 00:00 0                          [stack]
+7ffd9e1e4000-7ffd9e1e6000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+2b7b1d925000-2b7b1d92f000 r-xp 00000000 08:03 38930825                   /usr/lib64/libnuma.so.1.0.0
+2b7b1d92f000-2b7b1db2f000 ---p 0000a000 08:03 38930825                   /usr/lib64/libnuma.so.1.0.0
+2b7b1db2f000-2b7b1db30000 r--p 0000a000 08:03 38930825                   /usr/lib64/libnuma.so.1.0.0
+2b7b1db30000-2b7b1db31000 rw-p 0000b000 08:03 38930825                   /usr/lib64/libnuma.so.1.0.0
+2b7b1db31000-2b7b1db36000 r-xp 00000000 08:03 38936419                   /usr/lib64/libpmi.so.0.0.0
+2b7b1db36000-2b7b1dd35000 ---p 00005000 08:03 38936419                   /usr/lib64/libpmi.so.0.0.0
+2b7b1dd35000-2b7b1dd36000 r--p 00004000 08:03 38936419                   /usr/lib64/libpmi.so.0.0.0
+2b7b1dd36000-2b7b1dd37000 rw-p 00005000 08:03 38936419                   /usr/lib64/libpmi.so.0.0.0
+2b7b1dd37000-2b7b1def7000 r-xp 00000000 08:03 38932361                   /usr/lib64/libslurm_pmi-20.11.8.so
+2b7b1def7000-2b7b1e0f6000 ---p 001c0000 08:03 38932361                   /usr/lib64/libslurm_pmi-20.11.8.so
+2b7b1e0f6000-2b7b1e0f8000 r--p 001bf000 08:03 38932361                   /usr/lib64/libslurm_pmi-20.11.8.so
+2b7b1e0f8000-2b7b1e102000 rw-p 001c1000 08:03 38932361                   /usr/lib64/libslurm_pmi-20.11.8.so
+2b7b1e102000-2b7b1e107000 rw-p 00000000 00:00 0 
+2b7b1e107000-2b7b1e11d000 r-xp 00000000 08:03 38929049                   /usr/lib64/libresolv-2.17.so
+2b7b1e11d000-2b7b1e31d000 ---p 00016000 08:03 38929049                   /usr/lib64/libresolv-2.17.so
+2b7b1e31d000-2b7b1e31e000 r--p 00016000 08:03 38929049                   /usr/lib64/libresolv-2.17.so
+2b7b1e31e000-2b7b1e31f000 rw-p 00017000 08:03 38929049                   /usr/lib64/libresolv-2.17.so
+2b7b1e31f000-2b7b1e321000 rw-p 00000000 00:00 0 
+2b7b1e321000-2b7b1e32d000 r-xp 00000000 08:03 38929039                   /usr/lib64/libnss_files-2.17.so
+2b7b1e32d000-2b7b1e52c000 ---p 0000c000 08:03 38929039                   /usr/lib64/libnss_files-2.17.so
+2b7b1e52c000-2b7b1e52d000 r--p 0000b000 08:03 38929039                   /usr/lib64/libnss_files-2.17.so
+2b7b1e52d000-2b7b1e52e000 rw-p 0000c000 08:03 38929039                   /usr/lib64/libnss_files-2.17.so
+2b7b1e52e000-2b7b1e534000 rw-p 00000000 00:00 0 
+2b7b1e534000-2b7b1e537000 r-xp 00000000 08:03 39326865                   /usr/lib64/slurm/auth_munge.so
+2b7b1e537000-2b7b1e736000 ---p 00003000 08:03 39326865                   /usr/lib64/slurm/auth_munge.so
+2b7b1e736000-2b7b1e737000 r--p 00002000 08:03 39326865                   /usr/lib64/slurm/auth_munge.so
+2b7b1e737000-2b7b1e738000 rw-p 00003000 08:03 39326865                   /usr/lib64/slurm/auth_munge.so
+2b7b1e738000-2b7b1e740000 r-xp 00000000 08:03 38932364                   /usr/lib64/libmunge.so.2.0.0
+2b7b1e740000-2b7b1e93f000 ---p 00008000 08:03 38932364                   /usr/lib64/libmunge.so.2.0.0
+2b7b1e93f000-2b7b1e940000 r--p 00007000 08:03 38932364                   /usr/lib64/libmunge.so.2.0.0
+2b7b1e940000-2b7b1e941000 rw-p 00008000 08:03 38932364                   /usr/lib64/libmunge.so.2.0.0
+2b7b1e941000-2b7c17c08000 rw-s 00000000 00:12 98756812                   /dev/shm/Intel_MPI_L3l11N (deleted)
+2b7c17c08000-2b7c17c4a000 r-xp 00000000 a73:e3392 162130641050171787     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/libfabric/lib/prov/librxm-fi.so
+2b7c17c4a000-2b7c17e49000 ---p 00042000 a73:e3392 162130641050171787     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/libfabric/lib/prov/librxm-fi.so
+2b7c17e49000-2b7c17e5c000 rw-p 00041000 a73:e3392 162130641050171787     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/libfabric/lib/prov/librxm-fi.so
+2b7c17e5c000-2b7c17ea6000 r-xp 00000000 a73:e3392 162130641050171786     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/libfabric/lib/prov/libsockets-fi.so
+2ab68f092000-2ab68f093000 r--p 00016000 08:03 38929049                   /usr/lib64/libresolv-2.17.so
+2ab68f093000-2ab68f094000 rw-p 00017000 08:03 38929049                   /usr/lib64/libresolv-2.17.so
+2ab68f094000-2ab68f096000 rw-p 00000000 00:00 0 
+2ab68f096000-2ab68f0a2000 r-xp 00000000 08:03 38929039                   /usr/lib64/libnss_files-2.17.so
+2ab68f0a2000-2ab68f2a1000 ---p 0000c000 08:03 38929039                   /usr/lib64/libnss_files-2.17.so
+2ab68f2a1000-2ab68f2a2000 r--p 0000b000 08:03 38929039                   /usr/lib64/libnss_files-2.17.so
+2ab68f2a2000-2ab68f2a3000 rw-p 0000c000 08:03 38929039                   /usr/lib64/libnss_files-2.17.so
+2ab68f2a3000-2ab68f2a9000 rw-p 00000000 00:00 0 
+2ab68f2a9000-2ab68f2ac000 r-xp 00000000 08:03 39326865                   /usr/lib64/slurm/auth_munge.so
+2ab68f2ac000-2ab68f4ab000 ---p 00003000 08:03 39326865                   /usr/lib64/slurm/auth_munge.so
+2ab68f4ab000-2ab68f4ac000 r--p 00002000 08:03 39326865                   /usr/lib64/slurm/auth_munge.so
+2ab68f4ac000-2ab68f4ad000 rw-p 00003000 08:03 39326865                   /usr/lib64/slurm/auth_munge.so
+2ab68f4ad000-2ab68f4b5000 r-xp 00000000 08:03 38932364                   /usr/lib64/libmunge.so.2.0.0
+2ab68f4b5000-2ab68f6b4000 ---p 00008000 08:03 38932364                   /usr/lib64/libmunge.so.2.0.0
+2ab68f6b4000-2ab68f6b5000 r--p 00007000 08:03 38932364                   /usr/lib64/libmunge.so.2.0.0
+2ab68f6b5000-2ab68f6b6000 rw-p 00008000 08:03 38932364                   /usr/lib64/libmunge.so.2.0.0
+2ab68f6b6000-2ab78897d000 rw-s 00000000 00:12 98756812                   /dev/shm/Intel_MPI_L3l11N (deleted)
+2ab78897d000-2ab7889bf000 r-xp 00000000 a73:e3392 162130641050171787     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/libfabric/lib/prov/librxm-fi.so
+2ab7889bf000-2ab788bbe000 ---p 00042000 a73:e3392 162130641050171787     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/libfabric/lib/prov/librxm-fi.so
+2ab788bbe000-2ab788bd1000 rw-p 00041000 a73:e3392 162130641050171787     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/libfabric/lib/prov/librxm-fi.so
+2ab788bd1000-2ab788c1b000 r-xp 00000000 a73:e3392 162130641050171786     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/libfabric/lib/prov/libsockets-fi.so
+2ab788c1b000-2ab788e1a000 ---p 0004a000 a73:e3392 162130641050171786     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/libfabric/lib/prov/libsockets-fi.so
+2ab788e1a000-2ab788e1d000 rw-p 00049000 a73:e3392 162130641050171786     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/libfabric/lib/prov/libsockets-fi.so
+2ab788e1d000-2ab788e1e000 ---p 00000000 00:00 0 
+2ab788e1e000-2ab78901e000 rw-p 00000000 00:00 0 
+2ab78901e000-2ab78901f000 ---p 00000000 00:00 0 
+2ab78901f000-2ab78921f000 rw-p 00000000 00:00 0 
+2ab78927c000-2ab789296000 r-xp 00000000 08:03 38932194                   /usr/lib64/libibverbs.so.1.8.28.0
+2ab789296000-2ab789495000 ---p 0001a000 08:03 38932194                   /usr/lib64/libibverbs.so.1.8.28.0
+2ab789495000-2ab789496000 r--p 00019000 08:03 38932194                   /usr/lib64/libibverbs.so.1.8.28.0
+2ab789496000-2ab789497000 rw-p 0001a000 08:03 38932194                   /usr/lib64/libibverbs.so.1.8.28.0
+2ab789497000-2ab7894b5000 r-xp 00000000 08:03 38929466                   /usr/lib64/libnl-3.so.200.23.0
+2ab7894b5000-2ab7896b5000 ---p 0001e000 08:03 38929466                   /usr/lib64/libnl-3.so.200.23.0
+2ab7896b5000-2ab7896b7000 r--p 0001e000 08:03 38929466                   /usr/lib64/libnl-3.so.200.23.0
+2ab7896b7000-2ab7896b8000 rw-p 00020000 08:03 38929466                   /usr/lib64/libnl-3.so.200.23.0
+2ab7896b8000-2ab78971c000 r-xp 00000000 08:03 38929474                   /usr/lib64/libnl-route-3.so.200.23.0
+2b7c17ea6000-2b7c180a5000 ---p 0004a000 a73:e3392 162130641050171786     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/libfabric/lib/prov/libsockets-fi.so
+2b7c180a5000-2b7c180a8000 rw-p 00049000 a73:e3392 162130641050171786     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/libfabric/lib/prov/libsockets-fi.so
+2b7c180a8000-2b7c180a9000 ---p 00000000 00:00 0 
+2b7c180a9000-2b7c182a9000 rw-p 00000000 00:00 0 
+2b7c182a9000-2b7c182aa000 ---p 00000000 00:00 0 
+2b7c182aa000-2b7c184aa000 rw-p 00000000 00:00 0 
+2b7c18507000-2b7c18521000 r-xp 00000000 08:03 38932194                   /usr/lib64/libibverbs.so.1.8.28.0
+2b7c18521000-2b7c18720000 ---p 0001a000 08:03 38932194                   /usr/lib64/libibverbs.so.1.8.28.0
+2b7c18720000-2b7c18721000 r--p 00019000 08:03 38932194                   /usr/lib64/libibverbs.so.1.8.28.0
+2b7c18721000-2b7c18722000 rw-p 0001a000 08:03 38932194                   /usr/lib64/libibverbs.so.1.8.28.0
+2b7c18722000-2b7c18740000 r-xp 00000000 08:03 38929466                   /usr/lib64/libnl-3.so.200.23.0
+2b7c18740000-2b7c18940000 ---p 0001e000 08:03 38929466                   /usr/lib64/libnl-3.so.200.23.0
+2b7c18940000-2b7c18942000 r--p 0001e000 08:03 38929466                   /usr/lib64/libnl-3.so.200.23.0
+2b7c18942000-2b7c18943000 rw-p 00020000 08:03 38929466                   /usr/lib64/libnl-3.so.200.23.0
+2b7c18943000-2b7c189a7000 r-xp 00000000 08:03 38929474                   /usr/lib64/libnl-route-3.so.200.23.0
+2b7c189a7000-2b7c18ba6000 ---p 00064000 08:03 38929474                   /usr/lib64/libnl-route-3.so.200.23.0
+2b7c18ba6000-2b7c18ba9000 r--p 00063000 08:03 38929474                   /usr/lib64/libnl-route-3.so.200.23.0
+2b7c18ba9000-2b7c18bae000 rw-p 00066000 08:03 38929474                   /usr/lib64/libnl-route-3.so.200.23.0
+2b7c18bae000-2b7c18bb0000 rw-p 00000000 00:00 0 
+2b7c18bb0000-2b7c18bf8000 r-xp 00000000 08:03 38932198                   /usr/lib64/libmlx5.so.1.12.28.0
+2b7c18bf8000-2b7c18df8000 ---p 00048000 08:03 38932198                   /usr/lib64/libmlx5.so.1.12.28.0
+2b7c18df8000-2b7c18df9000 r--p 00048000 08:03 38932198                   /usr/lib64/libmlx5.so.1.12.28.0
+2b7c18df9000-2b7c18dfa000 rw-p 00049000 08:03 38932198                   /usr/lib64/libmlx5.so.1.12.28.0
+2b7c18dfa000-2b7c18dfc000 rw-p 00000000 00:00 0 
+2b7c18dfc000-2b7c18e07000 r-xp 00000000 08:03 38932196                   /usr/lib64/libmlx4.so.1.0.28.0
+2b7c18e07000-2b7c19006000 ---p 0000b000 08:03 38932196                   /usr/lib64/libmlx4.so.1.0.28.0
+2b7c19006000-2b7c19007000 r--p 0000a000 08:03 38932196                   /usr/lib64/libmlx4.so.1.0.28.0
+2b7c19007000-2b7c19008000 rw-p 0000b000 08:03 38932196                   /usr/lib64/libmlx4.so.1.0.28.0
+2b7c19008000-2b7c191de000 rw-p 00000000 00:00 0 
+2b7c19262000-2b7c19e18000 rw-p 00000000 00:00 0 
+2b7c1c000000-2b7c1c021000 rw-p 00000000 00:00 0 
+2b7c1c021000-2b7c20000000 ---p 00000000 00:00 0 
+7f0000000000-7f0003000000 rw-p 00000000 00:00 0 
+7f1000000000-7f1000200000 rw-p 00000000 00:00 0 
+7f2000000000-7f2002400000 rw-p 00000000 00:00 0 
+7ffc58323000-7ffc58353000 rw-p 00000000 00:00 0                          [stack]
+7ffc583d6000-7ffc583d8000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+2ab78971c000-2ab78991b000 ---p 00064000 08:03 38929474                   /usr/lib64/libnl-route-3.so.200.23.0
+2ab78991b000-2ab78991e000 r--p 00063000 08:03 38929474                   /usr/lib64/libnl-route-3.so.200.23.0
+2ab78991e000-2ab789923000 rw-p 00066000 08:03 38929474                   /usr/lib64/libnl-route-3.so.200.23.0
+2ab789923000-2ab789925000 rw-p 00000000 00:00 0 
+2ab789925000-2ab78996d000 r-xp 00000000 08:03 38932198                   /usr/lib64/libmlx5.so.1.12.28.0
+2ab78996d000-2ab789b6d000 ---p 00048000 08:03 38932198                   /usr/lib64/libmlx5.so.1.12.28.0
+2ab789b6d000-2ab789b6e000 r--p 00048000 08:03 38932198                   /usr/lib64/libmlx5.so.1.12.28.0
+2ab789b6e000-2ab789b6f000 rw-p 00049000 08:03 38932198                   /usr/lib64/libmlx5.so.1.12.28.0
+2ab789b6f000-2ab789b71000 rw-p 00000000 00:00 0 
+2ab789b71000-2ab789b7c000 r-xp 00000000 08:03 38932196                   /usr/lib64/libmlx4.so.1.0.28.0
+2ab789b7c000-2ab789d7b000 ---p 0000b000 08:03 38932196                   /usr/lib64/libmlx4.so.1.0.28.0
+2ab789d7b000-2ab789d7c000 r--p 0000a000 08:03 38932196                   /usr/lib64/libmlx4.so.1.0.28.0
+2ab789d7c000-2ab789d7d000 rw-p 0000b000 08:03 38932196                   /usr/lib64/libmlx4.so.1.0.28.0
+2ab789d7d000-2ab78ab06000 rw-p 00000000 00:00 0 
+2ab78c000000-2ab78c021000 rw-p 00000000 00:00 0 
+2ab78c021000-2ab790000000 ---p 00000000 00:00 0 
+7f0000000000-7f0003000000 rw-p 00000000 00:00 0 
+7f1000000000-7f1000200000 rw-p 00000000 00:00 0 
+7f2000000000-7f2002200000 rw-p 00000000 00:00 0 
+7ffec8dd0000-7ffec8e01000 rw-p 00000000 00:00 0                          [stack]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B99  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002AE82BC9E630  Unknown               Unknown  Unknown
+ld-2.17.so         00002AE82BA7F39A  Unknown               Unknown  Unknown
+ld-2.17.so         00002AE82BA7A7D4  Unknown               Unknown  Unknown
+ld-2.17.so         00002AE82BA7EB8B  Unknown               Unknown  Unknown
+libc-2.17.so       00002AE82DC42952  Unknown               Unknown  Unknown
+ld-2.17.so         00002AE82BA7A7D4  Unknown               Unknown  Unknown
+libc-2.17.so       00002AE82DC42A12  __libc_dlopen_mod     Unknown  Unknown
+libc-2.17.so       00002AE82DC19C05  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002AE82BC9520B  Unknown               Unknown  Unknown
+libc-2.17.so       00002AE82DC19D1C  backtrace             Unknown  Unknown
+libc-2.17.so       00002AE82DB7DF84  Unknown               Unknown  Unknown
+libc-2.17.so       00002AE82DB87B36  Unknown               Unknown  Unknown
+libc-2.17.so       00002AE82DB8A78C  __libc_malloc         Unknown  Unknown
+libc-2.17.so       00002AE82DB39C2F  catopen               Unknown  Unknown
+siesta             0000000001A83F26  Unknown               Unknown  Unknown
+siesta             0000000001A90AF3  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002AE82BC9E630  Unknown               Unknown  Unknown
+siesta             0000000001CEC000  Unknown               Unknown  Unknown
+siesta             0000000001CE221F  Unknown               Unknown  Unknown
+siesta             0000000001D03FD3  Unknown               Unknown  Unknown
+siesta             0000000002301A9F  Unknown               Unknown  Unknown
+siesta             0000000001E54FEE  Unknown               Unknown  Unknown
+siesta             0000000001B43A2A  Unknown               Unknown  Unknown
+siesta             0000000001B401B5  Unknown               Unknown  Unknown
+siesta             000000000040BE22  Unknown               Unknown  Unknown
+libc-2.17.so       00002AE82DB27555  __libc_start_main     Unknown  Unknown
+siesta             000000000040BD29  Unknown               Unknown  Unknown
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B99  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002AE82BC9E630  Unknown               Unknown  Unknown
+libfabric.so.1     00002AE82E0F4E80  Unknown               Unknown  Unknown
+libfabric.so.1     00002AE82E0EFA8E  Unknown               Unknown  Unknown
+libfabric.so.1     00002AE82E0EFAF7  Unknown               Unknown  Unknown
+libfabric.so.1     00002AE82E0EF58F  Unknown               Unknown  Unknown
+forrtl: severe (174): SIGSEGV, segmentation fault occurred
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90AF3  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002AB118837630  Unknown               Unknown  Unknown
+siesta             0000000001CEC000  Unknown               Unknown  Unknown
+siesta             0000000001CE221F  Unknown               Unknown  Unknown
+siesta             0000000001D03FD3  Unknown               Unknown  Unknown
+siesta             0000000002301A9F  Unknown               Unknown  Unknown
+siesta             0000000001E54FEE  Unknown               Unknown  Unknown
+siesta             0000000001B43A2A  Unknown               Unknown  Unknown
+siesta             0000000001B401B5  Unknown               Unknown  Unknown
+siesta             000000000040BE22  Unknown               Unknown  Unknown
+
+Stack trace terminated abnormally.
+srun: error: sdumont6166: task 46: Exited with exit code 174
+srun: error: sdumont6166: tasks 40-44: Aborted (core dumped)
+srun: Job step aborted: Waiting up to 302 seconds for job step to finish.
+srun: got SIGCONT
+slurmstepd: error: *** STEP 10499280.0 ON sdumont6166 CANCELLED AT 2022-04-21T14:07:05 ***
+srun: forcing job termination
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002BAA16313630  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002BAA16310573  pthread_spin_lock     Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B24C785C630  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B24C78595B0  pthread_spin_init     Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B9CD2465630  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B9CD2462573  pthread_spin_lock     Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002AF402FC6630  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002AF402FC3573  pthread_spin_lock     Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B08D3DC5630  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B08D3DC2573  pthread_spin_lock     Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002AD3DED61630  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002AD3DED5E573  pthread_spin_lock     Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B17530D1630  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B17530CE573  pthread_spin_lock     Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002AE76D4DD630  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002AE76D4DA573  pthread_spin_lock     Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002ABF5B42F630  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002ABF5B42C570  pthread_spin_lock     Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B1E0DDCB630  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B1E0DDC8573  pthread_spin_lock     Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B938DB38630  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B938DB35570  pthread_spin_lock     Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002AE2B67C8630  Unknown               Unknown  Unknown
+libsockets-fi.so   00002AE3B3387960  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B094D90C630  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B0A4A4CB960  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B9C6AC16630  Unknown               Unknown  Unknown
+.                  00007FFC3CDF5CD5  __vdso_gettimeofd     Unknown  Unknown
+libsockets-fi.so   00002B9D677F2E1E  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B9D677DA9B2  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B9C6BAEB612  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B9C6C2632CF  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B9C6BC24E73  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B9C6B7BF8E8  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B9C6B7FECA6  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B9C6BB5D311  MPI_Comm_split        Unknown  Unknown
+siesta             0000000001A64A70  mpi_comm_split_       Unknown  Unknown
+siesta             0000000001CE262A  Unknown               Unknown  Unknown
+siesta             0000000001CDF655  Unknown               Unknown  Unknown
+siesta             0000000001D03FD3  Unknown               Unknown  Unknown
+siesta             0000000002301A9F  Unknown               Unknown  Unknown
+siesta             0000000001E54FEE  Unknown               Unknown  Unknown
+siesta             0000000001B43A2A  Unknown               Unknown  Unknown
+siesta             0000000001B401B5  Unknown               Unknown  Unknown
+siesta             000000000040BE22  Unknown               Unknown  Unknown
+libc-2.17.so       00002B9C6CA9F555  __libc_start_main     Unknown  Unknown
+siesta             000000000040BD29  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002AAC6CD58630  Unknown               Unknown  Unknown
+.                  00007FFCB13CFCD5  __vdso_gettimeofd     Unknown  Unknown
+libsockets-fi.so   00002AAD69934E1E  Unknown               Unknown  Unknown
+libsockets-fi.so   00002AAD6991C9B2  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002AAC6DC2D612  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002AAC6E3A52CF  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002AAC6DD66E73  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002AAC6D9018E8  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002AAC6D940CA6  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002AAC6DC9F311  MPI_Comm_split        Unknown  Unknown
+siesta             0000000001A64A70  mpi_comm_split_       Unknown  Unknown
+siesta             0000000001CE262A  Unknown               Unknown  Unknown
+siesta             0000000001CDF655  Unknown               Unknown  Unknown
+siesta             0000000001D03FD3  Unknown               Unknown  Unknown
+siesta             0000000002301A9F  Unknown               Unknown  Unknown
+siesta             0000000001E54FEE  Unknown               Unknown  Unknown
+siesta             0000000001B43A2A  Unknown               Unknown  Unknown
+siesta             0000000001B401B5  Unknown               Unknown  Unknown
+siesta             000000000040BE22  Unknown               Unknown  Unknown
+libc-2.17.so       00002AAC6EBE1555  __libc_start_main     Unknown  Unknown
+siesta             000000000040BD29  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B77E7FAB630  Unknown               Unknown  Unknown
+.                  00007FFF63BB5CD5  __vdso_gettimeofd     Unknown  Unknown
+libsockets-fi.so   00002B78E4B87E1E  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B78E4B6F0FE  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B77E8E80612  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B77E95F82CF  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B77E8FB9E73  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B77E8B548E8  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B77E8B93CA6  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B77E8EF2311  MPI_Comm_split        Unknown  Unknown
+siesta             0000000001A64A70  mpi_comm_split_       Unknown  Unknown
+siesta             0000000001CE262A  Unknown               Unknown  Unknown
+siesta             0000000001CDF655  Unknown               Unknown  Unknown
+siesta             0000000001D03FD3  Unknown               Unknown  Unknown
+siesta             0000000002301A9F  Unknown               Unknown  Unknown
+siesta             0000000001E54FEE  Unknown               Unknown  Unknown
+siesta             0000000001B43A2A  Unknown               Unknown  Unknown
+siesta             0000000001B401B5  Unknown               Unknown  Unknown
+siesta             000000000040BE22  Unknown               Unknown  Unknown
+libc-2.17.so       00002B77E9E34555  __libc_start_main     Unknown  Unknown
+siesta             000000000040BD29  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B38FBD48630  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B39F891D4C2  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B39F891E205  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B39F890B5D8  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B39F890C620  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B38FCC1D612  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B38FD3952CF  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B38FCD56E73  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B38FC8F18E8  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B38FC930CA6  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B38FCC8F311  MPI_Comm_split        Unknown  Unknown
+siesta             0000000001A64A70  mpi_comm_split_       Unknown  Unknown
+siesta             0000000001CE262A  Unknown               Unknown  Unknown
+siesta             0000000001CDF655  Unknown               Unknown  Unknown
+siesta             0000000001D03FD3  Unknown               Unknown  Unknown
+siesta             0000000002301A9F  Unknown               Unknown  Unknown
+siesta             0000000001E54FEE  Unknown               Unknown  Unknown
+siesta             0000000001B43A2A  Unknown               Unknown  Unknown
+siesta             0000000001B401B5  Unknown               Unknown  Unknown
+siesta             000000000040BE22  Unknown               Unknown  Unknown
+libc-2.17.so       00002B38FDBD1555  __libc_start_main     Unknown  Unknown
+siesta             000000000040BD29  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B7B234AE630  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B7C200834E8  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B7C20084205  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B7C200715D8  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B7C20072620  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B7B24383612  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B7B24AFB2CF  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B7B244BCE73  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B7B240578E8  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B7B24096CA6  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B7B243F5311  MPI_Comm_split        Unknown  Unknown
+siesta             0000000001A64A70  mpi_comm_split_       Unknown  Unknown
+siesta             0000000001CE262A  Unknown               Unknown  Unknown
+siesta             0000000001CDF655  Unknown               Unknown  Unknown
+siesta             0000000001D03FD3  Unknown               Unknown  Unknown
+siesta             0000000002301A9F  Unknown               Unknown  Unknown
+siesta             0000000001E54FEE  Unknown               Unknown  Unknown
+siesta             0000000001B43A2A  Unknown               Unknown  Unknown
+siesta             0000000001B401B5  Unknown               Unknown  Unknown
+siesta             000000000040BE22  Unknown               Unknown  Unknown
+libc-2.17.so       00002B7B25337555  __libc_start_main     Unknown  Unknown
+siesta             000000000040BD29  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002ABC3B52D630  Unknown               Unknown  Unknown
+libsockets-fi.so   00002ABD381017FC  Unknown               Unknown  Unknown
+libsockets-fi.so   00002ABD381018B5  Unknown               Unknown  Unknown
+libsockets-fi.so   00002ABD380F0649  Unknown               Unknown  Unknown
+libsockets-fi.so   00002ABD380F1620  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002ABC3C402612  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002ABC3CB7A2CF  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002ABC3C53BE73  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002ABC3C0D699B  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002ABC3C115CA6  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002ABC3C474311  MPI_Comm_split        Unknown  Unknown
+siesta             0000000001A64A70  mpi_comm_split_       Unknown  Unknown
+siesta             0000000001CE262A  Unknown               Unknown  Unknown
+siesta             0000000001CDF655  Unknown               Unknown  Unknown
+siesta             0000000001D03FD3  Unknown               Unknown  Unknown
+siesta             0000000002301A9F  Unknown               Unknown  Unknown
+siesta             0000000001E54FEE  Unknown               Unknown  Unknown
+siesta             0000000001B43A2A  Unknown               Unknown  Unknown
+siesta             0000000001B401B5  Unknown               Unknown  Unknown
+siesta             000000000040BE22  Unknown               Unknown  Unknown
+libc-2.17.so       00002ABC3D3B6555  __libc_start_main     Unknown  Unknown
+siesta             000000000040BD29  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B1B35FD7630  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B1C32BAB719  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B1C32BAB8B5  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B1C32B9A649  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B1C32B9B620  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B1B36EAC612  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B1B376242CF  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B1B36FE5E73  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B1B36B808E8  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B1B36BBFCA6  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B1B36F1E311  MPI_Comm_split        Unknown  Unknown
+siesta             0000000001A64A70  mpi_comm_split_       Unknown  Unknown
+siesta             0000000001CE262A  Unknown               Unknown  Unknown
+siesta             0000000001CDF655  Unknown               Unknown  Unknown
+siesta             0000000001D03FD3  Unknown               Unknown  Unknown
+siesta             0000000002301A9F  Unknown               Unknown  Unknown
+siesta             0000000001E54FEE  Unknown               Unknown  Unknown
+siesta             0000000001B43A2A  Unknown               Unknown  Unknown
+siesta             0000000001B401B5  Unknown               Unknown  Unknown
+siesta             000000000040BE22  Unknown               Unknown  Unknown
+libc-2.17.so       00002B1B37E60555  __libc_start_main     Unknown  Unknown
+siesta             000000000040BD29  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B4DBC859630  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B4EB942D8BC  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B4EB941C649  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B4EB941D620  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B4DBD72E612  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B4DBDEA62CF  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B4DBD867E73  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B4DBD4028E8  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B4DBD441CA6  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B4DBD7A0311  MPI_Comm_split        Unknown  Unknown
+siesta             0000000001A64A70  mpi_comm_split_       Unknown  Unknown
+siesta             0000000001CE262A  Unknown               Unknown  Unknown
+siesta             0000000001CDF655  Unknown               Unknown  Unknown
+siesta             0000000001D03FD3  Unknown               Unknown  Unknown
+siesta             0000000002301A9F  Unknown               Unknown  Unknown
+siesta             0000000001E54FEE  Unknown               Unknown  Unknown
+siesta             0000000001B43A2A  Unknown               Unknown  Unknown
+siesta             0000000001B401B5  Unknown               Unknown  Unknown
+siesta             000000000040BE22  Unknown               Unknown  Unknown
+libc-2.17.so       00002B4DBE6E2555  __libc_start_main     Unknown  Unknown
+siesta             000000000040BD29  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B7D595AF630  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B7E561739BC  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B7D5A484612  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B7D5ABFC2CF  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B7D5A5BDE73  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B7D5A1588E8  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B7D5A197CA6  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B7D5A4F6311  MPI_Comm_split        Unknown  Unknown
+siesta             0000000001A64A70  mpi_comm_split_       Unknown  Unknown
+siesta             0000000001CE262A  Unknown               Unknown  Unknown
+siesta             0000000001CDF655  Unknown               Unknown  Unknown
+siesta             0000000001D03FD3  Unknown               Unknown  Unknown
+siesta             0000000002301A9F  Unknown               Unknown  Unknown
+siesta             0000000001E54FEE  Unknown               Unknown  Unknown
+siesta             0000000001B43A2A  Unknown               Unknown  Unknown
+siesta             0000000001B401B5  Unknown               Unknown  Unknown
+siesta             000000000040BE22  Unknown               Unknown  Unknown
+libc-2.17.so       00002B7D5B438555  __libc_start_main     Unknown  Unknown
+siesta             000000000040BD29  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B6076D6C630  Unknown               Unknown  Unknown
+.                  00007FFE39D0CC51  __vdso_gettimeofd     Unknown  Unknown
+libsockets-fi.so   00002B6173948E1E  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B61739309B2  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B6077C41612  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B60783B92CF  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B6077D7AE73  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B60779158E8  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B6077954CA6  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B6077CB3311  MPI_Comm_split        Unknown  Unknown
+siesta             0000000001A64A70  mpi_comm_split_       Unknown  Unknown
+siesta             0000000001CE262A  Unknown               Unknown  Unknown
+siesta             0000000001CDF655  Unknown               Unknown  Unknown
+siesta             0000000001D03FD3  Unknown               Unknown  Unknown
+siesta             0000000002301A9F  Unknown               Unknown  Unknown
+siesta             0000000001E54FEE  Unknown               Unknown  Unknown
+siesta             0000000001B43A2A  Unknown               Unknown  Unknown
+siesta             0000000001B401B5  Unknown               Unknown  Unknown
+siesta             000000000040BE22  Unknown               Unknown  Unknown
+libc-2.17.so       00002B6078BF5555  __libc_start_main     Unknown  Unknown
+siesta             000000000040BD29  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B21672D7630  Unknown               Unknown  Unknown
+.                  00007FFDBFCF4C33  __vdso_gettimeofd     Unknown  Unknown
+libsockets-fi.so   00002B2263EB3E1E  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B2263E9B9B2  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B21681AC612  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B21689242CF  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B21682E5E73  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B2167E8099B  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B2167EBFCA6  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B216821E311  MPI_Comm_split        Unknown  Unknown
+siesta             0000000001A64A70  mpi_comm_split_       Unknown  Unknown
+siesta             0000000001CE262A  Unknown               Unknown  Unknown
+siesta             0000000001CDF655  Unknown               Unknown  Unknown
+siesta             0000000001D03FD3  Unknown               Unknown  Unknown
+siesta             0000000002301A9F  Unknown               Unknown  Unknown
+siesta             0000000001E54FEE  Unknown               Unknown  Unknown
+siesta             0000000001B43A2A  Unknown               Unknown  Unknown
+siesta             0000000001B401B5  Unknown               Unknown  Unknown
+siesta             000000000040BE22  Unknown               Unknown  Unknown
+libc-2.17.so       00002B2169160555  __libc_start_main     Unknown  Unknown
+siesta             000000000040BD29  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002AC244873630  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002AC2457413AB  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002AC245EC02CF  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002AC245881E73  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002AC24541C99B  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002AC24545BCA6  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002AC2457BA311  MPI_Comm_split        Unknown  Unknown
+siesta             0000000001A64A70  mpi_comm_split_       Unknown  Unknown
+siesta             0000000001CE262A  Unknown               Unknown  Unknown
+siesta             0000000001CDF655  Unknown               Unknown  Unknown
+siesta             0000000001D03FD3  Unknown               Unknown  Unknown
+siesta             0000000002301A9F  Unknown               Unknown  Unknown
+siesta             0000000001E54FEE  Unknown               Unknown  Unknown
+siesta             0000000001B43A2A  Unknown               Unknown  Unknown
+siesta             0000000001B401B5  Unknown               Unknown  Unknown
+siesta             000000000040BE22  Unknown               Unknown  Unknown
+libc-2.17.so       00002AC2466FC555  __libc_start_main     Unknown  Unknown
+siesta             000000000040BD29  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B3AD334C630  Unknown               Unknown  Unknown
+.                  00007FFF13186C21  __vdso_gettimeofd     Unknown  Unknown
+libsockets-fi.so   00002B3BCFF28E1E  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B3BCFF109B2  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B3AD4221612  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B3AD49992CF  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B3AD435AE73  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B3AD3EF599B  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B3AD3F34CA6  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B3AD4293311  MPI_Comm_split        Unknown  Unknown
+siesta             0000000001A64A70  mpi_comm_split_       Unknown  Unknown
+siesta             0000000001CE262A  Unknown               Unknown  Unknown
+siesta             0000000001CDF655  Unknown               Unknown  Unknown
+siesta             0000000001D03FD3  Unknown               Unknown  Unknown
+siesta             0000000002301A9F  Unknown               Unknown  Unknown
+siesta             0000000001E54FEE  Unknown               Unknown  Unknown
+siesta             0000000001B43A2A  Unknown               Unknown  Unknown
+siesta             0000000001B401B5  Unknown               Unknown  Unknown
+siesta             000000000040BE22  Unknown               Unknown  Unknown
+libc-2.17.so       00002B3AD51D5555  __libc_start_main     Unknown  Unknown
+siesta             000000000040BD29  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B2532E07630  Unknown               Unknown  Unknown
+.                  00007FFC9B1E5C4B  __vdso_gettimeofd     Unknown  Unknown
+libsockets-fi.so   00002B262F9E3E1E  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B262F9CB0FE  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B2533CDC612  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B25344542CF  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B2533E15E73  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B25339B08E8  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B25339EFCA6  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B2533D4E311  MPI_Comm_split        Unknown  Unknown
+siesta             0000000001A64A70  mpi_comm_split_       Unknown  Unknown
+siesta             0000000001CE262A  Unknown               Unknown  Unknown
+siesta             0000000001CDF655  Unknown               Unknown  Unknown
+siesta             0000000001D03FD3  Unknown               Unknown  Unknown
+siesta             0000000002301A9F  Unknown               Unknown  Unknown
+siesta             0000000001E54FEE  Unknown               Unknown  Unknown
+siesta             0000000001B43A2A  Unknown               Unknown  Unknown
+siesta             0000000001B401B5  Unknown               Unknown  Unknown
+siesta             000000000040BE22  Unknown               Unknown  Unknown
+libc-2.17.so       00002B2534C90555  __libc_start_main     Unknown  Unknown
+siesta             000000000040BD29  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002BA2D245F630  Unknown               Unknown  Unknown
+libsockets-fi.so   00002BA3CF022551  Unknown               Unknown  Unknown
+libsockets-fi.so   00002BA3CF023620  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002BA2D3334612  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002BA2D3AAC2CF  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002BA2D346DE73  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002BA2D30088E8  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002BA2D3047CA6  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002BA2D33A6311  MPI_Comm_split        Unknown  Unknown
+siesta             0000000001A64A70  mpi_comm_split_       Unknown  Unknown
+siesta             0000000001CE262A  Unknown               Unknown  Unknown
+siesta             0000000001CDF655  Unknown               Unknown  Unknown
+siesta             0000000001D03FD3  Unknown               Unknown  Unknown
+siesta             0000000002301A9F  Unknown               Unknown  Unknown
+siesta             0000000001E54FEE  Unknown               Unknown  Unknown
+siesta             0000000001B43A2A  Unknown               Unknown  Unknown
+siesta             0000000001B401B5  Unknown               Unknown  Unknown
+siesta             000000000040BE22  Unknown               Unknown  Unknown
+libc-2.17.so       00002BA2D42E8555  __libc_start_main     Unknown  Unknown
+siesta             000000000040BD29  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B9869622630  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B99661F360E  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B99661F674F  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B99661F68B5  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B99661E5649  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B99661E6620  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B986A4F7612  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B986AC6F2CF  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B986A630E73  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B986A1CB8E8  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B986A20ACA6  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B986A569311  MPI_Comm_split        Unknown  Unknown
+siesta             0000000001A64A70  mpi_comm_split_       Unknown  Unknown
+siesta             0000000001CE262A  Unknown               Unknown  Unknown
+siesta             0000000001CDF655  Unknown               Unknown  Unknown
+siesta             0000000001D03FD3  Unknown               Unknown  Unknown
+siesta             0000000002301A9F  Unknown               Unknown  Unknown
+siesta             0000000001E54FEE  Unknown               Unknown  Unknown
+siesta             0000000001B43A2A  Unknown               Unknown  Unknown
+siesta             0000000001B401B5  Unknown               Unknown  Unknown
+siesta             000000000040BE22  Unknown               Unknown  Unknown
+libc-2.17.so       00002B986B4AB555  __libc_start_main     Unknown  Unknown
+siesta             000000000040BD29  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B0CE3F90630  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B0CE4E5E3CC  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B0CE55DD2CF  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B0CE4F9EE73  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B0CE4B398E8  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B0CE4B78CA6  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B0CE4ED7311  MPI_Comm_split        Unknown  Unknown
+siesta             0000000001A64A70  mpi_comm_split_       Unknown  Unknown
+siesta             0000000001CE262A  Unknown               Unknown  Unknown
+siesta             0000000001CDF655  Unknown               Unknown  Unknown
+siesta             0000000001D03FD3  Unknown               Unknown  Unknown
+siesta             0000000002301A9F  Unknown               Unknown  Unknown
+siesta             0000000001E54FEE  Unknown               Unknown  Unknown
+siesta             0000000001B43A2A  Unknown               Unknown  Unknown
+siesta             0000000001B401B5  Unknown               Unknown  Unknown
+siesta             000000000040BE22  Unknown               Unknown  Unknown
+libc-2.17.so       00002B0CE5E19555  __libc_start_main     Unknown  Unknown
+siesta             000000000040BD29  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B3F63D13630  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B40608EFE4A  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B40608D70FE  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B3F64BE8612  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B3F653602CF  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B3F64D21E73  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B3F648BC8E8  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B3F648FBCA6  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B3F64C5A311  MPI_Comm_split        Unknown  Unknown
+siesta             0000000001A64A70  mpi_comm_split_       Unknown  Unknown
+siesta             0000000001CE262A  Unknown               Unknown  Unknown
+siesta             0000000001CDF655  Unknown               Unknown  Unknown
+siesta             0000000001D03FD3  Unknown               Unknown  Unknown
+siesta             0000000002301A9F  Unknown               Unknown  Unknown
+siesta             0000000001E54FEE  Unknown               Unknown  Unknown
+siesta             0000000001B43A2A  Unknown               Unknown  Unknown
+siesta             0000000001B401B5  Unknown               Unknown  Unknown
+siesta             000000000040BE22  Unknown               Unknown  Unknown
+libc-2.17.so       00002B3F65B9C555  __libc_start_main     Unknown  Unknown
+siesta             000000000040BD29  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002AE28BAD0630  Unknown               Unknown  Unknown
+.                  00007FFEF6D99CD5  __vdso_gettimeofd     Unknown  Unknown
+libsockets-fi.so   00002AE3886ACE1E  Unknown               Unknown  Unknown
+libsockets-fi.so   00002AE3886940FE  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002AE28C9A5612  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002AE28D11D2CF  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002AE28CADEE73  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002AE28C6798E8  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002AE28C6B8CA6  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002AE28CA17311  MPI_Comm_split        Unknown  Unknown
+siesta             0000000001A64A70  mpi_comm_split_       Unknown  Unknown
+siesta             0000000001CE262A  Unknown               Unknown  Unknown
+siesta             0000000001CDF655  Unknown               Unknown  Unknown
+siesta             0000000001D03FD3  Unknown               Unknown  Unknown
+siesta             0000000002301A9F  Unknown               Unknown  Unknown
+siesta             0000000001E54FEE  Unknown               Unknown  Unknown
+siesta             0000000001B43A2A  Unknown               Unknown  Unknown
+siesta             0000000001B401B5  Unknown               Unknown  Unknown
+siesta             000000000040BE22  Unknown               Unknown  Unknown
+libc-2.17.so       00002AE28D959555  __libc_start_main     Unknown  Unknown
+siesta             000000000040BD29  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B27D8278630  Unknown               Unknown  Unknown
+.                  00002B27D8067C2C  __vdso_gettimeofd     Unknown  Unknown
+libsockets-fi.so   00002B28D4E54E1E  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B28D4E3C0FE  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B27D914D612  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B27D98C52CF  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B27D9286E73  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B27D8E218E8  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B27D8E60CA6  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B27D91BF311  MPI_Comm_split        Unknown  Unknown
+siesta             0000000001A64A70  mpi_comm_split_       Unknown  Unknown
+siesta             0000000001CE262A  Unknown               Unknown  Unknown
+siesta             0000000001CDF655  Unknown               Unknown  Unknown
+siesta             0000000001D03FD3  Unknown               Unknown  Unknown
+siesta             0000000002301A9F  Unknown               Unknown  Unknown
+siesta             0000000001E54FEE  Unknown               Unknown  Unknown
+siesta             0000000001B43A2A  Unknown               Unknown  Unknown
+siesta             0000000001B401B5  Unknown               Unknown  Unknown
+siesta             000000000040BE22  Unknown               Unknown  Unknown
+libc-2.17.so       00002B27DA101555  __libc_start_main     Unknown  Unknown
+siesta             000000000040BD29  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002AC9224A0630  Unknown               Unknown  Unknown
+libsockets-fi.so   00002ACA1F0712E4  Unknown               Unknown  Unknown
+libsockets-fi.so   00002ACA1F074775  Unknown               Unknown  Unknown
+libsockets-fi.so   00002ACA1F0748B5  Unknown               Unknown  Unknown
+libsockets-fi.so   00002ACA1F063649  Unknown               Unknown  Unknown
+libsockets-fi.so   00002ACA1F064620  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002AC923375612  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002AC923AED2CF  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002AC9234AEE73  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002AC9230498E8  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002AC923088CA6  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002AC9233E7311  MPI_Comm_split        Unknown  Unknown
+siesta             0000000001A64A70  mpi_comm_split_       Unknown  Unknown
+siesta             0000000001CE262A  Unknown               Unknown  Unknown
+siesta             0000000001CDF655  Unknown               Unknown  Unknown
+siesta             0000000001D03FD3  Unknown               Unknown  Unknown
+siesta             0000000002301A9F  Unknown               Unknown  Unknown
+siesta             0000000001E54FEE  Unknown               Unknown  Unknown
+siesta             0000000001B43A2A  Unknown               Unknown  Unknown
+siesta             0000000001B401B5  Unknown               Unknown  Unknown
+siesta             000000000040BE22  Unknown               Unknown  Unknown
+libc-2.17.so       00002AC924329555  __libc_start_main     Unknown  Unknown
+siesta             000000000040BD29  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B9DE93FB630  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B9EE5FBF9F2  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B9DEA2D0612  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B9DEAA482CF  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B9DEA409E73  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B9DE9FA48E8  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B9DE9FE3CA6  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B9DEA342311  MPI_Comm_split        Unknown  Unknown
+siesta             0000000001A64A70  mpi_comm_split_       Unknown  Unknown
+siesta             0000000001CE262A  Unknown               Unknown  Unknown
+siesta             0000000001CDF655  Unknown               Unknown  Unknown
+siesta             0000000001D03FD3  Unknown               Unknown  Unknown
+siesta             0000000002301A9F  Unknown               Unknown  Unknown
+siesta             0000000001E54FEE  Unknown               Unknown  Unknown
+siesta             0000000001B43A2A  Unknown               Unknown  Unknown
+siesta             0000000001B401B5  Unknown               Unknown  Unknown
+siesta             000000000040BE22  Unknown               Unknown  Unknown
+libc-2.17.so       00002B9DEB284555  __libc_start_main     Unknown  Unknown
+siesta             000000000040BD29  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B91488CE630  Unknown               Unknown  Unknown
+.                  00007FFE929DDC21  __vdso_gettimeofd     Unknown  Unknown
+libsockets-fi.so   00002B92454AAE1E  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B92454920FE  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B91497A3612  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B9149F1B2CF  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B91498DCE73  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B91494778E8  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B91494B6CA6  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B9149815311  MPI_Comm_split        Unknown  Unknown
+siesta             0000000001A64A70  mpi_comm_split_       Unknown  Unknown
+siesta             0000000001CE262A  Unknown               Unknown  Unknown
+siesta             0000000001CDF655  Unknown               Unknown  Unknown
+siesta             0000000001D03FD3  Unknown               Unknown  Unknown
+siesta             0000000002301A9F  Unknown               Unknown  Unknown
+siesta             0000000001E54FEE  Unknown               Unknown  Unknown
+siesta             0000000001B43A2A  Unknown               Unknown  Unknown
+siesta             0000000001B401B5  Unknown               Unknown  Unknown
+siesta             000000000040BE22  Unknown               Unknown  Unknown
+libc-2.17.so       00002B914A757555  __libc_start_main     Unknown  Unknown
+siesta             000000000040BD29  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B43AEB1E630  Unknown               Unknown  Unknown
+.                  00007FFC5093DCD5  __vdso_gettimeofd     Unknown  Unknown
+libsockets-fi.so   00002B44AB6FAE1E  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B44AB6E29B2  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B43AF9F3612  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B43B016B2CF  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B43AFB2CE73  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B43AF6C78E8  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B43AF706CA6  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B43AFA65311  MPI_Comm_split        Unknown  Unknown
+siesta             0000000001A64A70  mpi_comm_split_       Unknown  Unknown
+siesta             0000000001CE262A  Unknown               Unknown  Unknown
+siesta             0000000001CDF655  Unknown               Unknown  Unknown
+siesta             0000000001D03FD3  Unknown               Unknown  Unknown
+siesta             0000000002301A9F  Unknown               Unknown  Unknown
+siesta             0000000001E54FEE  Unknown               Unknown  Unknown
+siesta             0000000001B43A2A  Unknown               Unknown  Unknown
+siesta             0000000001B401B5  Unknown               Unknown  Unknown
+siesta             000000000040BE22  Unknown               Unknown  Unknown
+libc-2.17.so       00002B43B09A7555  __libc_start_main     Unknown  Unknown
+siesta             000000000040BD29  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B146D741630  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B156A31DE51  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B156A3059B2  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B146E616612  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B146ED8E2CF  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B146E74FE73  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B146E2EA8E8  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B146E329CA6  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B146E688311  MPI_Comm_split        Unknown  Unknown
+siesta             0000000001A64A70  mpi_comm_split_       Unknown  Unknown
+siesta             0000000001CE262A  Unknown               Unknown  Unknown
+siesta             0000000001CDF655  Unknown               Unknown  Unknown
+siesta             0000000001D03FD3  Unknown               Unknown  Unknown
+siesta             0000000002301A9F  Unknown               Unknown  Unknown
+siesta             0000000001E54FEE  Unknown               Unknown  Unknown
+siesta             0000000001B43A2A  Unknown               Unknown  Unknown
+siesta             0000000001B401B5  Unknown               Unknown  Unknown
+siesta             000000000040BE22  Unknown               Unknown  Unknown
+libc-2.17.so       00002B146F5CA555  __libc_start_main     Unknown  Unknown
+siesta             000000000040BD29  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B759DF8E630  Unknown               Unknown  Unknown
+.                  00007FFD189CFB56  __vdso_gettimeofd     Unknown  Unknown
+libsockets-fi.so   00002B769AB6AE1E  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B769AB520FE  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B759EE63612  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B759F5DB2CF  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B759EF9CE73  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B759EB378E8  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B759EB76CA6  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B759EED5311  MPI_Comm_split        Unknown  Unknown
+siesta             0000000001A64A70  mpi_comm_split_       Unknown  Unknown
+siesta             0000000001CE262A  Unknown               Unknown  Unknown
+siesta             0000000001CDF655  Unknown               Unknown  Unknown
+siesta             0000000001D03FD3  Unknown               Unknown  Unknown
+siesta             0000000002301A9F  Unknown               Unknown  Unknown
+siesta             0000000001E54FEE  Unknown               Unknown  Unknown
+siesta             0000000001B43A2A  Unknown               Unknown  Unknown
+siesta             0000000001B401B5  Unknown               Unknown  Unknown
+siesta             000000000040BE22  Unknown               Unknown  Unknown
+libc-2.17.so       00002B759FE17555  __libc_start_main     Unknown  Unknown
+siesta             000000000040BD29  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002ABE311F7630  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002ABE328A0515  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002ABE320C480A  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002ABE320C56A1  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002ABE328442CF  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002ABE32205E73  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002ABE31DA08E8  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002ABE31DDFCA6  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002ABE3213E311  MPI_Comm_split        Unknown  Unknown
+siesta             0000000001A64A70  mpi_comm_split_       Unknown  Unknown
+siesta             0000000001CE262A  Unknown               Unknown  Unknown
+siesta             0000000001CDF655  Unknown               Unknown  Unknown
+siesta             0000000001D03FD3  Unknown               Unknown  Unknown
+siesta             0000000002301A9F  Unknown               Unknown  Unknown
+siesta             0000000001E54FEE  Unknown               Unknown  Unknown
+siesta             0000000001B43A2A  Unknown               Unknown  Unknown
+siesta             0000000001B401B5  Unknown               Unknown  Unknown
+siesta             000000000040BE22  Unknown               Unknown  Unknown
+libc-2.17.so       00002ABE33080555  __libc_start_main     Unknown  Unknown
+siesta             000000000040BD29  Unknown               Unknown  Unknown
+srun: error: sdumont6166: tasks 0-39: Exited with exit code 1
+srun: First task exited 600s ago
+srun: StepId=10499280.0 task 45: running
+srun: StepId=10499280.0 tasks 0-44,46: exited abnormally
+srun: launch/slurm: _step_signal: Terminating StepId=10499280.0
+srun: error: sdumont6166: task 45: Killed

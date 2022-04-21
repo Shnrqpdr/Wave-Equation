@@ -1,0 +1,822 @@
+*** Error in `/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta': malloc(): memory corruption: 0x00000000059b9eb0 ***
+======= Backtrace: =========
+/lib64/libc.so.6(+0x82b36)[0x2b73f1152b36]
+/lib64/libc.so.6(__libc_malloc+0x4c)[0x2b73f115578c]
+/lib64/libc.so.6(catopen+0xf3)[0x2b73f1104cf3]
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x1a83f26]
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x1a90af3]
+/lib64/libpthread.so.0(+0xf630)[0x2b73ef269630]
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x1cec00a]
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x1ce221f]
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x1d03fd3]
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x2301a9f]
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x1e54fee]
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x1b43a2a]
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x1b401b5]
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x40be22]
+/lib64/libc.so.6(__libc_start_main+0xf5)[0x2b73f10f2555]
+/scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/Tests/benzene/work/../../../siesta[0x40bd29]
+======= Memory map: ========
+00400000-025c8000 r-xp 00000000 a73:e3392 162134922478240464             /scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/siesta
+027c8000-027d0000 r--p 021c8000 a73:e3392 162134922478240464             /scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/siesta
+027d0000-0283a000 rw-p 021d0000 a73:e3392 162134922478240464             /scratch/uff21hpc/pedro.cunha/Siesta/siesta-v4.1-b4/Obj/siesta
+0283a000-039ff000 rw-p 00000000 00:00 0 
+057b9000-05d4d000 rw-p 00000000 00:00 0                                  [heap]
+2b73ef036000-2b73ef058000 r-xp 00000000 08:03 46796926                   /usr/lib64/ld-2.17.so
+2b73ef058000-2b73ef06a000 rw-p 00000000 00:00 0 
+2b73ef06a000-2b73ef06b000 -w-s 00000000 00:05 31793                      /dev/infiniband/uverbs0
+2b73ef06b000-2b73ef06c000 -w-s 00001000 00:05 31793                      /dev/infiniband/uverbs0
+2b73ef06c000-2b73ef06d000 -w-s 00002000 00:05 31793                      /dev/infiniband/uverbs0
+2b73ef06d000-2b73ef06e000 -w-s 00003000 00:05 31793                      /dev/infiniband/uverbs0
+2b73ef06e000-2b73ef06f000 -w-s 00004000 00:05 31793                      /dev/infiniband/uverbs0
+2b73ef06f000-2b73ef070000 -w-s 00005000 00:05 31793                      /dev/infiniband/uverbs0
+2b73ef070000-2b73ef071000 -w-s 00006000 00:05 31793                      /dev/infiniband/uverbs0
+2b73ef071000-2b73ef072000 -w-s 00007000 00:05 31793                      /dev/infiniband/uverbs0
+2b73ef072000-2b73ef073000 r--s 00500000 00:05 31793                      /dev/infiniband/uverbs0
+2b73ef073000-2b73ef074000 r--s 00700000 00:05 31793                      /dev/infiniband/uverbs0
+2b73ef074000-2b73ef083000 rw-p 00000000 00:00 0 
+2b73ef083000-2b73ef12a000 rw-s 00000000 00:12 966739811                  /dev/shm/Intel_MPI_TsmOs2 (deleted)
+2b73ef12a000-2b73ef1d1000 rw-s 00000000 00:12 966861976                  /dev/shm/Intel_MPI_FcXXcS (deleted)
+2b73ef257000-2b73ef258000 r--p 00021000 08:03 46796926                   /usr/lib64/ld-2.17.so
+2b73ef258000-2b73ef259000 rw-p 00022000 08:03 46796926                   /usr/lib64/ld-2.17.so
+2b73ef259000-2b73ef25a000 rw-p 00000000 00:00 0 
+2b73ef25a000-2b73ef271000 r-xp 00000000 08:03 46793648                   /usr/lib64/libpthread-2.17.so
+2b73ef271000-2b73ef470000 ---p 00017000 08:03 46793648                   /usr/lib64/libpthread-2.17.so
+2b73ef470000-2b73ef471000 r--p 00016000 08:03 46793648                   /usr/lib64/libpthread-2.17.so
+2b73ef471000-2b73ef472000 rw-p 00017000 08:03 46793648                   /usr/lib64/libpthread-2.17.so
+2b73ef472000-2b73ef476000 rw-p 00000000 00:00 0 
+2b73ef476000-2b73ef577000 r-xp 00000000 08:03 46793630                   /usr/lib64/libm-2.17.so
+2b73ef577000-2b73ef776000 ---p 00101000 08:03 46793630                   /usr/lib64/libm-2.17.so
+2b73ef776000-2b73ef777000 r--p 00100000 08:03 46793630                   /usr/lib64/libm-2.17.so
+2b73ef777000-2b73ef778000 rw-p 00101000 08:03 46793630                   /usr/lib64/libm-2.17.so
+2b73ef778000-2b73ef77a000 r-xp 00000000 08:03 46793628                   /usr/lib64/libdl-2.17.so
+2b73ef77a000-2b73ef97a000 ---p 00002000 08:03 46793628                   /usr/lib64/libdl-2.17.so
+2b73ef97a000-2b73ef97b000 r--p 00002000 08:03 46793628                   /usr/lib64/libdl-2.17.so
+2b73ef97b000-2b73ef97c000 rw-p 00003000 08:03 46793628                   /usr/lib64/libdl-2.17.so
+2b73ef97c000-2b73efb0e000 r-xp 00000000 a73:e3392 162130641050172020     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/lib/libmpifort.so.12.0.0
+2b73efb0e000-2b73efd0e000 ---p 00192000 a73:e3392 162130641050172020     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/lib/libmpifort.so.12.0.0
+2b73efd0e000-2b73efd16000 rw-p 00192000 a73:e3392 162130641050172020     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/lib/libmpifort.so.12.0.0
+2b73efd16000-2b73efd3a000 rw-p 00000000 00:00 0 
+2b73efd3a000-2b73f0c3c000 r-xp 00000000 a73:e3392 162130641050172012     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/lib/release/libmpi.so.12.0.0
+2b73f0c3c000-2b73f0e3c000 ---p 00f02000 a73:e3392 162130641050172012     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/lib/release/libmpi.so.12.0.0
+2b73f0e3c000-2b73f0e5b000 rw-p 00f02000 a73:e3392 162130641050172012     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/lib/release/libmpi.so.12.0.0
+2b73f0e5b000-2b73f0ec8000 rw-p 00000000 00:00 0 
+2b73f0ec8000-2b73f0ecf000 r-xp 00000000 08:03 46793652                   /usr/lib64/librt-2.17.so
+2b73f0ecf000-2b73f10ce000 ---p 00007000 08:03 46793652                   /usr/lib64/librt-2.17.so
+2b73f10ce000-2b73f10cf000 r--p 00006000 08:03 46793652                   /usr/lib64/librt-2.17.so
+2b73f10cf000-2b73f10d0000 rw-p 00007000 08:03 46793652                   /usr/lib64/librt-2.17.so
+2b73f10d0000-2b73f1294000 r-xp 00000000 08:03 46793622                   /usr/lib64/libc-2.17.so
+2b73f1294000-2b73f1493000 ---p 001c4000 08:03 46793622                   /usr/lib64/libc-2.17.so
+2b73f1493000-2b73f1497000 r--p 001c3000 08:03 46793622                   /usr/lib64/libc-2.17.so
+2b73f1497000-2b73f1499000 rw-p 001c7000 08:03 46793622                   /usr/lib64/libc-2.17.so
+2b73f1499000-2b73f149e000 rw-p 00000000 00:00 0 
+2b73f149e000-2b73f14b3000 r-xp 00000000 08:03 46792723                   /usr/lib64/libgcc_s-4.8.5-20150702.so.1
+2b73f14b3000-2b73f16b2000 ---p 00015000 08:03 46792723                   /usr/lib64/libgcc_s-4.8.5-20150702.so.1
+2b73f16b2000-2b73f16b3000 r--p 00014000 08:03 46792723                   /usr/lib64/libgcc_s-4.8.5-20150702.so.1
+2b73f16b3000-2b73f16b4000 rw-p 00015000 08:03 46792723                   /usr/lib64/libgcc_s-4.8.5-20150702.so.1
+2b73f16b4000-2b73f16ea000 r-xp 00000000 a73:e3392 162130641050171789     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/libfabric/lib/libfabric.so.1
+2b73f16ea000-2b73f18e9000 ---p 00036000 a73:e3392 162130641050171789     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/libfabric/lib/libfabric.so.1
+2b73f18e9000-2b73f18ec000 rw-p 00035000 a73:e3392 162130641050171789     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/libfabric/lib/libfabric.so.1
+2b73f18ec000-2b73f18f6000 r-xp 00000000 08:03 46795422                   /usr/lib64/libnuma.so.1.0.0
+2b73f18f6000-2b73f1af6000 ---p 0000a000 08:03 46795422                   /usr/lib64/libnuma.so.1.0.0
+2b73f1af6000-2b73f1af7000 r--p 0000a000 08:03 46795422                   /usr/lib64/libnuma.so.1.0.0
+2b73f1af7000-2b73f1af8000 rw-p 0000b000 08:03 46795422                   /usr/lib64/libnuma.so.1.0.0
+2b73f1af8000-2b73f1afd000 r-xp 00000000 08:03 46801065                   /usr/lib64/libpmi.so.0.0.0
+2b73f1afd000-2b73f1cfc000 ---p 00005000 08:03 46801065                   /usr/lib64/libpmi.so.0.0.0
+2b73f1cfc000-2b73f1cfd000 r--p 00004000 08:03 46801065                   /usr/lib64/libpmi.so.0.0.0
+2b73f1cfd000-2b73f1cfe000 rw-p 00005000 08:03 46801065                   /usr/lib64/libpmi.so.0.0.0
+2b73f1cfe000-2b73f1ebe000 r-xp 00000000 08:03 46796991                   /usr/lib64/libslurm_pmi-20.11.8.so
+2b73f1ebe000-2b73f20bd000 ---p 001c0000 08:03 46796991                   /usr/lib64/libslurm_pmi-20.11.8.so
+2b73f20bd000-2b73f20bf000 r--p 001bf000 08:03 46796991                   /usr/lib64/libslurm_pmi-20.11.8.so
+2b73f20bf000-2b73f20c9000 rw-p 001c1000 08:03 46796991                   /usr/lib64/libslurm_pmi-20.11.8.so
+2b73f20c9000-2b73f20ce000 rw-p 00000000 00:00 0 
+2b73f20ce000-2b73f20e4000 r-xp 00000000 08:03 46793650                   /usr/lib64/libresolv-2.17.so
+2b73f20e4000-2b73f22e4000 ---p 00016000 08:03 46793650                   /usr/lib64/libresolv-2.17.so
+2b73f22e4000-2b73f22e5000 r--p 00016000 08:03 46793650                   /usr/lib64/libresolv-2.17.so
+2b73f22e5000-2b73f22e6000 rw-p 00017000 08:03 46793650                   /usr/lib64/libresolv-2.17.so
+2b73f22e6000-2b73f22e8000 rw-p 00000000 00:00 0 
+2b73f22e8000-2b73f22f4000 r-xp 00000000 08:03 46793640                   /usr/lib64/libnss_files-2.17.so
+2b73f22f4000-2b73f24f3000 ---p 0000c000 08:03 46793640                   /usr/lib64/libnss_files-2.17.so
+2b73f24f3000-2b73f24f4000 r--p 0000b000 08:03 46793640                   /usr/lib64/libnss_files-2.17.so
+2b73f24f4000-2b73f24f5000 rw-p 0000c000 08:03 46793640                   /usr/lib64/libnss_files-2.17.so
+2b73f24f5000-2b73f24fb000 rw-p 00000000 00:00 0 
+2b73f24fb000-2b73f24fe000 r-xp 00000000 08:03 47711033                   /usr/lib64/slurm/auth_munge.so
+2b73f24fe000-2b73f26fd000 ---p 00003000 08:03 47711033                   /usr/lib64/slurm/auth_munge.so
+2b73f26fd000-2b73f26fe000 r--p 00002000 08:03 47711033                   /usr/lib64/slurm/auth_munge.so
+2b73f26fe000-2b73f26ff000 rw-p 00003000 08:03 47711033                   /usr/lib64/slurm/auth_munge.so
+2b73f26ff000-2b73f2707000 r-xp 00000000 08:03 46796994                   /usr/lib64/libmunge.so.2.0.0
+2b73f2707000-2b73f2906000 ---p 00008000 08:03 46796994                   /usr/lib64/libmunge.so.2.0.0
+2b73f2906000-2b73f2907000 r--p 00007000 08:03 46796994                   /usr/lib64/libmunge.so.2.0.0
+2b73f2907000-2b73f2908000 rw-p 00008000 08:03 46796994                   /usr/lib64/libmunge.so.2.0.0
+2b73f2908000-2b74dc44e000 rw-s 00000000 00:12 966778469                  /dev/shm/Intel_MPI_RB9fMo (deleted)
+2b74dc44e000-2b74dc490000 r-xp 00000000 a73:e3392 162130641050171787     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/libfabric/lib/prov/librxm-fi.so
+2b74dc490000-2b74dc68f000 ---p 00042000 a73:e3392 162130641050171787     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/libfabric/lib/prov/librxm-fi.so
+2b74dc68f000-2b74dc6a2000 rw-p 00041000 a73:e3392 162130641050171787     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/libfabric/lib/prov/librxm-fi.so
+2b74dc6a2000-2b74dc6ec000 r-xp 00000000 a73:e3392 162130641050171786     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/libfabric/lib/prov/libsockets-fi.so
+2b74dc6ec000-2b74dc8eb000 ---p 0004a000 a73:e3392 162130641050171786     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/libfabric/lib/prov/libsockets-fi.so
+2b74dc8eb000-2b74dc8ee000 rw-p 00049000 a73:e3392 162130641050171786     /scratch/opt/intel/parallel_studio_xe_2019/compilers_and_libraries_2019.3.199/linux/mpi/intel64/libfabric/lib/prov/libsockets-fi.so
+2b74dc8ee000-2b74dc8ef000 ---p 00000000 00:00 0 
+2b74dc8ef000-2b74dcaef000 rw-p 00000000 00:00 0 
+2b74dcaef000-2b74dcaf0000 ---p 00000000 00:00 0 
+2b74dcaf0000-2b74dccf0000 rw-p 00000000 00:00 0 
+2b74dcd4d000-2b74dcd67000 r-xp 00000000 08:03 46796822                   /usr/lib64/libibverbs.so.1.8.28.0
+2b74dcd67000-2b74dcf66000 ---p 0001a000 08:03 46796822                   /usr/lib64/libibverbs.so.1.8.28.0
+2b74dcf66000-2b74dcf67000 r--p 00019000 08:03 46796822                   /usr/lib64/libibverbs.so.1.8.28.0
+2b74dcf67000-2b74dcf68000 rw-p 0001a000 08:03 46796822                   /usr/lib64/libibverbs.so.1.8.28.0
+2b74dcf68000-2b74dcf86000 r-xp 00000000 08:03 46794067                   /usr/lib64/libnl-3.so.200.23.0
+2b74dcf86000-2b74dd186000 ---p 0001e000 08:03 46794067                   /usr/lib64/libnl-3.so.200.23.0
+2b74dd186000-2b74dd188000 r--p 0001e000 08:03 46794067                   /usr/lib64/libnl-3.so.200.23.0
+2b74dd188000-2b74dd189000 rw-p 00020000 08:03 46794067                   /usr/lib64/libnl-3.so.200.23.0
+2b74dd189000-2b74dd1ed000 r-xp 00000000 08:03 46794075                   /usr/lib64/libnl-route-3.so.200.23.0
+2b74dd1ed000-2b74dd3ec000 ---p 00064000 08:03 46794075                   /usr/lib64/libnl-route-3.so.200.23.0
+2b74dd3ec000-2b74dd3ef000 r--p 00063000 08:03 46794075                   /usr/lib64/libnl-route-3.so.200.23.0
+2b74dd3ef000-2b74dd3f4000 rw-p 00066000 08:03 46794075                   /usr/lib64/libnl-route-3.so.200.23.0
+2b74dd3f4000-2b74dd3f6000 rw-p 00000000 00:00 0 
+2b74dd3f6000-2b74dd43e000 r-xp 00000000 08:03 46796826                   /usr/lib64/libmlx5.so.1.12.28.0
+2b74dd43e000-2b74dd63e000 ---p 00048000 08:03 46796826                   /usr/lib64/libmlx5.so.1.12.28.0
+2b74dd63e000-2b74dd63f000 r--p 00048000 08:03 46796826                   /usr/lib64/libmlx5.so.1.12.28.0
+2b74dd63f000-2b74dd640000 rw-p 00049000 08:03 46796826                   /usr/lib64/libmlx5.so.1.12.28.0
+2b74dd640000-2b74dd642000 rw-p 00000000 00:00 0 
+2b74dd642000-2b74dd64d000 r-xp 00000000 08:03 46796824                   /usr/lib64/libmlx4.so.1.0.28.0
+2b74dd64d000-2b74dd84c000 ---p 0000b000 08:03 46796824                   /usr/lib64/libmlx4.so.1.0.28.0
+2b74dd84c000-2b74dd84d000 r--p 0000a000 08:03 46796824                   /usr/lib64/libmlx4.so.1.0.28.0
+2b74dd84d000-2b74dd84e000 rw-p 0000b000 08:03 46796824                   /usr/lib64/libmlx4.so.1.0.28.0
+2b74dd84e000-2b74de628000 rw-p 00000000 00:00 0 
+2b74e0000000-2b74e0021000 rw-p 00000000 00:00 0 
+2b74e0021000-2b74e4000000 ---p 00000000 00:00 0 
+7f0000000000-7f0003000000 rw-p 00000000 00:00 0 
+7f1000000000-7f1000200000 rw-p 00000000 00:00 0 
+7f2000000000-7f2002200000 rw-p 00000000 00:00 0 
+7ffd7d210000-7ffd7d241000 rw-p 00000000 00:00 0                          [stack]
+7ffd7d2c6000-7ffd7d2c8000 r-xp 00000000 00:00 0                          [vdso]
+ffffffffff600000-ffffffffff601000 r-xp 00000000 00:00 0                  [vsyscall]
+srun: error: sdumont6069: task 40: Aborted (core dumped)
+srun: Job step aborted: Waiting up to 302 seconds for job step to finish.
+srun: got SIGCONT
+srun: forcing job termination
+slurmstepd: error: *** STEP 10499238.0 ON sdumont6069 CANCELLED AT 2022-04-21T13:20:14 ***
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B9E5160D630  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B9E5160A573  pthread_spin_lock     Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002ACBED456630  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002ACBED453573  pthread_spin_lock     Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B00D80A2630  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B00D809F573  pthread_spin_lock     Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B8A80BBD630  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B8A80BBA573  pthread_spin_lock     Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B785764E630  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B785764B573  pthread_spin_lock     Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002AF50C605630  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002AF50C602573  pthread_spin_lock     Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B76CE6B4630  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B76CE6B1573  pthread_spin_lock     Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002BA8ED36D630  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002BA8ED36A573  pthread_spin_lock     Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002ADAC0B91630  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002ADAC0B8E573  pthread_spin_lock     Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B0E9C8D5630  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B0E9C8D2573  pthread_spin_lock     Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B4EF8FE4630  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B4EF8FE1573  pthread_spin_lock     Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B6A4B27A630  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B6A4B277573  pthread_spin_lock     Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B9773320630  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B977331D5B0  pthread_spin_init     Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002AD6776BF630  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002AD6776BC573  pthread_spin_lock     Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B82809DF630  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B836DE1D960  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B6DD6A29630  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B6DD78F6F97  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B6DD78F76A1  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B6DD80762CF  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B6DD7A37E73  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B6DD75D28E8  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B6DD7611CA6  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B6DD7970311  MPI_Comm_split        Unknown  Unknown
+siesta             0000000001A64A70  mpi_comm_split_       Unknown  Unknown
+siesta             0000000001CE262A  Unknown               Unknown  Unknown
+siesta             0000000001CDF655  Unknown               Unknown  Unknown
+siesta             0000000001D03FD3  Unknown               Unknown  Unknown
+siesta             0000000002301A9F  Unknown               Unknown  Unknown
+siesta             0000000001E54FEE  Unknown               Unknown  Unknown
+siesta             0000000001B43A2A  Unknown               Unknown  Unknown
+siesta             0000000001B401B5  Unknown               Unknown  Unknown
+siesta             000000000040BE22  Unknown               Unknown  Unknown
+libc-2.17.so       00002B6DD88B2555  __libc_start_main     Unknown  Unknown
+siesta             000000000040BD29  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002AB67FF6C630  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002AB6816155A8  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002AB680E3980A  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002AB680E3A6A1  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002AB6815B92CF  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002AB680F7AE73  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002AB680B1599B  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002AB680B54CA6  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002AB680EB3311  MPI_Comm_split        Unknown  Unknown
+siesta             0000000001A64A70  mpi_comm_split_       Unknown  Unknown
+siesta             0000000001CE262A  Unknown               Unknown  Unknown
+siesta             0000000001CDF655  Unknown               Unknown  Unknown
+siesta             0000000001D03FD3  Unknown               Unknown  Unknown
+siesta             0000000002301A9F  Unknown               Unknown  Unknown
+siesta             0000000001E54FEE  Unknown               Unknown  Unknown
+siesta             0000000001B43A2A  Unknown               Unknown  Unknown
+siesta             0000000001B401B5  Unknown               Unknown  Unknown
+siesta             000000000040BE22  Unknown               Unknown  Unknown
+libc-2.17.so       00002AB681DF5555  __libc_start_main     Unknown  Unknown
+siesta             000000000040BD29  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B076D7E6630  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B076E6B4370  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B076EE332CF  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B076E7F4E73  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B076E38F8E8  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B076E3CECA6  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B076E72D311  MPI_Comm_split        Unknown  Unknown
+siesta             0000000001A64A70  mpi_comm_split_       Unknown  Unknown
+siesta             0000000001CE262A  Unknown               Unknown  Unknown
+siesta             0000000001CDF655  Unknown               Unknown  Unknown
+siesta             0000000001D03FD3  Unknown               Unknown  Unknown
+siesta             0000000002301A9F  Unknown               Unknown  Unknown
+siesta             0000000001E54FEE  Unknown               Unknown  Unknown
+siesta             0000000001B43A2A  Unknown               Unknown  Unknown
+siesta             0000000001B401B5  Unknown               Unknown  Unknown
+siesta             000000000040BE22  Unknown               Unknown  Unknown
+libc-2.17.so       00002B076F66F555  __libc_start_main     Unknown  Unknown
+siesta             000000000040BD29  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B98BFBD6630  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B98C0AC0E7B  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B98C12232D8  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B98C0BE4E73  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B98C077F8E8  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B98C07BECA6  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B98C0B1D311  MPI_Comm_split        Unknown  Unknown
+siesta             0000000001A64A70  mpi_comm_split_       Unknown  Unknown
+siesta             0000000001CE262A  Unknown               Unknown  Unknown
+siesta             0000000001CDF655  Unknown               Unknown  Unknown
+siesta             0000000001D03FD3  Unknown               Unknown  Unknown
+siesta             0000000002301A9F  Unknown               Unknown  Unknown
+siesta             0000000001E54FEE  Unknown               Unknown  Unknown
+siesta             0000000001B43A2A  Unknown               Unknown  Unknown
+siesta             0000000001B401B5  Unknown               Unknown  Unknown
+siesta             000000000040BE22  Unknown               Unknown  Unknown
+libc-2.17.so       00002B98C1A5F555  __libc_start_main     Unknown  Unknown
+siesta             000000000040BD29  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B8A794BE630  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B8A7A38B6A0  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B8A7A38C6A1  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B8A7AB0B2CF  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B8A7A4CCE73  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B8A7A0678E8  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B8A7A0A6CA6  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B8A7A405311  MPI_Comm_split        Unknown  Unknown
+siesta             0000000001A64A70  mpi_comm_split_       Unknown  Unknown
+siesta             0000000001CE262A  Unknown               Unknown  Unknown
+siesta             0000000001CDF655  Unknown               Unknown  Unknown
+siesta             0000000001D03FD3  Unknown               Unknown  Unknown
+siesta             0000000002301A9F  Unknown               Unknown  Unknown
+siesta             0000000001E54FEE  Unknown               Unknown  Unknown
+siesta             0000000001B43A2A  Unknown               Unknown  Unknown
+siesta             0000000001B401B5  Unknown               Unknown  Unknown
+siesta             000000000040BE22  Unknown               Unknown  Unknown
+libc-2.17.so       00002B8A7B347555  __libc_start_main     Unknown  Unknown
+siesta             000000000040BD29  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B70A4CF4630  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B71921379BC  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B70A5BC9612  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B70A63412CF  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B70A5D02E73  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B70A589D8E8  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B70A58DCCA6  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B70A5C3B311  MPI_Comm_split        Unknown  Unknown
+siesta             0000000001A64A70  mpi_comm_split_       Unknown  Unknown
+siesta             0000000001CE262A  Unknown               Unknown  Unknown
+siesta             0000000001CDF655  Unknown               Unknown  Unknown
+siesta             0000000001D03FD3  Unknown               Unknown  Unknown
+siesta             0000000002301A9F  Unknown               Unknown  Unknown
+siesta             0000000001E54FEE  Unknown               Unknown  Unknown
+siesta             0000000001B43A2A  Unknown               Unknown  Unknown
+siesta             0000000001B401B5  Unknown               Unknown  Unknown
+siesta             000000000040BE22  Unknown               Unknown  Unknown
+libc-2.17.so       00002B70A6B7D555  __libc_start_main     Unknown  Unknown
+siesta             000000000040BD29  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002ACB4C5CA630  Unknown               Unknown  Unknown
+libsockets-fi.so   00002ACC39A0D0BE  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002ACB4D49F612  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002ACB4DC172CF  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002ACB4D5D8E73  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002ACB4D1738E8  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002ACB4D1B2CA6  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002ACB4D511311  MPI_Comm_split        Unknown  Unknown
+siesta             0000000001A64A70  mpi_comm_split_       Unknown  Unknown
+siesta             0000000001CE262A  Unknown               Unknown  Unknown
+siesta             0000000001CDF655  Unknown               Unknown  Unknown
+siesta             0000000001D03FD3  Unknown               Unknown  Unknown
+siesta             0000000002301A9F  Unknown               Unknown  Unknown
+siesta             0000000001E54FEE  Unknown               Unknown  Unknown
+siesta             0000000001B43A2A  Unknown               Unknown  Unknown
+siesta             0000000001B401B5  Unknown               Unknown  Unknown
+siesta             000000000040BE22  Unknown               Unknown  Unknown
+libc-2.17.so       00002ACB4E453555  __libc_start_main     Unknown  Unknown
+siesta             000000000040BD29  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002ACA1AA09630  Unknown               Unknown  Unknown
+libsockets-fi.so   00002ACB07E4C0D0  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002ACA1B8DE612  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002ACA1C0562CF  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002ACA1BA17E73  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002ACA1B5B28E8  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002ACA1B5F1CA6  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002ACA1B950311  MPI_Comm_split        Unknown  Unknown
+siesta             0000000001A64A70  mpi_comm_split_       Unknown  Unknown
+siesta             0000000001CE262A  Unknown               Unknown  Unknown
+siesta             0000000001CDF655  Unknown               Unknown  Unknown
+siesta             0000000001D03FD3  Unknown               Unknown  Unknown
+siesta             0000000002301A9F  Unknown               Unknown  Unknown
+siesta             0000000001E54FEE  Unknown               Unknown  Unknown
+siesta             0000000001B43A2A  Unknown               Unknown  Unknown
+siesta             0000000001B401B5  Unknown               Unknown  Unknown
+siesta             000000000040BE22  Unknown               Unknown  Unknown
+libc-2.17.so       00002ACA1C892555  __libc_start_main     Unknown  Unknown
+siesta             000000000040BD29  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B47D23E3630  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B48BF825659  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B48BF826620  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B47D32B8612  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B47D3A302CF  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B47D33F1E73  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B47D2F8C99B  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B47D2FCBCA6  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B47D332A311  MPI_Comm_split        Unknown  Unknown
+siesta             0000000001A64A70  mpi_comm_split_       Unknown  Unknown
+siesta             0000000001CE262A  Unknown               Unknown  Unknown
+siesta             0000000001CDF655  Unknown               Unknown  Unknown
+siesta             0000000001D03FD3  Unknown               Unknown  Unknown
+siesta             0000000002301A9F  Unknown               Unknown  Unknown
+siesta             0000000001E54FEE  Unknown               Unknown  Unknown
+siesta             0000000001B43A2A  Unknown               Unknown  Unknown
+siesta             0000000001B401B5  Unknown               Unknown  Unknown
+siesta             000000000040BE22  Unknown               Unknown  Unknown
+libc-2.17.so       00002B47D426C555  __libc_start_main     Unknown  Unknown
+siesta             000000000040BD29  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002ACABD679630  Unknown               Unknown  Unknown
+libsockets-fi.so   00002ACBAAAD4E4A  Unknown               Unknown  Unknown
+libsockets-fi.so   00002ACBAAABC0FE  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002ACABE54E612  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002ACABECC62CF  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002ACABE687E73  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002ACABE22299B  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002ACABE261CA6  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002ACABE5C0311  MPI_Comm_split        Unknown  Unknown
+siesta             0000000001A64A70  mpi_comm_split_       Unknown  Unknown
+siesta             0000000001CE262A  Unknown               Unknown  Unknown
+siesta             0000000001CDF655  Unknown               Unknown  Unknown
+siesta             0000000001D03FD3  Unknown               Unknown  Unknown
+siesta             0000000002301A9F  Unknown               Unknown  Unknown
+siesta             0000000001E54FEE  Unknown               Unknown  Unknown
+siesta             0000000001B43A2A  Unknown               Unknown  Unknown
+siesta             0000000001B401B5  Unknown               Unknown  Unknown
+siesta             000000000040BE22  Unknown               Unknown  Unknown
+libc-2.17.so       00002ACABF502555  __libc_start_main     Unknown  Unknown
+siesta             000000000040BD29  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B4D33401630  Unknown               Unknown  Unknown
+.                  00007FFDEC530C21  __vdso_gettimeofd     Unknown  Unknown
+libsockets-fi.so   00002B4E2085CE1E  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B4E208440FE  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B4D342D6612  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B4D34A4E2CF  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B4D3440FE73  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B4D33FAA8E8  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B4D33FE9CA6  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B4D34348311  MPI_Comm_split        Unknown  Unknown
+siesta             0000000001A64A70  mpi_comm_split_       Unknown  Unknown
+siesta             0000000001CE262A  Unknown               Unknown  Unknown
+siesta             0000000001CDF655  Unknown               Unknown  Unknown
+siesta             0000000001D03FD3  Unknown               Unknown  Unknown
+siesta             0000000002301A9F  Unknown               Unknown  Unknown
+siesta             0000000001E54FEE  Unknown               Unknown  Unknown
+siesta             0000000001B43A2A  Unknown               Unknown  Unknown
+siesta             0000000001B401B5  Unknown               Unknown  Unknown
+siesta             000000000040BE22  Unknown               Unknown  Unknown
+libc-2.17.so       00002B4D3528A555  __libc_start_main     Unknown  Unknown
+siesta             000000000040BD29  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B7723D3E630  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B7811199E3C  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B78111819B2  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B7724C13612  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B772538B2CF  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B7724D4CE73  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B77248E78E8  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B7724926CA6  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B7724C85311  MPI_Comm_split        Unknown  Unknown
+siesta             0000000001A64A70  mpi_comm_split_       Unknown  Unknown
+siesta             0000000001CE262A  Unknown               Unknown  Unknown
+siesta             0000000001CDF655  Unknown               Unknown  Unknown
+siesta             0000000001D03FD3  Unknown               Unknown  Unknown
+siesta             0000000002301A9F  Unknown               Unknown  Unknown
+siesta             0000000001E54FEE  Unknown               Unknown  Unknown
+siesta             0000000001B43A2A  Unknown               Unknown  Unknown
+siesta             0000000001B401B5  Unknown               Unknown  Unknown
+siesta             000000000040BE22  Unknown               Unknown  Unknown
+libc-2.17.so       00002B7725BC7555  __libc_start_main     Unknown  Unknown
+siesta             000000000040BD29  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B8F80E76630  Unknown               Unknown  Unknown
+.                  00007FFCEA139CD5  __vdso_gettimeofd     Unknown  Unknown
+libsockets-fi.so   00002B906E2D1E1E  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B906E2B99B2  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B8F81D4B612  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B8F824C32CF  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B8F81E84E73  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B8F81A1F99B  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B8F81A5ECA6  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B8F81DBD311  MPI_Comm_split        Unknown  Unknown
+siesta             0000000001A64A70  mpi_comm_split_       Unknown  Unknown
+siesta             0000000001CE262A  Unknown               Unknown  Unknown
+siesta             0000000001CDF655  Unknown               Unknown  Unknown
+siesta             0000000001D03FD3  Unknown               Unknown  Unknown
+siesta             0000000002301A9F  Unknown               Unknown  Unknown
+siesta             0000000001E54FEE  Unknown               Unknown  Unknown
+siesta             0000000001B43A2A  Unknown               Unknown  Unknown
+siesta             0000000001B401B5  Unknown               Unknown  Unknown
+siesta             000000000040BE22  Unknown               Unknown  Unknown
+libc-2.17.so       00002B8F82CFF555  __libc_start_main     Unknown  Unknown
+siesta             000000000040BD29  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B81EBE1E630  Unknown               Unknown  Unknown
+.                  00007FFDF5CFDBE2  __vdso_gettimeofd     Unknown  Unknown
+libsockets-fi.so   00002B82D9279E1E  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B82D92619B2  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B81ECCF3612  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B81ED46B2CF  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B81ECE2CE73  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B81EC9C799B  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B81ECA06CA6  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B81ECD65311  MPI_Comm_split        Unknown  Unknown
+siesta             0000000001A64A70  mpi_comm_split_       Unknown  Unknown
+siesta             0000000001CE262A  Unknown               Unknown  Unknown
+siesta             0000000001CDF655  Unknown               Unknown  Unknown
+siesta             0000000001D03FD3  Unknown               Unknown  Unknown
+siesta             0000000002301A9F  Unknown               Unknown  Unknown
+siesta             0000000001E54FEE  Unknown               Unknown  Unknown
+siesta             0000000001B43A2A  Unknown               Unknown  Unknown
+siesta             0000000001B401B5  Unknown               Unknown  Unknown
+siesta             000000000040BE22  Unknown               Unknown  Unknown
+libc-2.17.so       00002B81EDCA7555  __libc_start_main     Unknown  Unknown
+siesta             000000000040BD29  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B8E6E5AD630  Unknown               Unknown  Unknown
+.                  00007FFD9DB2ACF2  __vdso_gettimeofd     Unknown  Unknown
+libsockets-fi.so   00002B8F5BA08E1E  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B8F5B9F00FE  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B8E6F482612  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B8E6FBFA2CF  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B8E6F5BBE73  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B8E6F1568E8  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B8E6F195CA6  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B8E6F4F4311  MPI_Comm_split        Unknown  Unknown
+siesta             0000000001A64A70  mpi_comm_split_       Unknown  Unknown
+siesta             0000000001CE262A  Unknown               Unknown  Unknown
+siesta             0000000001CDF655  Unknown               Unknown  Unknown
+siesta             0000000001D03FD3  Unknown               Unknown  Unknown
+siesta             0000000002301A9F  Unknown               Unknown  Unknown
+siesta             0000000001E54FEE  Unknown               Unknown  Unknown
+siesta             0000000001B43A2A  Unknown               Unknown  Unknown
+siesta             0000000001B401B5  Unknown               Unknown  Unknown
+siesta             000000000040BE22  Unknown               Unknown  Unknown
+libc-2.17.so       00002B8E70436555  __libc_start_main     Unknown  Unknown
+siesta             000000000040BD29  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B0A50FD9630  Unknown               Unknown  Unknown
+.                  00007FFF3499DCB9  __vdso_gettimeofd     Unknown  Unknown
+libsockets-fi.so   00002B0B3E434E1E  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B0B3E41C9B2  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B0A51EAE612  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B0A526262CF  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B0A51FE7E73  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B0A51B828E8  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B0A51BC1CA6  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B0A51F20311  MPI_Comm_split        Unknown  Unknown
+siesta             0000000001A64A70  mpi_comm_split_       Unknown  Unknown
+siesta             0000000001CE262A  Unknown               Unknown  Unknown
+siesta             0000000001CDF655  Unknown               Unknown  Unknown
+siesta             0000000001D03FD3  Unknown               Unknown  Unknown
+siesta             0000000002301A9F  Unknown               Unknown  Unknown
+siesta             0000000001E54FEE  Unknown               Unknown  Unknown
+siesta             0000000001B43A2A  Unknown               Unknown  Unknown
+siesta             0000000001B401B5  Unknown               Unknown  Unknown
+siesta             000000000040BE22  Unknown               Unknown  Unknown
+libc-2.17.so       00002B0A52E62555  __libc_start_main     Unknown  Unknown
+siesta             000000000040BD29  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B3A67EC3630  Unknown               Unknown  Unknown
+.                  00007FFDBB1B6CD5  __vdso_gettimeofd     Unknown  Unknown
+libsockets-fi.so   00002B3B5531EE1E  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B3B553069B2  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B3A68D98612  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B3A695102CF  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B3A68ED1E73  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B3A68A6C8E8  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B3A68AABCA6  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B3A68E0A311  MPI_Comm_split        Unknown  Unknown
+siesta             0000000001A64A70  mpi_comm_split_       Unknown  Unknown
+siesta             0000000001CE262A  Unknown               Unknown  Unknown
+siesta             0000000001CDF655  Unknown               Unknown  Unknown
+siesta             0000000001D03FD3  Unknown               Unknown  Unknown
+siesta             0000000002301A9F  Unknown               Unknown  Unknown
+siesta             0000000001E54FEE  Unknown               Unknown  Unknown
+siesta             0000000001B43A2A  Unknown               Unknown  Unknown
+siesta             0000000001B401B5  Unknown               Unknown  Unknown
+siesta             000000000040BE22  Unknown               Unknown  Unknown
+libc-2.17.so       00002B3A69D4C555  __libc_start_main     Unknown  Unknown
+siesta             000000000040BD29  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B54813EE630  Unknown               Unknown  Unknown
+.                  00007FFE7BD77CD5  __vdso_gettimeofd     Unknown  Unknown
+libsockets-fi.so   00002B556E849E1E  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B556E8310FE  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B54822C3612  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B5482A3B2CF  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B54823FCE73  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B5481F978E8  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B5481FD6CA6  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B5482335311  MPI_Comm_split        Unknown  Unknown
+siesta             0000000001A64A70  mpi_comm_split_       Unknown  Unknown
+siesta             0000000001CE262A  Unknown               Unknown  Unknown
+siesta             0000000001CDF655  Unknown               Unknown  Unknown
+siesta             0000000001D03FD3  Unknown               Unknown  Unknown
+siesta             0000000002301A9F  Unknown               Unknown  Unknown
+siesta             0000000001E54FEE  Unknown               Unknown  Unknown
+siesta             0000000001B43A2A  Unknown               Unknown  Unknown
+siesta             0000000001B401B5  Unknown               Unknown  Unknown
+siesta             000000000040BE22  Unknown               Unknown  Unknown
+libc-2.17.so       00002B5483277555  __libc_start_main     Unknown  Unknown
+siesta             000000000040BD29  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B759A00B630  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B768745E730  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B768745E8B5  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B768744D649  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B768744E620  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B759AEE0612  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B759B6582CF  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B759B019E73  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B759ABB48E8  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B759ABF3CA6  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B759AF52311  MPI_Comm_split        Unknown  Unknown
+siesta             0000000001A64A70  mpi_comm_split_       Unknown  Unknown
+siesta             0000000001CE262A  Unknown               Unknown  Unknown
+siesta             0000000001CDF655  Unknown               Unknown  Unknown
+siesta             0000000001D03FD3  Unknown               Unknown  Unknown
+siesta             0000000002301A9F  Unknown               Unknown  Unknown
+siesta             0000000001E54FEE  Unknown               Unknown  Unknown
+siesta             0000000001B43A2A  Unknown               Unknown  Unknown
+siesta             0000000001B401B5  Unknown               Unknown  Unknown
+siesta             000000000040BE22  Unknown               Unknown  Unknown
+libc-2.17.so       00002B759BE94555  __libc_start_main     Unknown  Unknown
+siesta             000000000040BD29  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002AD5A4BDF630  Unknown               Unknown  Unknown
+.                  00007FFD441FBC0E  __vdso_gettimeofd     Unknown  Unknown
+libsockets-fi.so   00002AD69203AE1E  Unknown               Unknown  Unknown
+libsockets-fi.so   00002AD6920220FE  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002AD5A5AB4612  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002AD5A622C2CF  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002AD5A5BEDE73  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002AD5A57888E8  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002AD5A57C7CA6  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002AD5A5B26311  MPI_Comm_split        Unknown  Unknown
+siesta             0000000001A64A70  mpi_comm_split_       Unknown  Unknown
+siesta             0000000001CE262A  Unknown               Unknown  Unknown
+siesta             0000000001CDF655  Unknown               Unknown  Unknown
+siesta             0000000001D03FD3  Unknown               Unknown  Unknown
+siesta             0000000002301A9F  Unknown               Unknown  Unknown
+siesta             0000000001E54FEE  Unknown               Unknown  Unknown
+siesta             0000000001B43A2A  Unknown               Unknown  Unknown
+siesta             0000000001B401B5  Unknown               Unknown  Unknown
+siesta             000000000040BE22  Unknown               Unknown  Unknown
+libc-2.17.so       00002AD5A6A68555  __libc_start_main     Unknown  Unknown
+siesta             000000000040BD29  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002AE2F05A5630  Unknown               Unknown  Unknown
+libsockets-fi.so   00002AE3DD9F8752  Unknown               Unknown  Unknown
+libsockets-fi.so   00002AE3DD9F88B5  Unknown               Unknown  Unknown
+libsockets-fi.so   00002AE3DD9E7649  Unknown               Unknown  Unknown
+libsockets-fi.so   00002AE3DD9E8620  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002AE2F147A612  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002AE2F1BF22CF  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002AE2F15B3E73  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002AE2F114E8E8  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002AE2F118DCA6  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002AE2F14EC311  MPI_Comm_split        Unknown  Unknown
+siesta             0000000001A64A70  mpi_comm_split_       Unknown  Unknown
+siesta             0000000001CE262A  Unknown               Unknown  Unknown
+siesta             0000000001CDF655  Unknown               Unknown  Unknown
+siesta             0000000001D03FD3  Unknown               Unknown  Unknown
+siesta             0000000002301A9F  Unknown               Unknown  Unknown
+siesta             0000000001E54FEE  Unknown               Unknown  Unknown
+siesta             0000000001B43A2A  Unknown               Unknown  Unknown
+siesta             0000000001B401B5  Unknown               Unknown  Unknown
+siesta             000000000040BE22  Unknown               Unknown  Unknown
+libc-2.17.so       00002AE2F242E555  __libc_start_main     Unknown  Unknown
+siesta             000000000040BD29  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002ADA5D99E630  Unknown               Unknown  Unknown
+libsockets-fi.so   00002ADB4ADEE60E  Unknown               Unknown  Unknown
+libsockets-fi.so   00002ADB4ADF174F  Unknown               Unknown  Unknown
+libsockets-fi.so   00002ADB4ADF18B5  Unknown               Unknown  Unknown
+libsockets-fi.so   00002ADB4ADE0649  Unknown               Unknown  Unknown
+libsockets-fi.so   00002ADB4ADE1620  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002ADA5E873612  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002ADA5EFEB2CF  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002ADA5E9ACE73  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002ADA5E5478E8  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002ADA5E586CA6  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002ADA5E8E5311  MPI_Comm_split        Unknown  Unknown
+siesta             0000000001A64A70  mpi_comm_split_       Unknown  Unknown
+siesta             0000000001CE262A  Unknown               Unknown  Unknown
+siesta             0000000001CDF655  Unknown               Unknown  Unknown
+siesta             0000000001D03FD3  Unknown               Unknown  Unknown
+siesta             0000000002301A9F  Unknown               Unknown  Unknown
+siesta             0000000001E54FEE  Unknown               Unknown  Unknown
+siesta             0000000001B43A2A  Unknown               Unknown  Unknown
+siesta             0000000001B401B5  Unknown               Unknown  Unknown
+siesta             000000000040BE22  Unknown               Unknown  Unknown
+libc-2.17.so       00002ADA5F827555  __libc_start_main     Unknown  Unknown
+siesta             000000000040BD29  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B68B68C5630  Unknown               Unknown  Unknown
+.                  00007FFFBDF90CD5  __vdso_gettimeofd     Unknown  Unknown
+libsockets-fi.so   00002B69A3D20E1E  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B69A3D089B2  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B68B779A612  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B68B7F122CF  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B68B78D3E73  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B68B746E8E8  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B68B74ADCA6  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B68B780C311  MPI_Comm_split        Unknown  Unknown
+siesta             0000000001A64A70  mpi_comm_split_       Unknown  Unknown
+siesta             0000000001CE262A  Unknown               Unknown  Unknown
+siesta             0000000001CDF655  Unknown               Unknown  Unknown
+siesta             0000000001D03FD3  Unknown               Unknown  Unknown
+siesta             0000000002301A9F  Unknown               Unknown  Unknown
+siesta             0000000001E54FEE  Unknown               Unknown  Unknown
+siesta             0000000001B43A2A  Unknown               Unknown  Unknown
+siesta             0000000001B401B5  Unknown               Unknown  Unknown
+siesta             000000000040BE22  Unknown               Unknown  Unknown
+libc-2.17.so       00002B68B874E555  __libc_start_main     Unknown  Unknown
+siesta             000000000040BD29  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B348E58C630  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B357B9DF664  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B357B9E0740  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B357B9E1205  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B357B9CE5D8  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B357B9CF620  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B348F461612  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B348FBD92CF  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B348F59AE73  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B348F1358E8  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B348F174CA6  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B348F4D3311  MPI_Comm_split        Unknown  Unknown
+siesta             0000000001A64A70  mpi_comm_split_       Unknown  Unknown
+siesta             0000000001CE262A  Unknown               Unknown  Unknown
+siesta             0000000001CDF655  Unknown               Unknown  Unknown
+siesta             0000000001D03FD3  Unknown               Unknown  Unknown
+siesta             0000000002301A9F  Unknown               Unknown  Unknown
+siesta             0000000001E54FEE  Unknown               Unknown  Unknown
+siesta             0000000001B43A2A  Unknown               Unknown  Unknown
+siesta             0000000001B401B5  Unknown               Unknown  Unknown
+siesta             000000000040BE22  Unknown               Unknown  Unknown
+libc-2.17.so       00002B3490415555  __libc_start_main     Unknown  Unknown
+siesta             000000000040BD29  Unknown               Unknown  Unknown
+forrtl: error (78): process killed (SIGTERM)
+Image              PC                Routine            Line        Source             
+siesta             0000000001A90B24  Unknown               Unknown  Unknown
+libpthread-2.17.s  00002B9659AA4630  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B9746EF42CD  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B9746EF768B  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B9746EF8740  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B9746EF9205  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B9746EE65D8  Unknown               Unknown  Unknown
+libsockets-fi.so   00002B9746EE7620  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B965A979612  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B965B0F12CF  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B965AAB2E73  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B965A64D99B  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B965A68CCA6  Unknown               Unknown  Unknown
+libmpi.so.12.0.0   00002B965A9EB311  MPI_Comm_split        Unknown  Unknown
+siesta             0000000001A64A70  mpi_comm_split_       Unknown  Unknown
+siesta             0000000001CE262A  Unknown               Unknown  Unknown
+siesta             0000000001CDF655  Unknown               Unknown  Unknown
+siesta             0000000001D03FD3  Unknown               Unknown  Unknown
+siesta             0000000002301A9F  Unknown               Unknown  Unknown
+siesta             0000000001E54FEE  Unknown               Unknown  Unknown
+siesta             0000000001B43A2A  Unknown               Unknown  Unknown
+siesta             0000000001B401B5  Unknown               Unknown  Unknown
+siesta             000000000040BE22  Unknown               Unknown  Unknown
+libc-2.17.so       00002B965B92D555  __libc_start_main     Unknown  Unknown
+siesta             000000000040BD29  Unknown               Unknown  Unknown
+srun: error: sdumont6069: tasks 0-39: Exited with exit code 1
