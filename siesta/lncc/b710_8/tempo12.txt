@@ -1,0 +1,6 @@
+srun: Warning: can't honor --ntasks-per-node set to 8 which doesn't match the requested tasks 12 with the number of requested nodes 3. Ignoring --ntasks-per-node.
+Job completed
+
+real	3m6.675s
+user	0m0.040s
+sys	0m0.104s
