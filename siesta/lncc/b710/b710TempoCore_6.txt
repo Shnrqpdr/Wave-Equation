@@ -1,5 +1,0 @@
-Job completed
-
-real	1m15.372s
-user	0m0.036s
-sys	0m0.087s

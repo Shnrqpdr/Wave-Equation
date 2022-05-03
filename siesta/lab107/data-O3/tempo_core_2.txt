@@ -1,5 +1,0 @@
-bash: mpirun: comando não encontrado...
-
-real	0m0,729s
-user	0m0,009s
-sys	0m0,004s
