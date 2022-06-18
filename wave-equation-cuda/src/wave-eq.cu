@@ -6,14 +6,14 @@
 #include <math.h>
 #include <time.h>
 
-#define N 1000 // Tamanho da Malha
-#define tempoTotal 15000 // Loops temporais
-#define	alpha 0.4
-#define	gamma 0.8
+#define N 1000
+#define tempoTotal 15000
 #define xInicial 0
 #define xFinal 50.0
 #define yInicial 0
 #define yFinal 50.0
+#define	alpha 0.4
+#define	gamma 0.8
 
 #define CHECK(call)                                                \
     {                                                              \
@@ -89,7 +89,7 @@ void deviceCapabilities()
     for (int i = 0; i < count; i++)
     {
         cudaGetDeviceProperties(&prop, i);
-        printf(" --- General Information for device %d ---\n", i);
+        printf("\n --- General Information for device %d ---\n", i);
         printf("Name: %s\n", prop.name);
         printf("Compute capability: %d.%d\n", prop.major, prop.minor);
         printf("Clock rate: %d\n", prop.clockRate);
@@ -103,12 +103,12 @@ void deviceCapabilities()
             printf("Enabled\n");
         else
             printf("Disabled\n");
-        printf(" --- Memory Information for device %d ---\n", i);
+        printf("\n --- Memory Information for device %d ---\n", i);
         printf("Total global mem: %ld\n", prop.totalGlobalMem);
         printf("Total constant Mem: %ld\n", prop.totalConstMem);
         printf("Max mem pitch: %ld\n", prop.memPitch);
         printf("Texture Alignment: %ld\n", prop.textureAlignment);
-        printf(" --- MP Information for device %d ---\n", i);
+        printf("\n --- MP Information for device %d ---\n", i);
         printf("Multiprocessor count: %d\n",
                prop.multiProcessorCount);
         printf("Shared mem per mp: %ld\n", prop.sharedMemPerBlock);
@@ -122,13 +122,13 @@ void deviceCapabilities()
         printf("Max grid dimensions: (%d, %d, %d)\n",
                prop.maxGridSize[0], prop.maxGridSize[1],
                prop.maxGridSize[2]);
-        printf("\n");
+        printf("\n\n");
     }
 }
 
 void actionWork(double dx, double dy){
 
-    int i, j, k;
+    int i, j, t;
 
     double *hostWave, *hostWaveFuture, *hostWavePast;       // Host variables
     double *deviceWave, *deviceWaveFuture, *deviceWavePast; // Device Variables
@@ -149,7 +149,7 @@ void actionWork(double dx, double dy){
     CHECK(cudaMalloc(&deviceWavePast, (N * N) * sizeof(double))); 
     
     printf("Iniciando calculo da função de onda.\n");
-    for (i = 0; i < tempoTotal; i++)
+    for (t = 0; t < tempoTotal; t++)
     {
         CHECK(cudaMemcpy(deviceWave, hostWave, (N * N) * sizeof(double), cudaMemcpyHostToDevice));
         CHECK(cudaMemcpy(deviceWaveFuture, hostWaveFuture, (N * N) * sizeof(double), cudaMemcpyHostToDevice));
@@ -161,12 +161,12 @@ void actionWork(double dx, double dy){
         CHECK(cudaMemcpy(hostWaveFuture, deviceWaveFuture, (N * N) * sizeof(double), cudaMemcpyDeviceToHost));
         CHECK(cudaMemcpy(hostWavePast, deviceWavePast, (N * N) * sizeof(double), cudaMemcpyDeviceToHost));
 
-        for (k = 1; k < N - 1; k++)
+        for (i = 1; i < N - 1; i++)
         {
             for (j = 1; j < N - 1; j++)
             {
-                hostWavePast[k * N + j] = hostWave[k * N + j];
-                hostWave[k * N + j] = hostWaveFuture[k * N + j];
+                hostWavePast[i * N + j] = hostWave[i * N + j];
+                hostWave[i * N + j] = hostWaveFuture[i * N + j];
             }
         }
     }
