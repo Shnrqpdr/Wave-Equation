@@ -6,11 +6,10 @@
 #include <math.h>
 #include <time.h>
 
-#define N 500 // Tamanho da Malha
-#define dom 50.0
-#define IT 10 // Loops temporais
-#define alpha 1.4
-#define gamma 1.8
+#define N 1000 // Tamanho da Malha
+#define tempoTotal 15000 // Loops temporais
+#define	alpha 0.4
+#define	gamma 0.8
 #define xInicial 0
 #define xFinal 50.0
 #define yInicial 0
@@ -36,38 +35,14 @@ __global__ void waveEquationKernel(double *wave, double *waveFuture, double *wav
         waveFuture[i * blockDim.x + j] = 2 * wave[i * blockDim.x + j] * (1 - alpha * alpha - gamma * gamma) - wavePast[i * blockDim.x + j] + alpha * alpha * wave[(i + 1) * blockDim.x + j] + alpha * alpha * wave[(i - 1) * blockDim.x + j] + gamma * gamma * wave[i * blockDim.x + (j + 1)] + gamma * gamma * wave[i * blockDim.x + (j - 1)];
 }
 
-__global__ void actualizationKernel(double *wave, double *waveFuture, double *wavePast)
-{
-    int i = blockIdx.x;
-    int j = threadIdx.x;
-    if ((i > 0 && i < N - 1) && (j > 0 && j < N - 1))
-    {
-        wavePast[i * blockDim.x + j] = wave[i * blockDim.x + j];
-        wave[i * blockDim.x + j] = waveFuture[i * blockDim.x + j];
-    }
-}
-
-void inicMatrix(double *wave)
-{
-    int i, j;
-
-    for (i = 0; i < N; i++)
-    {
-        for (j = 0; j < N; j++)
-        {
-            wave[i * N + j] = 0;
-        }
-    }
-}
-
 void writeFiles(double *wave, double dx, double dy)
 {
     int i, j;
     FILE *fileStaticPlot;
 
-    fileStaticPlot = fopen("WaveStatic.dat", "w");
+    fileStaticPlot = fopen("WaveStatic2.dat", "w");
 
-    fprintf(fileStaticPlot, "x\ty\tt\tf\n");
+    fprintf(fileStaticPlot, "x\ty\tf\n");
 
     for (i = 1; i < N - 1; i++)
     {
@@ -80,23 +55,29 @@ void writeFiles(double *wave, double dx, double dy)
     fclose(fileStaticPlot);
 }
 
-void initialCond(double *wave)
+void initialCondition(double *wave)
 {
     int i, j;
-    // double x, y;
-    // double dx, dy;
-
-    // y = -dom / 2.0;
     for (j = 0; j < N; j++)
     {
-        // x = -dom / 2.0;
         for (i = 0; i < N; i++)
         {
-            wave[i * N + j] = 4 * sin(M_PI * i / 25.0);
-
-            // wave[i * N + j] = 2;
+            wave[i * N + j] = 4 * sin(M_PI * i / 75.0);
         }
     }
+}
+
+void derivativeCondition(double *wave, double *wavePast){
+
+	int i, j;
+
+	for (i = 1; i < N-1; i++)
+	{
+		for (j = 1; j < N-1; j++)
+		{
+			wave[i*N+j] = (2*wavePast[i*N + j]*(1 - alpha*alpha - gamma*gamma) + alpha*alpha*wavePast[(i+1)*N + j] + alpha*alpha*wavePast[(i-1)*N + j] + gamma*gamma*wavePast[i*N + (j+1)] +  gamma*gamma*wavePast[i*N + (j-1)])/2;
+		}
+	}
 }
 
 void deviceCapabilities()
@@ -145,61 +126,40 @@ void deviceCapabilities()
     }
 }
 
-int main()
-{
+void actionWork(double dx, double dy){
+
+    int i, j, k;
+
     double *hostWave, *hostWaveFuture, *hostWavePast;       // Host variables
     double *deviceWave, *deviceWaveFuture, *deviceWavePast; // Device Variables
-    int i, j, k;
-    double dx, dy;
 
-    dx = (xFinal - xInicial) / N;
-    dy = (yFinal - yInicial) / N;
+    printf("Alocando memoria no host\n");
+    hostWave = (double *)calloc((N * N), sizeof(double));
+    hostWaveFuture = (double *)calloc((N * N), sizeof(double));
+    hostWavePast = (double *)calloc((N * N), sizeof(double));
 
-    printf("Definindo parametros para a discretizao ... \n");
+    printf("Colocando condição inicial.\n");
+    initialCondition(hostWavePast);
+    printf("Colocando condição da derivada.\n"); 
+    derivativeCondition(hostWave, hostWavePast);
 
-    // deviceCapabilities();
-
-    printf("Alocando memOria no HOST ... \n");
-    hostWave = (double *)malloc((N * N) * sizeof(double));       // Matrix Solution on HOST
-    hostWaveFuture = (double *)malloc((N * N) * sizeof(double)); // Matrix Actualizations on HOST
-    hostWavePast = (double *)malloc((N * N) * sizeof(double));   // Previous Matrix results on HOST
-
-    printf("Inicializando matrizes no HOST ... \n");
-    inicMatrix(hostWave);       // Zeros  Matrix
-    inicMatrix(hostWaveFuture); // Zeros  Matrix
-    inicMatrix(hostWavePast);   // Zeros  Matrix
-
-    printf("Aplicando as condicoes iniciais a matriz ... \n");
-    initialCond(hostWave); // Appling initial conditions
-
-    writeFiles(hostWave, dx, dy);
-
-    printf("Alocando memoria no DEVICE ... \n");
-    CHECK(cudaMalloc(&deviceWave, (N * N) * sizeof(double)));       // Matrix Solution on Device
-    CHECK(cudaMalloc(&deviceWaveFuture, (N * N) * sizeof(double))); // Matrix Actualizations on Device
-    CHECK(cudaMalloc(&deviceWavePast, (N * N) * sizeof(double)));   // Matrix Actualizations on Device
-
-    // deviceCapabilities();
-
-    clock_t beginTime = clock();
-    printf("Iniciando looping temporal ... \n");
-    for (i = 0; i < IT; i++)
+    printf("Alocando memoria no Device\n");
+    CHECK(cudaMalloc(&deviceWave, (N * N) * sizeof(double)));
+    CHECK(cudaMalloc(&deviceWaveFuture, (N * N) * sizeof(double)));
+    CHECK(cudaMalloc(&deviceWavePast, (N * N) * sizeof(double))); 
+    
+    printf("Iniciando calculo da função de onda.\n");
+    for (i = 0; i < tempoTotal; i++)
     {
-        // printf("Transferindo informacoes do HOST para o DEVICE ... \n");
         CHECK(cudaMemcpy(deviceWave, hostWave, (N * N) * sizeof(double), cudaMemcpyHostToDevice));
         CHECK(cudaMemcpy(deviceWaveFuture, hostWaveFuture, (N * N) * sizeof(double), cudaMemcpyHostToDevice));
         CHECK(cudaMemcpy(deviceWavePast, hostWavePast, (N * N) * sizeof(double), cudaMemcpyHostToDevice));
 
-        // Parellelism in N blocks and N threads per block for the inner elements
-        waveEquationKernel<<<N, N>>>(deviceWave, deviceWaveFuture, deviceWavePast); // Parallelism in N Blocks with N Threads
-        // actualizationKernel<<<N, N>>>(deviceWave, deviceWaveFuture, deviceWavePast);
+        waveEquationKernel<<<N, N>>>(deviceWave, deviceWaveFuture, deviceWavePast);
 
-        // printf("Transferindo atualizacoes do DEVICE para o HOST ... \n");
         CHECK(cudaMemcpy(hostWave, deviceWave, (N * N) * sizeof(double), cudaMemcpyDeviceToHost));
         CHECK(cudaMemcpy(hostWaveFuture, deviceWaveFuture, (N * N) * sizeof(double), cudaMemcpyDeviceToHost));
         CHECK(cudaMemcpy(hostWavePast, deviceWavePast, (N * N) * sizeof(double), cudaMemcpyDeviceToHost));
-
-        // printf("%f\t%f\t%f\n", hostWave[10], hostWaveFuture[10], hostWavePast[10]);
 
         for (k = 1; k < N - 1; k++)
         {
@@ -211,22 +171,34 @@ int main()
         }
     }
 
-    printf("Escrevendo o arquivo de dados ... \n");
-
+    printf("Escrevendo no arquivo o resultado do cálculo\n");
     writeFiles(hostWave, dx, dy);
 
-    clock_t endTime = clock();
+    printf("Liberando memoria no host e device ... \n");
 
-    printf("Liberando memoria no HOST e no DEVICE ... \n");
-
-    // Unallocing CPU variables
     free(hostWave);
     free(hostWaveFuture);
     free(hostWavePast);
-    // Unallocing GPU variables
+
     cudaFree(deviceWave);
     cudaFree(deviceWaveFuture);
     cudaFree(deviceWavePast);
+}
+
+int main()
+{
+    double dx, dy;
+
+    dx = (xFinal - xInicial) / N;
+    dy = (yFinal - yInicial) / N;
+
+    deviceCapabilities();
+
+    clock_t beginTime = clock();
+
+    actionWork(dx, dy);
+
+    clock_t endTime = clock();
 
     printf("Time: %10.2f seconds \n", (endTime - beginTime) / (1.0 * CLOCKS_PER_SEC));
     return 0;

@@ -5,7 +5,7 @@ import pandas as pd
 from dask import dataframe as dd
 # %matplotlib inline
 
-file=dd.read_csv("../WaveStatic.dat", header = 0, sep='\s+')
+file=dd.read_csv("../program/WaveStatic.dat", header = 0, sep='\s+')
 
 fig = plt.figure(figsize=(10,6))
 ax1 = fig.add_subplot(111, projection='3d')
@@ -19,4 +19,4 @@ surf1 = ax1.plot_trisurf(file['x'], file['y'], file['f'], cmap=mycmap)
 fig.colorbar(surf1, ax=ax1, shrink=0.5, aspect=5)
 
 #plt.show()
-plt.savefig('plotWave5.png', dpi=400)
+plt.savefig('plotWave6.png', dpi=400)

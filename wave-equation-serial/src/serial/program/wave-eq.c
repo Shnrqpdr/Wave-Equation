@@ -4,11 +4,11 @@
 #include <math.h>
 #include <time.h>
 
-#define N 5000
+#define N 1000
 #define xInicial 0
-#define xFinal 500.0
+#define xFinal 50.0
 #define yInicial 0
-#define yFinal 500.0
+#define yFinal 50.0
 #define finalTime 15000
 #define	alpha 0.4
 #define	gamma 0.8
@@ -40,7 +40,7 @@ void ***initialCondition(double ***wave, double dx, double dy){
 	for (i = 0; i < N; i++){
 		for (j = 0; j < N; j++){
 
-			wave[i][j][0] = sin(M_PI*i/75);
+			wave[i][j][0] = 4*sin(M_PI*i/75);
 
 		}
 	}
