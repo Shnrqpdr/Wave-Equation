@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <mpi.h>
 #include <math.h>
 #include <time.h>
 
@@ -13,29 +14,22 @@
 #define alpha 0.4
 #define gamma 0.8
 
-double ***allocArray()
+double preencheArray(double wave[3][N][N], double valor)
 {
+    int i, j, t;
 
-    int i, j;
-    double ***waveFunction;
-
-    waveFunction = (double ***)malloc(N * sizeof(double));
-    for (i = 0; i < N; i++)
-    {
-
-        waveFunction[i] = (double **)malloc(N * sizeof(double));
-
-        for (j = 0; j < N; j++)
+    for(t = 0; t < finalTime; t++){
+        for (i = 0; i < N; i++)
         {
-
-            waveFunction[i][j] = (double *)malloc(3 * sizeof(double));
+            for (j = 0; j < N; j++){
+                wave[t%3][i][j] = valor;
+            }
         }
     }
-
-    return waveFunction;
+    return wave[3][N][N];
 }
 
-void ***initialCondition(double ***wave, double dx, double dy)
+double initialCondition(double wave[3][N][N], double dx, double dy)
 {
 
     int i, j;
@@ -45,12 +39,14 @@ void ***initialCondition(double ***wave, double dx, double dy)
         for (j = 0; j < N; j++)
         {
 
-            wave[i][j][0] = sin(M_PI * i / 75);
+            wave[0][i][j] = sin(M_PI * i / 75);
         }
     }
+
+    return wave[3][N][N];
 }
 
-void ***contourCondition(double ***wave, double dx, double dy)
+double contourCondition(double wave[3][N][N], double dx, double dy)
 {
 
     int i, j, t;
@@ -59,7 +55,7 @@ void ***contourCondition(double ***wave, double dx, double dy)
     {
         for (t = 0; t < 3; t++)
         {
-            wave[0][j][t] = 0;
+            wave[t][0][j] = 0;
             wave[N - 1][j][t] = 0;
         }
     }
@@ -68,13 +64,15 @@ void ***contourCondition(double ***wave, double dx, double dy)
     {
         for (t = 0; t < 3; t++)
         {
-            wave[i][0][t] = 0;
-            wave[i][N - 1][t] = 0;
+            wave[t][i][0] = 0;
+            wave[t][i][N - 1] = 0;
         }
     }
+
+    return wave[3][N][N];
 }
 
-void ***derivativeCondition(double ***wave, double dx, double dy)
+double derivativeCondition(double ***wave, double dx, double dy)
 {
 
     int i, j;
@@ -86,6 +84,8 @@ void ***derivativeCondition(double ***wave, double dx, double dy)
             wave[i][j][1] = (2 * wave[i][j][0] * (1 - alpha * alpha - gamma * gamma) + alpha * alpha * wave[i + 1][j][0] + alpha * alpha * wave[i - 1][j][0] + gamma * gamma * wave[i][j + 1][0] + gamma * gamma * wave[i][j - 1][0]) / 2;
         }
     }
+
+    return wave[3][N][N];
 }
 
 void ***finiteDifference(double ***wave, double dx, double dy)
@@ -137,9 +137,52 @@ void writeFiles(double ***wave, double dx, double dy)
     fclose(fileStaticPlot);
 }
 
-void actionWork(double ***wave)
+void imprimeFinalTimeArray(double wave[3][N][N])
 {
 
+        for (int i = 0; i < nL; i++)
+        {
+            printf("\n");
+            for (int j = 0; j < nC; j++)
+            {
+                printf("%lf \t", wave[finalTime % 3][i][j]);
+            }
+        }
+
+        printf("\n\n");
+}
+
+// void actionWork(double ***wave)
+// {
+
+//     double dx, dy, dt;
+
+    
+
+//     printf("Colocando condição inicial.\n");
+//     initialCondition(wave, dx, dy);
+
+//     printf("Colocando condição de contorno.\n");
+//     contourCondition(wave, dx, dy);
+
+//     printf("Colocando condição da derivada.\n");
+//     derivativeCondition(wave, dx, dy);
+
+//     printf("Iniciando calculo da função de onda.\n");
+//     finiteDifference(wave, dx, dy);
+
+//     printf("Escrevendo no arquivo\n");
+//     writeFiles(wave, dx, dy);
+// }
+
+void main(int argc, char **argv)
+{
+    int rank, size;
+    int sinalMaster, sinalWorker;
+    int i, j, k;
+    int divisaoLinhas, aux, restoDivisao, divisaoMalha;
+    int teste1, teste2;
+    double waveFunction[3][N][N];
     double dx, dy, dt;
 
     dx = (xFinal - xInicial) / N;
@@ -148,37 +191,48 @@ void actionWork(double ***wave)
     printf("Malha: %d x %d\n", N, N);
     printf("Tempo total: %d\n", finalTime);
 
-    printf("Colocando condição inicial.\n");
-    initialCondition(wave, dx, dy);
-
-    printf("Colocando condição de contorno.\n");
-    contourCondition(wave, dx, dy);
-
-    printf("Colocando condição da derivada.\n");
-    derivativeCondition(wave, dx, dy);
-
-    printf("Iniciando calculo da função de onda.\n");
-    finiteDifference(wave, dx, dy);
-
-    printf("Escrevendo no arquivo\n");
-    writeFiles(wave, dx, dy);
-}
-
-void main()
-{
-
-    double ***waveFunction;
-
-    system("clear");
     clock_t beginTime = clock();
 
-    printf("Alocando a memória do array.\n");
-    waveFunction = allocArray();
+    sinalMaster = 0;
+    sinalWorker = 1;
+    restoDivisao = 0;
+    divisaoMalha = 0;
 
-    printf("Começando os calculos.\n");
-    actionWork(waveFunction);
+    MPI_Status status;
+    // inicia a zona paralela
+    MPI_Init(&argc, &argv);
+    MPI_Comm_rank(MPI_COMM_WORLD, &rank);
+    MPI_Comm_size(MPI_COMM_WORLD, &size);
 
-    clock_t endTime = clock();
+    if (rank == 0)
+    {
 
-    printf("Time: %10.2f seconds \n", (endTime - beginTime) / (1.0 * CLOCKS_PER_SEC));
+        printf("Alocando a memória do array.\n");
+        waveFunction = preencheArray();
+        waveFunction = initialCondition(waveFunction, dx, dy);
+        waveFunction = contourCondition(waveFunction, dx, dy);
+        waveFunction = derivativeCondition(waveFunction, dx, dy);
+
+        imprimeFinalTimeArray(waveFunction);
+
+        printf("Começando os calculos.\n");
+
+    }
+
+    // MPI_Barrier(MPI_COMM_WORLD);
+
+    // teste1 = (N / size) * (rank);
+
+    // teste2 = (N / size) * (rank + 1);
+
+    // printf("Estou no rank %d e vou da linha %d até %d\n", rank, teste1, teste2);
+
+    // printMatrix(waveFunction, teste1, teste2);
+
+    if (rank == 0)
+    {
+        clock_t endTime = clock();
+
+        printf("Time: %10.2f seconds \n", (endTime - beginTime) / (1.0 * CLOCKS_PER_SEC));
+    }
 }
