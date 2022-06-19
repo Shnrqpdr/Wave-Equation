@@ -6,12 +6,14 @@
 #include <math.h>
 #include <time.h>
 
-#define N 1000
+#define mu 0.01
+#define T 40
+#define N 5000
 #define tempoTotal 15000
 #define xInicial 0
-#define xFinal 50.0
+#define xFinal 500.0
 #define yInicial 0
-#define yFinal 50.0
+#define yFinal 500.0
 #define	alpha 0.4
 #define	gamma 0.8
 
@@ -80,6 +82,32 @@ void derivativeCondition(double *wave, double *wavePast){
 	}
 }
 
+double resultsValidation(double *wave, double dx, double dy){
+
+    int i, j;
+    double erro, maiorErro, analitica;
+
+    for(i = 0; i < N; i++){
+        for(j = 0; j < N; j ++){
+
+            analitica = sin((j*M_PI*dx)/xFinal)*sin((i*M_PI*dy)/yFinal)*(-(2000/((M_PI)*(M_PI)))*((sin(M_PI*j)*(cos(M_PI*i) - 1))/((j*j - 250000)*i)))*cos(sqrt(mu/T)*(sqrt((j*M_PI/xFinal)*(j*M_PI/xFinal) + (i*M_PI/yFinal)*(i*M_PI/yFinal)))*tempoTotal);
+
+            erro = fabs((wave[i*N + j] - analitica)/analitica);
+
+            if(i == 0 && j == 0){
+                maiorErro = erro;
+            }
+            else{
+                if(erro > maiorErro){
+                    maiorErro = erro;
+                }
+            }
+        }
+    }
+
+    return maiorErro;
+}
+
 void deviceCapabilities()
 {
 
@@ -132,6 +160,7 @@ void actionWork(double dx, double dy){
 
     double *hostWave, *hostWaveFuture, *hostWavePast;       // Host variables
     double *deviceWave, *deviceWaveFuture, *deviceWavePast; // Device Variables
+    double erro;
 
     printf("Alocando memoria no host\n");
     hostWave = (double *)calloc((N * N), sizeof(double));
@@ -174,6 +203,10 @@ void actionWork(double dx, double dy){
     printf("Escrevendo no arquivo o resultado do cálculo\n");
     writeFiles(hostWave, dx, dy);
 
+    erro = resultsValidation(hostWave, dx, dy);
+
+    printf("Erro da solução numérica: %lf\n", erro);
+
     printf("Liberando memoria no host e device ... \n");
 
     free(hostWave);
@@ -193,6 +226,10 @@ int main()
     dy = (yFinal - yInicial) / N;
 
     deviceCapabilities();
+
+    printf("dx: %lf\tdy: %lf\n", dx, dy);
+    printf("Malha: %d x %d\n", N, N);
+    printf("Tempo total: %d\n", tempoTotal);
 
     clock_t beginTime = clock();
 
