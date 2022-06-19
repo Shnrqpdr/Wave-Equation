@@ -1,5 +1,6 @@
 {
     "files.associations": {
-        "device_launch_parameters.h": "c"
+        "device_launch_parameters.h": "c",
+        "cmath": "cpp"
     }
 }
