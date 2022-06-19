@@ -160,7 +160,7 @@ void actionWork(double dx, double dy){
 
     double *hostWave, *hostWaveFuture, *hostWavePast;       // Host variables
     double *deviceWave, *deviceWaveFuture, *deviceWavePast; // Device Variables
-    double erro;
+    //double erro;
 
     //printf("Alocando memoria no host\n");
     hostWave = (double *)calloc((N * N), sizeof(double));
@@ -203,7 +203,7 @@ void actionWork(double dx, double dy){
     //printf("Escrevendo no arquivo o resultado do cálculo\n");
     //writeFiles(hostWave, dx, dy);
 
-    erro = resultsValidation(hostWave, dx, dy);
+    //erro = resultsValidation(hostWave, dx, dy);
 
     //printf("Erro da solução numérica: %lf\n", erro);
 
@@ -227,9 +227,9 @@ int main()
 
     //deviceCapabilities();
 
-    printf("dx: %lf\tdy: %lf\n", dx, dy);
+    //printf("dx: %lf\tdy: %lf\n", dx, dy);
     printf("Malha: %d x %d\n", N, N);
-    printf("Tempo total: %d\n", tempoTotal);
+    //printf("Tempo total: %d\n", tempoTotal);
 
     clock_t beginTime = clock();
 

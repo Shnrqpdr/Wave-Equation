@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for j in 1000 2000 3000 4000 5000;
+for j in 4000 5000;
 do
     mkdir $j
 
