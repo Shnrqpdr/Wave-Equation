@@ -1,5 +1,4 @@
-./scriptRun.sh: line 24: 18277 Killed                  ./wave_O$i.x
 
-real	0m5,069s
-user	0m4,900s
-sys	0m0,152s
+real	25m54,003s
+user	25m53,987s
+sys	0m0,416s

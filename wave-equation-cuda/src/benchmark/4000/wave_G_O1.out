@@ -1,5 +1,4 @@
-./scriptRun.sh: line 30: 18077 Killed                  ./wave_G_O$i.x
 
-real	0m5,662s
-user	0m5,459s
-sys	0m0,188s
+real	34m47,874s
+user	34m47,703s
+sys	0m0,368s

@@ -31,5 +31,7 @@ do
 
         done
 
+    rm *.x
+
     cd .. 
 done
