@@ -4,7 +4,7 @@
 #include <math.h>
 #include <time.h>
 
-#define N XYXY
+#define N 896
 #define xInicial 0
 #define xFinal 500.0
 #define yInicial 0
