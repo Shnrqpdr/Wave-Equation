@@ -1,14 +1,14 @@
 #!/bin/bash
 
-for j in 4000 5000;
+for j in 896 1792 2688 3584;
 do
     mkdir $j
 
     cd $j
 
-    cp ../wave-model.cu .
+    cp ../wave-aux.cu .
 
-    sed "s/XYXY/$j/g" wave-model.cu > wave.cu
+    sed "s/XYXY/$j/g" wave-aux.cu > wave.cu
 
     echo "Iniciando o cálculo do programa sem as flags"
 
