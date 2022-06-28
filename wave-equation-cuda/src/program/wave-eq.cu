@@ -8,8 +8,8 @@
 
 #define mu 0.01
 #define T 40
-#define N 5000
-#define tempoTotal 15000
+#define N 1000
+#define tempoTotal 1000
 #define xInicial 0
 #define xFinal 500.0
 #define yInicial 0
@@ -28,7 +28,7 @@
         }                                                          \
     }
 
-__global__ void waveEquationKernel(double *wave, double *waveFuture, double *wavePast)
+__global__ void finiteDifferenceKernel(double *wave, double *waveFuture, double *wavePast)
 {
     int i = blockIdx.x;
     int j = threadIdx.x;
@@ -184,7 +184,7 @@ void actionWork(double dx, double dy){
         CHECK(cudaMemcpy(deviceWaveFuture, hostWaveFuture, (N * N) * sizeof(double), cudaMemcpyHostToDevice));
         CHECK(cudaMemcpy(deviceWavePast, hostWavePast, (N * N) * sizeof(double), cudaMemcpyHostToDevice));
 
-        waveEquationKernel<<<N, N>>>(deviceWave, deviceWaveFuture, deviceWavePast);
+        finiteDifferenceKernel<<<N, N>>>(deviceWave, deviceWaveFuture, deviceWavePast);
 
         CHECK(cudaMemcpy(hostWave, deviceWave, (N * N) * sizeof(double), cudaMemcpyDeviceToHost));
         CHECK(cudaMemcpy(hostWaveFuture, deviceWaveFuture, (N * N) * sizeof(double), cudaMemcpyDeviceToHost));
