@@ -14,8 +14,8 @@
 #define xFinal 500.0
 #define yInicial 0
 #define yFinal 500.0
-#define	alpha 0.4
-#define	gamma 0.8
+#define alpha 0.4
+#define gamma 0.8
 
 #define CHECK(call)                                                \
     {                                                              \
@@ -30,8 +30,8 @@
 
 __global__ void finiteDifferenceKernel(double *wave, double *waveFuture, double *wavePast)
 {
-    int i = blockIdx.x;
-    int j = threadIdx.x;
+    unsigned int i = blockIdx.x;
+    unsigned int j = threadIdx.x;
 
     if ((i > 0 && i < N - 1) && (j > 0 && j < N - 1))
         waveFuture[i * blockDim.x + j] = 2 * wave[i * blockDim.x + j] * (1 - alpha * alpha - gamma * gamma) - wavePast[i * blockDim.x + j] + alpha * alpha * wave[(i + 1) * blockDim.x + j] + alpha * alpha * wave[(i - 1) * blockDim.x + j] + gamma * gamma * wave[i * blockDim.x + (j + 1)] + gamma * gamma * wave[i * blockDim.x + (j - 1)];
@@ -69,36 +69,43 @@ void initialCondition(double *wave)
     }
 }
 
-void derivativeCondition(double *wave, double *wavePast){
+void derivativeCondition(double *wave, double *wavePast)
+{
 
-	int i, j;
+    int i, j;
 
-	for (i = 1; i < N-1; i++)
-	{
-		for (j = 1; j < N-1; j++)
-		{
-			wave[i*N+j] = (2*wavePast[i*N + j]*(1 - alpha*alpha - gamma*gamma) + alpha*alpha*wavePast[(i+1)*N + j] + alpha*alpha*wavePast[(i-1)*N + j] + gamma*gamma*wavePast[i*N + (j+1)] +  gamma*gamma*wavePast[i*N + (j-1)])/2;
-		}
-	}
+    for (i = 1; i < N - 1; i++)
+    {
+        for (j = 1; j < N - 1; j++)
+        {
+            wave[i * N + j] = (2 * wavePast[i * N + j] * (1 - alpha * alpha - gamma * gamma) + alpha * alpha * wavePast[(i + 1) * N + j] + alpha * alpha * wavePast[(i - 1) * N + j] + gamma * gamma * wavePast[i * N + (j + 1)] + gamma * gamma * wavePast[i * N + (j - 1)]) / 2;
+        }
+    }
 }
 
-double resultsValidation(double *wave, double dx, double dy){
+double resultsValidation(double *wave, double dx, double dy)
+{
 
     int i, j;
     double erro, maiorErro, analitica;
 
-    for(i = 0; i < N; i++){
-        for(j = 0; j < N; j ++){
+    for (i = 0; i < N; i++)
+    {
+        for (j = 0; j < N; j++)
+        {
 
-            analitica = sin((j*M_PI*dx)/xFinal)*sin((i*M_PI*dy)/yFinal)*(-(2000/((M_PI)*(M_PI)))*((sin(M_PI*j)*(cos(M_PI*i) - 1))/((j*j - 250000)*i)))*cos(sqrt(mu/T)*(sqrt((j*M_PI/xFinal)*(j*M_PI/xFinal) + (i*M_PI/yFinal)*(i*M_PI/yFinal)))*tempoTotal);
+            analitica = sin((j * M_PI * dx) / xFinal) * sin((i * M_PI * dy) / yFinal) * (-(2000 / ((M_PI) * (M_PI))) * ((sin(M_PI * j) * (cos(M_PI * i) - 1)) / ((j * j - 250000) * i))) * cos(sqrt(mu / T) * (sqrt((j * M_PI / xFinal) * (j * M_PI / xFinal) + (i * M_PI / yFinal) * (i * M_PI / yFinal))) * tempoTotal);
 
-            erro = fabs((wave[i*N + j] - analitica)/analitica);
+            erro = fabs((wave[i * N + j] - analitica) / analitica);
 
-            if(i == 0 && j == 0){
+            if (i == 0 && j == 0)
+            {
                 maiorErro = erro;
             }
-            else{
-                if(erro > maiorErro){
+            else
+            {
+                if (erro > maiorErro)
+                {
                     maiorErro = erro;
                 }
             }
@@ -154,7 +161,8 @@ void deviceCapabilities()
     }
 }
 
-void actionWork(double dx, double dy){
+void actionWork(double dx, double dy)
+{
 
     int i, j, t;
 
@@ -169,14 +177,14 @@ void actionWork(double dx, double dy){
 
     printf("Colocando condição inicial.\n");
     initialCondition(hostWavePast);
-    printf("Colocando condição da derivada.\n"); 
+    printf("Colocando condição da derivada.\n");
     derivativeCondition(hostWave, hostWavePast);
 
     printf("Alocando memoria no Device\n");
     CHECK(cudaMalloc(&deviceWave, (N * N) * sizeof(double)));
     CHECK(cudaMalloc(&deviceWaveFuture, (N * N) * sizeof(double)));
-    CHECK(cudaMalloc(&deviceWavePast, (N * N) * sizeof(double))); 
-    
+    CHECK(cudaMalloc(&deviceWavePast, (N * N) * sizeof(double)));
+
     printf("Iniciando calculo da função de onda.\n");
     for (t = 0; t < tempoTotal; t++)
     {
