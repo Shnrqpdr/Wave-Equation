@@ -4,12 +4,12 @@
 #include <math.h>
 #include <time.h>
 
-#define N 100
+#define N 500
 #define xInicial 0
-#define xFinal 50.0
+#define xFinal 5.0
 #define yInicial 0
-#define yFinal 50.0
-#define finalTime 100
+#define yFinal 5.0
+#define finalTime 1000
 #define	lambda 0.4
 #define	delta 0.8
 
