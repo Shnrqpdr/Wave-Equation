@@ -4,7 +4,7 @@
 #include <math.h>
 #include <time.h>
 
-#define N 500
+#define N 300
 #define xInicial 0
 #define xFinal 5.0
 #define yInicial 0
@@ -36,12 +36,16 @@ double ***allocArray() {
 void ***initialCondition(double ***wave, double dx, double dy){
 
 	int i, j;
+    double x, y;
+
+    x = N/2.0;
+    y = N/2.0;
 
 	for (i = 0; i < N; ++i){
 		for (j = 0; j < N; ++j){
-
-			wave[i][j][0] = 4*sin(M_PI*i/75);
-
+            if(i == N/2 && j == N/2){
+			    wave[i][j][0] = exp(2);
+            }
 		}
 	}
 }

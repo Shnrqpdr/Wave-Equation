@@ -65,4 +65,4 @@ anim = FuncAnimation(fig, anim, t, interval=10, blit=False)
     
 #plt.style.use('dark_background')
 plt.axis('off')
-anim.save('wave4.mp4', fps=30, savefig_kwargs={'facecolor':'black'})
+anim.save('wave5.mp4', fps=30, savefig_kwargs={'facecolor':'black'})
