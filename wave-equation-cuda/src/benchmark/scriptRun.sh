@@ -1,5 +1,7 @@
 #!/bin/bash
 
+echo "Iniciando a rotina de execução do cálculo da equação de onda em CUDA"
+
 for j in 896 1792 2688 3584;
 do
     mkdir "malha$j"
@@ -38,3 +40,5 @@ do
 
     cd .. 
 done
+
+echo "Fim da execução!"
