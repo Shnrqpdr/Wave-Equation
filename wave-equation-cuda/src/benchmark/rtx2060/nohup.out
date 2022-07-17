@@ -1,0 +1,162 @@
+Iniciando a rotina de execução do cálculo da equação de onda em CUDA
+Iniciando o cálculo do programa sem as flags
+Malha: 896 x 896
+Time:      97.30 seconds 
+Iniciando o cálculo do programa com as flags
+Usando as flags -O0
+Malha: 896 x 896
+Time:      97.31 seconds 
+Usando as flags -use_fast_math -O0
+Malha: 896 x 896
+Time:      97.16 seconds 
+Usando as flags -Xptxas -O0
+Malha: 896 x 896
+Time:      97.54 seconds 
+Usando as flags -O1
+Malha: 896 x 896
+Time:      83.63 seconds 
+Usando as flags -use_fast_math -O1
+Malha: 896 x 896
+Time:      83.66 seconds 
+Usando as flags -Xptxas -O1
+Malha: 896 x 896
+Time:      97.72 seconds 
+Usando as flags -O2
+Malha: 896 x 896
+Time:      83.68 seconds 
+Usando as flags -use_fast_math -O2
+Malha: 896 x 896
+Time:      83.09 seconds 
+Usando as flags -Xptxas -O2
+Malha: 896 x 896
+Time:      97.14 seconds 
+Usando as flags -O3
+Malha: 896 x 896
+Time:      80.93 seconds 
+Usando as flags -use_fast_math -O3
+Malha: 896 x 896
+Time:      81.41 seconds 
+Usando as flags -Xptxas -O3
+Malha: 896 x 896
+Time:      97.96 seconds 
+Iniciando o cálculo do programa sem as flags
+Malha: 1792 x 1792
+Time:     365.43 seconds 
+Iniciando o cálculo do programa com as flags
+Usando as flags -O0
+Malha: 1792 x 1792
+Time:     366.52 seconds 
+Usando as flags -use_fast_math -O0
+Malha: 1792 x 1792
+Time:     366.37 seconds 
+Usando as flags -Xptxas -O0
+Malha: 1792 x 1792
+Time:     364.39 seconds 
+Usando as flags -O1
+Malha: 1792 x 1792
+Time:     313.24 seconds 
+Usando as flags -use_fast_math -O1
+Malha: 1792 x 1792
+Time:     313.54 seconds 
+Usando as flags -Xptxas -O1
+Malha: 1792 x 1792
+Time:     366.62 seconds 
+Usando as flags -O2
+Malha: 1792 x 1792
+Time:     313.18 seconds 
+Usando as flags -use_fast_math -O2
+Malha: 1792 x 1792
+Time:     312.78 seconds 
+Usando as flags -Xptxas -O2
+Malha: 1792 x 1792
+Time:     364.75 seconds 
+Usando as flags -O3
+Malha: 1792 x 1792
+Time:     306.10 seconds 
+Usando as flags -use_fast_math -O3
+Malha: 1792 x 1792
+Time:     306.75 seconds 
+Usando as flags -Xptxas -O3
+Malha: 1792 x 1792
+Time:     365.39 seconds 
+Iniciando o cálculo do programa sem as flags
+Malha: 2688 x 2688
+Time:     823.51 seconds 
+Iniciando o cálculo do programa com as flags
+Usando as flags -O0
+Malha: 2688 x 2688
+Time:     821.24 seconds 
+Usando as flags -use_fast_math -O0
+Malha: 2688 x 2688
+Time:     823.37 seconds 
+Usando as flags -Xptxas -O0
+Malha: 2688 x 2688
+Time:     823.50 seconds 
+Usando as flags -O1
+Malha: 2688 x 2688
+Time:     710.98 seconds 
+Usando as flags -use_fast_math -O1
+Malha: 2688 x 2688
+Time:     713.30 seconds 
+Usando as flags -Xptxas -O1
+Malha: 2688 x 2688
+Time:     816.36 seconds 
+Usando as flags -O2
+Malha: 2688 x 2688
+Time:     709.15 seconds 
+Usando as flags -use_fast_math -O2
+Malha: 2688 x 2688
+Time:     709.42 seconds 
+Usando as flags -Xptxas -O2
+Malha: 2688 x 2688
+Time:     821.34 seconds 
+Usando as flags -O3
+Malha: 2688 x 2688
+Time:     688.92 seconds 
+Usando as flags -use_fast_math -O3
+Malha: 2688 x 2688
+Time:     688.35 seconds 
+Usando as flags -Xptxas -O3
+Malha: 2688 x 2688
+Time:     821.24 seconds 
+Iniciando o cálculo do programa sem as flags
+Malha: 3584 x 3584
+Time:    1463.18 seconds 
+Iniciando o cálculo do programa com as flags
+Usando as flags -O0
+Malha: 3584 x 3584
+Time:    1468.94 seconds 
+Usando as flags -use_fast_math -O0
+Malha: 3584 x 3584
+Time:    1469.61 seconds 
+Usando as flags -Xptxas -O0
+Malha: 3584 x 3584
+Time:    1471.32 seconds 
+Usando as flags -O1
+Malha: 3584 x 3584
+Time:    1316.44 seconds 
+Usando as flags -use_fast_math -O1
+Malha: 3584 x 3584
+Time:    1310.64 seconds 
+Usando as flags -Xptxas -O1
+Malha: 3584 x 3584
+Time:    1466.39 seconds 
+Usando as flags -O2
+Malha: 3584 x 3584
+Time:    1309.22 seconds 
+Usando as flags -use_fast_math -O2
+Malha: 3584 x 3584
+Time:    1316.81 seconds 
+Usando as flags -Xptxas -O2
+Malha: 3584 x 3584
+Time:    1465.28 seconds 
+Usando as flags -O3
+Malha: 3584 x 3584
+Time:    1239.03 seconds 
+Usando as flags -use_fast_math -O3
+Malha: 3584 x 3584
+Time:    1237.05 seconds 
+Usando as flags -Xptxas -O3
+Malha: 3584 x 3584
+Time:    1467.18 seconds 
+Fim da execução!

@@ -1,0 +1,2 @@
+Malha: 2688 x 2688
+Time:    829.49 seconds 
